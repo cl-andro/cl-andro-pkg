@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_DESCRIPTION="Tools and demos for notcurses"
+CLANDRO_SUBPKG_INCLUDE="bin/"
+CLANDRO_SUBPKG_DEPENDS="notcurses-data"

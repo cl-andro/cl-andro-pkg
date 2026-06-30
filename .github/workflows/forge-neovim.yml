@@ -1,0 +1,104 @@
+name: Forge Neovim (aarch64)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-neovim:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cl-andro/package-builder:latest
+      options: --privileged
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_PAT }}
+    steps:
+      - name: Checkout Sovereign Code
+        uses: actions/checkout@v4
+
+      - name: Architect the Custom OS Directories
+        run: |
+          sudo mkdir -p /data/data/com.zk.clandro/files/usr
+          sudo mkdir -p /data/data/com.zk.clandro/files/home
+          sudo chown -R builder:builder /data/data/com.zk.clandro
+
+      - name: Install the C++ Compiler (The Missing NDK)
+        run: |
+          export HOME=/home/builder
+          ./scripts/setup-android-sdk.sh
+
+      - name: Forge Neovim (Surgical Execution)
+        run: |
+          export HOME=/home/builder
+
+          # Anti-Timeout: Heartbeat to keep GitHub Actions alive
+          while true; do echo "[HEARTBEAT] Still forging Neovim ecosystem... $(date)"; sleep 120; done &
+          HEARTBEAT_PID=$!
+
+          # 1. Bedrock Dependencies
+          ./build-package.sh -a aarch64 ndk-sysroot
+          ./build-package.sh -a aarch64 libc++
+
+          # 2. Standalone Libraries (no deps)
+          ./build-package.sh -a aarch64 utf8proc
+          ./build-package.sh -a aarch64 libmsgpack
+          ./build-package.sh -a aarch64 libunibilium
+          ./build-package.sh -a aarch64 libvterm
+          ./build-package.sh -a aarch64 tree-sitter
+          ./build-package.sh -a aarch64 luajit
+          ./build-package.sh -a aarch64 lua51
+          ./build-package.sh -a aarch64 lua55
+
+          # 3. Lua Ecosystem
+          ./build-package.sh -a aarch64 lua-lpeg
+          ./build-package.sh -a aarch64 luv
+
+          # 4. Tree-sitter Parsers
+          ./build-package.sh -a aarch64 tree-sitter-c
+          ./build-package.sh -a aarch64 tree-sitter-lua
+          ./build-package.sh -a aarch64 tree-sitter-markdown
+          ./build-package.sh -a aarch64 tree-sitter-query
+          ./build-package.sh -a aarch64 tree-sitter-vimdoc
+          ./build-package.sh -a aarch64 tree-sitter-vim
+          ./build-package.sh -a aarch64 tree-sitter-parsers
+
+          # 5. Neovim — The modular text editor
+          ./build-package.sh -a aarch64 neovim
+
+          # Terminate heartbeat when complete
+          kill $HEARTBEAT_PID
+
+      - name: Sanitize Artifact Filenames
+        if: success()
+        run: |
+          for f in output/*:*.deb; do
+            if [ -e "$f" ]; then
+              new_name=$(echo "$f" | tr ':' '_')
+              mv "$f" "$new_name"
+            fi
+          done
+
+      - name: The Autopsy (Catch the Crash)
+        if: failure()
+        run: |
+          echo "========== CONFIG.LOG AUTOPSY START =========="
+          find /home/builder/.clandro-build/ -name "config.log" -exec cat {} +
+          echo "========== CONFIG.LOG AUTOPSY END =========="
+
+      - name: Upload Neovim Artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cl-andro-neovim
+          path: output/*.deb
+
+      - name: Publish & Sign Packages
+        if: success()
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          ./scripts/publish-repo-ci.sh

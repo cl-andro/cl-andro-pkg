@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://constexpr.org/innoextract/
+CLANDRO_PKG_DESCRIPTION="A tool to unpack installers created by Inno Setup"
+CLANDRO_PKG_LICENSE="ZLIB"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.9"
+CLANDRO_PKG_REVISION=10
+CLANDRO_PKG_SRCURL="https://constexpr.org/innoextract/files/innoextract-${CLANDRO_PKG_VERSION}/innoextract-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=6344a69fc1ed847d4ed3e272e0da5998948c6b828cb7af39c6321aba6cf88126
+CLANDRO_PKG_DEPENDS="libc++, boost, liblzma, libiconv"
+CLANDRO_PKG_BUILD_DEPENDS="boost-headers"

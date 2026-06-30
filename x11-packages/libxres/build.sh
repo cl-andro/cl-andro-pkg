@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X-Resource extension client library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.3"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXres-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxext"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-malloc0returnsnull"

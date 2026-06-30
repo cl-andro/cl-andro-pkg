@@ -1,0 +1,19 @@
+CLANDRO_PKG_HOMEPAGE=https://fatsort.sourceforge.io/
+CLANDRO_PKG_DESCRIPTION="A C utility that sorts FAT12, FAT16, FAT32 and exFAT partitions"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.7.679
+CLANDRO_PKG_SRCURL="https://downloads.sourceforge.net/fatsort/fatsort-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=1012f551382639d69e194eabfbe99342ede7c856b1cd6788287f9dfd4bd8d122
+CLANDRO_PKG_DEPENDS="libiconv"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="
+MANDIR=$CLANDRO_PREFIX/share/man/man1
+SBINDIR=$CLANDRO_PREFIX/bin
+"
+
+clandro_step_pre_configure() {
+	CFLAGS+=" $CPPFLAGS"
+	LDFLAGS+=" -liconv"
+}

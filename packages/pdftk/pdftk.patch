@@ -1,0 +1,5 @@
+--- a/pdftk
++++ b/pdftk
+@@ -0,0 +1,2 @@
++#!@CLANDRO_PREFIX@/bin/sh
++exec java -cp @CLANDRO_PREFIX@/share/java/pdftk.jar:@CLANDRO_PREFIX@/share/java/bcprov.jar:@CLANDRO_PREFIX@/share/java/commons-lang3.jar com.gitlab.pdftk_java.pdftk "$@"

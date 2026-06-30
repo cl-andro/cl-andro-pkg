@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://dev.lovelyhq.com/libburnia
+CLANDRO_PKG_DESCRIPTION="Library to pack up hard disk files and directories into a ISO 9660 disk image"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.5.6.pl01
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://files.libburnia-project.org/releases/libisofs-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25
+CLANDRO_PKG_DEPENDS="libiconv, zlib"
+CLANDRO_PKG_BREAKS="libisofs-dev"
+CLANDRO_PKG_REPLACES="libisofs-dev"
+CLANDRO_PKG_BUILD_IN_SRC=true

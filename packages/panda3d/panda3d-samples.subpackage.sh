@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_DESCRIPTION="Python sample programs that use Panda3D"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="share/panda3d/samples/"

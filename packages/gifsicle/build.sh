@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://www.lcdf.org/gifsicle/
+CLANDRO_PKG_DESCRIPTION="Tool for creating, editing, and getting information about GIF images and animations"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.96"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://www.lcdf.org/gifsicle/gifsicle-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb
+CLANDRO_PKG_AUTO_UPDATE=true
+# for gifview
+CLANDRO_PKG_BUILD_DEPENDS="libx11"
+CLANDRO_PKG_SUGGESTS="libx11"

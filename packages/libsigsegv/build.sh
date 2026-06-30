@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/libsigsegv/
+CLANDRO_PKG_DESCRIPTION="GNU libsigsegv is a library for handling page faults in user mode"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.14
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/libsigsegv/libsigsegv-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=cdac3941803364cf81a908499beb79c200ead60b6b5b40cad124fd1e06caa295
+CLANDRO_PKG_BREAKS="libsigsegv-dev"
+CLANDRO_PKG_REPLACES="libsigsegv-dev"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.rarlab.com/
+CLANDRO_PKG_DESCRIPTION="Tool for extracting files from .rar archives"
+CLANDRO_PKG_LICENSE="non-free"
+CLANDRO_PKG_LICENSE_FILE="license.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="7.2.6"
+CLANDRO_PKG_SRCURL=https://www.rarlab.com/rar/unrarsrc-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=d1afa67ef4121ebc5986815699e05db0ce8648499e5dca854f282a4c3f72c003
+CLANDRO_PKG_DEPENDS="libandroid-support, libc++"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true

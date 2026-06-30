@@ -1,0 +1,22 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/rfc1036/whois
+CLANDRO_PKG_DESCRIPTION="An intelligent Whois client"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.6.6"
+CLANDRO_PKG_SRCURL=https://github.com/rfc1036/whois/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=43d3b3cc64c75e8bd10aee6feff3906e9488ed335076d206e70f3b25bf644969
+CLANDRO_PKG_DEPENDS="libcrypt, libiconv, libidn2"
+CLANDRO_PKG_CONFLICTS="inetutils (<< 1.9.4-13)"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="
+prefix=$CLANDRO_PREFIX
+HAVE_ICONV=1
+"
+
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP='v\d+\.\d+\.\d+'
+
+clandro_step_pre_configure() {
+	CPPFLAGS+=" -DHAVE_CRYPT_H"
+	LDFLAGS+=" -liconv"
+}

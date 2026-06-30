@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="lib/libdw.a"
+CLANDRO_SUBPKG_DESCRIPTION="Static library to read DWARF information"
+CLANDRO_SUBPKG_DEPENDS="libdw"

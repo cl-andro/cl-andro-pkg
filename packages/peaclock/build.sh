@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/octobanana/peaclock
+CLANDRO_PKG_DESCRIPTION="A responsive and customizable clock, timer, and stopwatch for the terminal."
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.3
+CLANDRO_PKG_REVISION=9
+CLANDRO_PKG_SRCURL=https://github.com/octobanana/peaclock/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=3de32486e45ddf6a62c591619b5373d23c8eaf885975441ae581ca7241c48012
+CLANDRO_PKG_DEPENDS="libc++, libicu"
+CLANDRO_PKG_AUTO_UPDATE=false

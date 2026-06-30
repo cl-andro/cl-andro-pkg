@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://www.nongnu.org/lzip/lzlib.html
+CLANDRO_PKG_DESCRIPTION="A library providing in-memory LZMA compression and decompression functions"
+CLANDRO_PKG_LICENSE="BSD 2-Clause, GPL-2.0"
+CLANDRO_PKG_LICENSE_FILE="COPYING, COPYING.GPL"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.16"
+CLANDRO_PKG_SRCURL=https://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=203228de911780309dad6813e51541d7ea89469784f01cb661edba080ff1b038
+CLANDRO_PKG_AUTO_UPDATE=true

@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/mtoyoda/sl
+CLANDRO_PKG_DESCRIPTION="Tool curing your bad habit of mistyping"
+CLANDRO_PKG_LICENSE="custom"
+CLANDRO_PKG_LICENSE_FILE="LICENSE"
+CLANDRO_PKG_VERSION=5.05
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/eyJhb/sl/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=6c941b526e3d01be7f91a3af4ae20a89d1e5d66b3b2d804c80123b1b1be96384
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE='newest-tag'
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_make_install() {
+	install sl $CLANDRO_PREFIX/bin/
+	cp sl.1 $CLANDRO_PREFIX/share/man/man1
+}

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.netfilter.org/projects/libmnl/
+CLANDRO_PKG_DESCRIPTION="a minimalistic user-space library oriented to Netlink developers"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.0.5
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://netfilter.org/projects/libmnl/files/libmnl-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=274b9b919ef3152bfb3da3a13c950dd60d6e2bcd54230ffeca298d03b40d0525
+CLANDRO_PKG_BREAKS="libmnl-dev"
+CLANDRO_PKG_REPLACES="libmnl-dev"

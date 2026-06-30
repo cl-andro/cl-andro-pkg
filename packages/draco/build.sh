@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://google.github.io/draco/
+CLANDRO_PKG_DESCRIPTION="Library for compressing and decompressing 3D geometric meshes and point clouds"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.5.7"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://github.com/google/draco/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=bf6b105b79223eab2b86795363dfe5e5356050006a96521477973aba8f036fe1
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_SHARED_LIBS=ON
+"

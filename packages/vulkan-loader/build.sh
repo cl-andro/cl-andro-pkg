@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/termux/termux-packages
+CLANDRO_PKG_DESCRIPTION="A metapackage that provides vulkan loader library"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.0.3
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="vulkan-loader-generic | vulkan-loader-android"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="vulkan-loader-android, vulkan-loader-generic"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_GENERATE_REPOLOGY_METADATA=false

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/automake/
+CLANDRO_PKG_DESCRIPTION="Tool for automatically generating Makefile.in files"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.18.1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/automake/automake-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=168aa363278351b89af56684448f525a5bce5079d0b6842bd910fdd3f1646887
+CLANDRO_PKG_DEPENDS="autoconf"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_GROUPS="base-devel"

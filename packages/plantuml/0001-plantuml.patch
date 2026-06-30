@@ -1,0 +1,5 @@
+--- a/plantuml
++++ b/plantuml
+@@ -0,0 +1,2 @@
++#!@CLANDRO_PREFIX@/bin/sh
++exec java -jar @CLANDRO_PREFIX@/share/java/plantuml.jar "$@"

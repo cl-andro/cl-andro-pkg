@@ -1,0 +1,12 @@
+# X11 package
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Xlib-based library for XTEST & RECORD extensions"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.5"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXtst-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=b50d4c25b97009a744706c1039c598f4d8e64910c9fde381994e1cae235d9242
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxext, libxi"
+CLANDRO_PKG_BUILD_DEPENDS="libxfixes, xorg-util-macros"

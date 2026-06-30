@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/wdiff/
+CLANDRO_PKG_DESCRIPTION="Display word differences between text files"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.2.2
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/wdiff/wdiff-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=34ff698c870c87e6e47a838eeaaae729fa73349139fc8db12211d2a22b78af6b
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--disable-threads
+"

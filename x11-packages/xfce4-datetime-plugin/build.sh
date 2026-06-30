@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://docs.xfce.org/panel-plugins/xfce4-datetime-plugin/start
+CLANDRO_PKG_DESCRIPTION="xfce4-datetime-plugin shows the date and time in the panel; when left-clicked, a popup calendar appears."
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+_MAJOR_VERSION=0.8
+CLANDRO_PKG_VERSION=${_MAJOR_VERSION}.3
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/${_MAJOR_VERSION}/xfce4-datetime-plugin-$CLANDRO_PKG_VERSION.tar.bz2
+CLANDRO_PKG_SHA256=6b2eeb79fb586868737426cbd2a4cd43c7f8c58507d8a2f578e0150187cc00b0
+CLANDRO_PKG_DEPENDS="atk, gdk-pixbuf, glib, gtk3, harfbuzz, libcairo, libxfce4ui, libxfce4util, pango, xfce4-panel, zlib"

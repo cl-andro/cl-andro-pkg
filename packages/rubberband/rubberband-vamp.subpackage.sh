@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_DESCRIPTION="Vamp plugin for Rubber Band"
+CLANDRO_SUBPKG_INCLUDE="lib/vamp/"
+CLANDRO_SUBPKG_DEPENDS="vamp-plugin-sdk"
+CLANDRO_SUBPKG_BREAKS="rubberband (<< 3.1.2-1)"
+CLANDRO_SUBPKG_REPLACES="rubberband (<< 3.1.2-1)"

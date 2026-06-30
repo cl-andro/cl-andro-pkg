@@ -1,0 +1,19 @@
+CLANDRO_PKG_HOMEPAGE=http://www.whence.com/minimodem/
+CLANDRO_PKG_DESCRIPTION="General-purpose software audio FSK modem"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.24-1"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://github.com/kamalmostafa/minimodem/archive/refs/tags/minimodem-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=812611a880008c86086c105683063076176e87115490f8c266a0e25f9e27719f
+CLANDRO_PKG_REPOLOGY_METADATA_VERSION="${CLANDRO_PKG_VERSION%%-*}"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_METHOD=repology
+CLANDRO_PKG_DEPENDS="fftw, libsndfile, pulseaudio"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--without-alsa
+"
+
+clandro_step_pre_configure() {
+	autoreconf -fi
+}

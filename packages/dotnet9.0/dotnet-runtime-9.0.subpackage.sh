@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_DESCRIPTION=".NET 9.0 Runtime"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_DEPENDS="dotnet-hostfxr-9.0, libicu, openssl, zlib"
+CLANDRO_SUBPKG_INCLUDE=$(cat "${CLANDRO_PKG_TMPDIR}"/dotnet-runtime.txt)

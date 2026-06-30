@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://zsync.moria.org.uk/
+CLANDRO_PKG_DESCRIPTION="A file transfer program to download files from remote web servers"
+CLANDRO_PKG_LICENSE="Artistic-License-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.6.3"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://zsync.moria.org.uk/download/zsync-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=293b6191821641d3ed6248206f8f9df0bf46e6ee2cf8b4dd97cfd1d5909edb9a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true

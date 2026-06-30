@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Composite Window-effects manager for X.org"
+CLANDRO_PKG_LICENSE="HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.10"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xcompmgr-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=7824f709c4f22432eaea7542ec93384e5dd48f6fcb85c12ff82d721423b0b98f
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxcomposite, libxdamage, libxext, libxfixes, libxrender"

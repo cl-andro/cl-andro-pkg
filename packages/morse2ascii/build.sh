@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://packages.debian.org/sid/morse2ascii
+CLANDRO_PKG_DESCRIPTION="A tool to decode the morse codes from a PCM WAV file as well as from text and RAW PCM files"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.2.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://ftp.debian.org/debian/pool/main/m/morse2ascii/morse2ascii_${CLANDRO_PKG_VERSION}+dfsg.orig.tar.xz
+CLANDRO_PKG_SHA256=1eed977abfe875c01643f9299178d3e05ca9239e4feef4ff6bfbee3df0a9feb8
+CLANDRO_PKG_BUILD_IN_SRC=true

@@ -1,0 +1,14 @@
+# X11 package
+CLANDRO_PKG_HOMEPAGE=https://xcb.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 client-side library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.17.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/lib/libxcb-$CLANDRO_PKG_VERSION.tar.xz
+CLANDRO_PKG_SHA256=599ebf9996710fea71622e6e184f3a8ad5b43d0e5fa8c4e407123c88a59a6d55
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libxau, libxdmcp"
+CLANDRO_PKG_BUILD_DEPENDS="xcb-proto, xorg-util-macros"
+CLANDRO_PKG_RECOMMENDS="xorg-xauth"
+CLANDRO_PKG_RM_AFTER_INSTALL="lib/python*"

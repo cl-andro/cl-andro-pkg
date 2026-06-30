@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://neurobin.org/projects/softwares/unix/shc/"
+CLANDRO_PKG_DESCRIPTION="Shell script compiler"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="Krishna Kanhaiya @kcubeterm"
+CLANDRO_PKG_VERSION=4.0.3
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/neurobin/shc/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=7d7fa6a9f5f53d607ab851d739ae3d3b99ca86e2cb1425a6cab9299f673aee16
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="clang"

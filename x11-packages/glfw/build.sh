@@ -1,0 +1,21 @@
+CLANDRO_PKG_HOMEPAGE=https://www.glfw.org/
+CLANDRO_PKG_DESCRIPTION="An Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development"
+CLANDRO_PKG_LICENSE="ZLIB"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.4
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/glfw/glfw/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01
+CLANDRO_PKG_DEPENDS="opengl"
+CLANDRO_PKG_BUILD_DEPENDS="libxcursor, libxi, libxinerama, libxrandr, xorgproto"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_SHARED_LIBS=ON
+-DGLFW_BUILD_EXAMPLES=OFF
+-DGLFW_BUILD_TESTS=OFF
+-DGLFW_BUILD_DOCS=OFF
+-DGLFW_BUILD_WAYLAND=OFF
+"
+
+clandro_step_pre_configure() {
+	LDFLAGS+=" -lm"
+}

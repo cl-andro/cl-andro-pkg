@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/baskerville/bspwm"
+CLANDRO_PKG_DESCRIPTION="A tiling window manager based on binary space partitioning"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9.12"
+CLANDRO_PKG_SRCURL="https://github.com/baskerville/bspwm/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=ca3be808e3d0c785955f1613e6e860fc51b5db086b821b48707466da1a06392c
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libxcb, sxhkd, xcb-util, xcb-util-keysyms, xcb-util-wm"
+CLANDRO_PKG_BUILD_IN_SRC=true

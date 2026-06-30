@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_DESCRIPTION="Platform-independent data for httrack"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="share/httrack/"
+CLANDRO_SUBPKG_BREAKS="httrack (<< 3.49.3)"
+CLANDRO_SUBPKG_REPLACES="httrack (<< 3.49.3)"

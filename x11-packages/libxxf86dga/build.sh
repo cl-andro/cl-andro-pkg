@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 Direct Graphics Access extension library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.7"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXxf86dga-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=b3be5b444d324cb6e0f4b5019a4972c99ea336ccb8ab7968eccefecd917ffde6
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxext"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-malloc0returnsnull"

@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Set the keyboard using the X Keyboard Extension"
+CLANDRO_PKG_LICENSE="HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.3.5"
+CLANDRO_PKG_SRCURL="https://xorg.freedesktop.org/releases/individual/app/setxkbmap-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=360193cecc93f906d8383a8fb5c1f3a7eed35e6ced0e118a64ee56ae13c88cac
+CLANDRO_PKG_DEPENDS="libx11, libxkbfile, libxrandr"
+CLANDRO_PKG_AUTO_UPDATE=true

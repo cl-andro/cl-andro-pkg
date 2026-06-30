@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://sourceforge.net/projects/crunch-wordlist/
+CLANDRO_PKG_DESCRIPTION="Highly customizable wordlist generator"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.6
+CLANDRO_PKG_REVISION=5
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/project/crunch-wordlist/crunch-wordlist/crunch-${CLANDRO_PKG_VERSION}.tgz
+CLANDRO_PKG_SHA256=6a8f6c3c7410cc1930e6854d1dadc6691bfef138760509b33722ff2de133fe55
+CLANDRO_PKG_BUILD_IN_SRC=true

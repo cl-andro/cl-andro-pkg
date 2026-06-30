@@ -1,0 +1,8 @@
+CLANDRO_SUBPKG_DESCRIPTION="GLVND's OpenGL headers"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_BREAKS="mesa (<< 22.3.3-2), mesa-dev (<< 22.3.3-2), ndk-sysroot (<< 25b-3)"
+CLANDRO_SUBPKG_REPLACES="mesa (<< 22.3.3-2), mesa-dev (<< 22.3.3-2), ndk-sysroot (<< 25b-3)"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="
+include/
+"

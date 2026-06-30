@@ -1,0 +1,59 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/KhronosGroup/Vulkan-ValidationLayers
+CLANDRO_PKG_DESCRIPTION="Vulkan Validation Layers"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.4.343"
+CLANDRO_PKG_SRCURL=https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c8a139dce102585abd19a752224e40b9b6cd8a616b2705bee1af3ce3b84b768a
+CLANDRO_PKG_DEPENDS="libc++, vulkan-loader"
+CLANDRO_PKG_BUILD_DEPENDS="libwayland, libx11, libxcb, libxrandr"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="vulkan-loader"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"
+
+clandro_step_pre_configure() {
+	clandro_setup_cmake
+	clandro_setup_ninja
+
+	# use upstream known_good.json to fetch and build deps
+	"${CLANDRO_PKG_SRCDIR}/scripts/update_deps.py" --generator Ninja
+
+	find "$PWD" -name helper.cmake | sort | xargs -i bash -c "echo '===== {} =====' && cat {}"
+
+	# prioritises build deps from source instead of system prefix
+	# avoiding pollution from old dependencies
+	local GLSLANG_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/glslang/build/install"
+	local GOOGLETEST_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/googletest/build/install"
+	local SPIRV_HEADERS_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/SPIRV-Headers/build/install"
+	local SPIRV_TOOLS_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/SPIRV-Tools/build/install"
+	local VULKAN_HEADERS_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/Vulkan-Headers/build/install"
+	local VULKAN_UTILITY_LIBRARIES_INSTALL_DIR="${CLANDRO_PKG_SRCDIR}/Vulkan-Utility-Libraries/build/install"
+
+	CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+="
+	-DGLSLANG_INSTALL_DIR=${GLSLANG_INSTALL_DIR}
+	-DGOOGLETEST_INSTALL_DIR=${GOOGLETEST_INSTALL_DIR}
+	-DSPIRV_HEADERS_INSTALL_DIR=${SPIRV_HEADERS_INSTALL_DIR}
+	-DSPIRV_TOOLS_INSTALL_DIR=${SPIRV_TOOLS_INSTALL_DIR}
+	-DVULKAN_HEADERS_INSTALL_DIR=${VULKAN_HEADERS_INSTALL_DIR}
+	-DVULKAN_UTILITY_LIBRARIES_INSTALL_DIR=${VULKAN_UTILITY_LIBRARIES_INSTALL_DIR}
+	"
+
+	CFLAGS="-I${GLSLANG_INSTALL_DIR}/include ${CFLAGS}"
+	CFLAGS="-I${GOOGLETEST_INSTALL_DIR}/include ${CFLAGS}"
+	CFLAGS="-I${SPIRV_HEADERS_INSTALL_DIR}/include ${CFLAGS}"
+	CFLAGS="-I${SPIRV_TOOLS_INSTALL_DIR}/include ${CFLAGS}"
+	CFLAGS="-I${VULKAN_HEADERS_INSTALL_DIR}/include ${CFLAGS}"
+	CFLAGS="-I${VULKAN_UTILITY_LIBRARIES_INSTALL_DIR}/include ${CFLAGS}"
+	CXXFLAGS="-I${GLSLANG_INSTALL_DIR}/include ${CXXFLAGS}"
+	CXXFLAGS="-I${GOOGLETEST_INSTALL_DIR}/include ${CXXFLAGS}"
+	CXXFLAGS="-I${SPIRV_HEADERS_INSTALL_DIR}/include ${CXXFLAGS}"
+	CXXFLAGS="-I${SPIRV_TOOLS_INSTALL_DIR}/include ${CXXFLAGS}"
+	CXXFLAGS="-I${VULKAN_HEADERS_INSTALL_DIR}/include ${CXXFLAGS}"
+	CXXFLAGS="-I${VULKAN_UTILITY_LIBRARIES_INSTALL_DIR}/include ${CXXFLAGS}"
+	LDFLAGS="-L${GLSLANG_INSTALL_DIR}/lib ${LDFLAGS}"
+	LDFLAGS="-L${GOOGLETEST_INSTALL_DIR}/lib ${LDFLAGS}"
+	LDFLAGS="-L${SPIRV_HEADERS_INSTALL_DIR}/lib ${LDFLAGS}"
+	LDFLAGS="-L${SPIRV_TOOLS_INSTALL_DIR}/lib ${LDFLAGS}"
+	LDFLAGS="-L${VULKAN_HEADERS_INSTALL_DIR}/lib ${LDFLAGS}"
+	LDFLAGS="-L${VULKAN_UTILITY_LIBRARIES_INSTALL_DIR}/lib ${LDFLAGS}"
+}

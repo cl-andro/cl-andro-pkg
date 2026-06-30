@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://sourceforge.net/projects/gnuski/
+CLANDRO_PKG_DESCRIPTION="Open source clone of Skifree, the old Windows game"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="Henrik Grimler @Grimler91"
+CLANDRO_PKG_VERSION=0.3
+CLANDRO_PKG_REVISION=7
+CLANDRO_PKG_SRCURL=https://sourceforge.net/projects/gnuski/files/gnuski/gnuski-${CLANDRO_PKG_VERSION}/gnuski-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=1b629bd29dd6ad362b56055ccdb4c7ad462ff39d7a0deb915753c2096f5f959d
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_GROUPS="games"

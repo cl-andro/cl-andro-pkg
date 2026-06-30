@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://www.nongnu.org/lzip/plzip.html
+CLANDRO_PKG_DESCRIPTION="A massively parallel lossless data compressor based on the lzlib compression library"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.13"
+CLANDRO_PKG_SRCURL=https://download.savannah.gnu.org/releases/lzip/plzip/plzip-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=64d49dde20daa5fdff2b3ff28e3348082de10dd54eb10df6da7d1bc6c7a6db64
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, lzlib"

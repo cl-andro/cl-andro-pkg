@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.cairographics.org/pycairo/
+CLANDRO_PKG_DESCRIPTION="Python bindings for the cairo graphics library"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.29.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/pygobject/pycairo/releases/download/v${CLANDRO_PKG_VERSION}/pycairo-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libcairo, python"
+CLANDRO_PKG_PYTHON_COMMON_BUILD_DEPS="wheel"

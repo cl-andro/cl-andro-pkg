@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://savannah.nongnu.org/projects/acl
+CLANDRO_PKG_DESCRIPTION="Access control list shared library"
+CLANDRO_PKG_LICENSE="LGPL-2.1, GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.3.2"
+CLANDRO_PKG_SRCURL=https://download.savannah.gnu.org/releases/acl/acl-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=5f2bdbad629707aa7d85c623f994aa8a1d2dec55a73de5205bac0bf6058a2f7c
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="attr"

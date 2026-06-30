@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/ocrad/ocrad.html
+CLANDRO_PKG_DESCRIPTION="Optical Character Recognition program based on a feature extraction method"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.29"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/ocrad/ocrad-${CLANDRO_PKG_VERSION}.tar.lz
+CLANDRO_PKG_SHA256=11200cc6b0b7ba16884a72dccb58ef694f7aa26cd2b2041e555580f064d2d9e9
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libpng"
+CLANDRO_PKG_BREAKS="ocrad-dev"
+CLANDRO_PKG_REPLACES="ocrad-dev"

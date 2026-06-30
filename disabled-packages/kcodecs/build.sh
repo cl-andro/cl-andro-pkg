@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.kde.org/
+CLANDRO_PKG_DESCRIPTION="Method collection to manipulate strings using various encodings (KDE)"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.116.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kcodecs-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=a489d22e91cafcb60854c6e914969e1f3f8270b403baf2ec3a1d76ae2bd3680e
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, qt5-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

@@ -1,0 +1,11 @@
+--- a/src/update.cc
++++ b/src/update.cc
+@@ -101,7 +101,7 @@
+ 
+   tmpdir = getenv("TMPDIR");
+   if (tmpdir == nullptr) {
+-    tmpdir = "/tmp";
++    tmpdir = "@CLANDRO_PREFIX@/tmp";
+   }
+ 
+ #ifdef O_TMPFILE

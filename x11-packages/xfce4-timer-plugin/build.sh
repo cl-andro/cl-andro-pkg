@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://docs.xfce.org/panel-plugins/xfce4-timer-plugin/start
+CLANDRO_PKG_DESCRIPTION="alarm and timer module for Xfce panel"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="1.8.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/${CLANDRO_PKG_VERSION%.*}/xfce4-timer-plugin-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=1d3ac3aa2c4345400c025642778e7643aab41047622baf9cdc00bbac78e89f99
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="glib, gtk3, libxfce4ui, libxfce4util, xfce4-panel"

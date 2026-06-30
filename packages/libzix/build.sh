@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://drobilla.net/category/zix
+CLANDRO_PKG_DESCRIPTION="lightweight C99 portability and data structure library"
+CLANDRO_PKG_LICENSE="BSD"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.6.2"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://download.drobilla.net/zix-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=4bc771abf4fcf399ea969a1da6b375f0117784f8fd0e2db356a859f635f616a7
+CLANDRO_PKG_AUTO_UPDATE=true

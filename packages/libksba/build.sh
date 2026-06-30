@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://gnupg.org/related_software/libksba/
+CLANDRO_PKG_DESCRIPTION="Library for using X.509 certificates and CMS (Cryptographic Message Syntax) easily accessible"
+CLANDRO_PKG_LICENSE="LGPL-3.0, GPL-3.0, GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.7.0"
+CLANDRO_PKG_SRCURL=https://www.gnupg.org/ftp/gcrypt/libksba/libksba-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=e1d3a5745911f5a663fddecf526541c4241052a9e4cafbc92dc7f4096c7efdac
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libgpg-error"
+CLANDRO_PKG_BREAKS="libksba-dev"
+CLANDRO_PKG_REPLACES="libksba-dev"

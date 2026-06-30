@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+CLANDRO_PKG_DESCRIPTION="Papirus is a free and open source icon theme, based on Paper Icon Set"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="20250501"
+CLANDRO_PKG_SRCURL=https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=3831a487f813479ad3224fdbfb0c7023f23056899bc78c93737f341aa655558e
+CLANDRO_PKG_DEPENDS="hicolor-icon-theme"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_NO_SHEBANG_FIX=true
+CLANDRO_PKG_AUTO_UPDATE=true

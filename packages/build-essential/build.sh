@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/termux/termux-packages
+CLANDRO_PKG_DESCRIPTION="A metapackage that installs essential development tools"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=4.1
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="clang, make, pkg-config"
+CLANDRO_PKG_RECOMMENDS="autoconf, automake, bc, bison, cmake, flex, gperf, libtool, m4"
+CLANDRO_PKG_SUGGESTS="git, golang, nodejs, patchelf, proot, python, ruby, rust, subversion"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_METAPACKAGE=true

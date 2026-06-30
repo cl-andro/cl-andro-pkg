@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://alembic.io
+CLANDRO_PKG_DESCRIPTION="A framework for sharing scene data that includes a C++ lib, a file format and client plugin"
+CLANDRO_PKG_LICENSE="BSD 3-Clause, BSL-1.0"
+CLANDRO_PKG_LICENSE_FILE="LICENSE.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.8.11"
+CLANDRO_PKG_SRCURL=https://github.com/alembic/alembic/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=ab299bb4b1894a6675c73fa29940522b54c81a91b1d691ca3470d86b7345ffce
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="imath, libc++"

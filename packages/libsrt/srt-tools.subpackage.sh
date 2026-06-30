@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_INCLUDE="
+bin/
+"
+CLANDRO_SUBPKG_DESCRIPTION="Command-line tools for libsrt"

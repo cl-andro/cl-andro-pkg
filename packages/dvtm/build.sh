@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/martanne/dvtm
+CLANDRO_PKG_DESCRIPTION="Terminal tiling window manager"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.15
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/martanne/dvtm/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=496eada13d8abaa8d772279746f78b0c6fed11b560599490f3e70ebc21197bf0
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_DEPENDS="ncurses"
+
+clandro_step_pre_configure() {
+	CFLAGS+=" $CPPFLAGS"
+}

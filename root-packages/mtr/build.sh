@@ -1,0 +1,20 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/traviscross/mtr
+CLANDRO_PKG_DESCRIPTION="Network diagnostic tool"
+CLANDRO_PKG_LICENSE="GPL-2.0, BSD 3-Clause"
+CLANDRO_PKG_LICENSE_FILE="BSDCOPYING, COPYING"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.96"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/traviscross/mtr/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=73e6aef3fb6c8b482acb5b5e2b8fa7794045c4f2420276f035ce76c5beae632d
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--without-gtk"
+
+clandro_step_pre_configure() {
+	cp ${CLANDRO_PKG_BUILDER_DIR}/hsearch/* ${CLANDRO_PKG_SRCDIR}/portability
+
+	cd ${CLANDRO_PKG_SRCDIR}
+	./bootstrap.sh
+}

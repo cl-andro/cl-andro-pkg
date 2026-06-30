@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/termux/getconf
+CLANDRO_PKG_DESCRIPTION="Utility to print configuration values"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.6
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/termux/getconf/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=ca6808fe1a936426d0b4ef05001dfbaedcf35159bec961732a1732e280e27caa
+CLANDRO_PKG_BUILD_IN_SRC=true

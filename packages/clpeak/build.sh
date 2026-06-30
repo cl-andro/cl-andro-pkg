@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/krrishnarraj/clpeak
+CLANDRO_PKG_DESCRIPTION="A tool which profiles OpenCL devices to find their peak capacities"
+CLANDRO_PKG_LICENSE="Unlicense"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.1.5
+CLANDRO_PKG_GIT_BRANCH=$CLANDRO_PKG_VERSION
+CLANDRO_PKG_SRCURL=git+https://github.com/krrishnarraj/clpeak
+CLANDRO_PKG_BUILD_DEPENDS="opencl-headers, opencl-clhpp"
+CLANDRO_PKG_DEPENDS="libc++, ocl-icd"

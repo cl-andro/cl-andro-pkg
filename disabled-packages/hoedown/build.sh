@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/hoedown/hoedown
+CLANDRO_PKG_DESCRIPTION="Hoedown is a revived fork of Sundown, the Markdown parser based on the original code of the Upskirt library"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.0.7
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/hoedown/hoedown/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=01b6021b1ec329b70687c0d240b12edcaf09c4aa28423ddf344d2bd9056ba920
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_BREAKS="hoedown-dev"
+CLANDRO_PKG_REPLACES="hoedown-dev"
+CLANDRO_PKG_BUILD_IN_SRC=true

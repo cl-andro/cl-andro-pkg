@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://cgit.freedesktop.org/xcb/util-cursor
+CLANDRO_PKG_DESCRIPTION="XCB cursor library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.1.6"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/lib/xcb-util-cursor-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=eae38b2dfc5c529a886e507ef576b12d2a20aa1f149608e4853af760f31be60b
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libxcb, xcb-util-image, xcb-util-renderutil"

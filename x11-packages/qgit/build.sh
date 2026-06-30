@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/tibirna/qgit
+CLANDRO_PKG_DESCRIPTION="A git GUI viewer"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.13"
+CLANDRO_PKG_SRCURL=https://github.com/tibirna/qgit/archive/refs/tags/qgit-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9fa64b011963b7b876b8634b140ec5339a81a422317df71b619fcee5740a364a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="git, libc++, qt6-qtbase, qt6-qt5compat"
+CLANDRO_PKG_RECOMMENDS="hicolor-icon-theme"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qtbase-cross-tools"
+CLANDRO_PKG_BUILD_IN_SRC=true

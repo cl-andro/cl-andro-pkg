@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://www.pcre.org
+CLANDRO_PKG_DESCRIPTION="Library implementing regular expression pattern matching using the same syntax and semantics as Perl 5"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=8.45
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/project/pcre/pcre/${CLANDRO_PKG_VERSION}/pcre-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=4dae6fdcd2bb0bb6c37b5f97c33c2be954da743985369cddac3546e3218bffb8
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BREAKS="pcre-dev"
+CLANDRO_PKG_REPLACES="pcre-dev"
+CLANDRO_PKG_RM_AFTER_INSTALL="bin/pcretest share/man/man1/pcretest.1"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-cpp --enable-jit --enable-utf8 --enable-unicode-properties"

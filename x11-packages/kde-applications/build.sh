@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/termux/x11-packages
+CLANDRO_PKG_DESCRIPTION="Meta package for KDE Gear applications (incomplete!)"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=26.04
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="alligator, ark, audiotube, calligra, dolphin, elisa, filelight, gwenview, kate, kcalc, kdeconnect, kdenlive, kdialog, kget, kig, konsole, konversation, krdc, krfb, kwalletmanager, kwave, kweather, okular"
+CLANDRO_PKG_RECOMMENDS="angelfish, falkon, konqueror, ktorrent, neochat, tokodon"
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

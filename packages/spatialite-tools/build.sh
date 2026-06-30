@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gaia-gis.it/fossil/spatialite-tools
+CLANDRO_PKG_DESCRIPTION="Collection of tools supporting SpatiaLite"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=5.0.1
+CLANDRO_PKG_REVISION=5
+CLANDRO_PKG_SRCURL=https://www.gaia-gis.it/gaia-sins/spatialite-tools-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9604c205e87f037789bc52302c66ccd1371c3e98c74e8ec4e29b0752de35171c
+CLANDRO_PKG_DEPENDS="libexpat, libiconv, libspatialite, libsqlite, libxml2"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--disable-readosm --disable-minizip"

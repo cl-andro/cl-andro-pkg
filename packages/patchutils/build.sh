@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/twaugh/patchutils
+CLANDRO_PKG_DESCRIPTION="A collection of programs for manipulating patch files"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.5"
+CLANDRO_PKG_SRCURL="https://github.com/twaugh/patchutils/releases/download/$CLANDRO_PKG_VERSION/patchutils-$CLANDRO_PKG_VERSION.tar.xz"
+CLANDRO_PKG_SHA256=8386a35a4d2d3cbc28fdcc93c5be007c382c78e3ee079070139f0d822e013325
+CLANDRO_PKG_DEPENDS="python, pcre2"
+CLANDRO_PKG_BUILD_DEPENDS="xmlto"
+CLANDRO_PKG_AUTO_UPDATE=true

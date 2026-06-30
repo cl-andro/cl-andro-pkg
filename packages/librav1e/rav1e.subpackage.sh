@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_DESCRIPTION="An AV1 encoder program focused on speed and safety"
+CLANDRO_SUBPKG_INCLUDE="bin/"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false

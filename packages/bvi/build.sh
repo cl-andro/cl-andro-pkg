@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://bvi.sourceforge.net/
+CLANDRO_PKG_DESCRIPTION="Binary file editor based on vi"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_VERSION="1.5.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=http://sourceforge.net/projects/bvi/files/bvi/${CLANDRO_PKG_VERSION}/bvi-${CLANDRO_PKG_VERSION}.src.tar.gz
+CLANDRO_PKG_SHA256=6540716a1a3b2b9711635108da14b26baea488881d4a682121c0bddbba6b74cb
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="ac_cv_lib_ncursesw6_addnwstr=yes"
+CLANDRO_PKG_RM_AFTER_INSTALL="share/applications share/pixmaps"

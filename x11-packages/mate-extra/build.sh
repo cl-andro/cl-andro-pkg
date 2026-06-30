@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://mate-desktop.org/
+CLANDRO_PKG_DESCRIPTION="A metapackage that installs various utilities and programs for the MATE desktop environment"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.28.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="atril, caja-actions, caja-extensions, engrampa, eom, mate-applets, mate-calc, mate-icon-theme-faenza, mate-media, mate-netbook, mate-power-manager, mate-screensaver, mate-system-monitor, mate-terminal, mate-utils, mozo, pluma"
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE=http://www.lxde.org/
+CLANDRO_PKG_DESCRIPTION="LXTask is a GUI application for the Lightweight X11 Desktop Environment (LXDE)"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="0.1.12"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/lxde/lxtask/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=f9d97ebdd8402fe7d9533b6173d0f553d5f9987f5c2885f7d2ee070e80300ab3
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="gtk3, glib"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-gtk3"
+clandro_step_pre_configure() {
+	./autogen.sh
+}

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://gitlab.freedesktop.org/xorg/util/bdftopcf
+CLANDRO_PKG_DESCRIPTION="convert X font from Bitmap Distribution Format to Portable Compiled Format"
+CLANDRO_PKG_LICENSE="HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.2"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/util/bdftopcf-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=bc60be5904330faaa3ddd2aed7874bee2f29e4387c245d6787552f067eb0523a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"

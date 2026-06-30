@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://poppler.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Consists of encoding files for use with poppler"
+CLANDRO_PKG_LICENSE="HPND, BSD 3-Clause, GPL-2.0"
+CLANDRO_PKG_LICENSE_FILE="COPYING, COPYING.adobe, COPYING.gpl2"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.12
+CLANDRO_PKG_SRCURL=https://poppler.freedesktop.org/poppler-data-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c835b640a40ce357e1b83666aabd95edffa24ddddd49b8daff63adb851cdab74
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

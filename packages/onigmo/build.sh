@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/k-takata/Onigmo
+CLANDRO_PKG_DESCRIPTION="A regular expressions library forked from Oniguruma"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.2.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/k-takata/Onigmo/releases/download/Onigmo-${CLANDRO_PKG_VERSION}/onigmo-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c648496b5339953b925ebf44b8de356feda8d3428fa07dc1db95bfe2570feb76
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"

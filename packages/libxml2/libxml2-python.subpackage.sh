@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_INCLUDE="
+lib/python*
+"
+CLANDRO_SUBPKG_DESCRIPTION="Python bindings for libxml2"
+CLANDRO_SUBPKG_DEPENDS="python"

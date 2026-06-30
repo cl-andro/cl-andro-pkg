@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Display a message or query in a window"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.7"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/app/xmessage-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=703fccb7a0b772d61d7e603c189b9739866aa97ba985c727275420f829a30356
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxaw, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

@@ -1,0 +1,20 @@
+CLANDRO_PKG_HOMEPAGE="https://beltoforion.de/en/muparser"
+CLANDRO_PKG_DESCRIPTION="An extensible high performance math expression parser library written in C++"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.3.5"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://github.com/beltoforion/muparser/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=20b43cc68c655665db83711906f01b20c51909368973116dfc8d7b3c4ddb5dd4
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_INSTALL_LIBDIR=$CLANDRO__PREFIX__LIB_SUBDIR
+-DCMAKE_INSTALL_INCLUDEDIR=$CLANDRO__PREFIX__INCLUDE_SUBDIR
+"
+
+clandro_step_pre_configure() {
+	LDFLAGS+=" -fopenmp -static-openmp"
+}

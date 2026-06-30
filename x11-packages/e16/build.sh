@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://www.enlightenment.org/e16
+CLANDRO_PKG_DESCRIPTION="Enlightenment DR16 window manager"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.0.31
+CLANDRO_PKG_SRCURL="https://downloads.sourceforge.net/enlightenment/e16-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=4b2255d43eab66dddd4599096d82948927d28997c0ce445dcc65528f682efe91
+CLANDRO_PKG_DEPENDS="glib, imlib2, libiconv, libx11, libxext, libxft, libxrender, pango"
+CLANDRO_PKG_AUTO_UPDATE=true

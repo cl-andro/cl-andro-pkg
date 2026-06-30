@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://ryuichiueda.github.io/GlueLang/
+CLANDRO_PKG_DESCRIPTION="A programming language that has a strong nature to be a glue of commands"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.2.0
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://github.com/ryuichiueda/GlueLang/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=abd46b8b9e0c0082289470b7dc6ffb8125066308a6165e6a92a92ab539ca11c1
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BUILD_IN_SRC=true

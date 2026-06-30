@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://invent.kde.org/graphics/libkdcraw
+CLANDRO_PKG_DESCRIPTION="C++ interface used to decode RAW pictures"
+CLANDRO_PKG_LICENSE="GPL-2.0-or-later, LGPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="26.04.1"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/release-service/${CLANDRO_PKG_VERSION}/src/libkdcraw-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=dc898b7488f84c1e286d47775a0562402c954647dab622719d9f953d90bd9aef
+CLANDRO_PKG_DEPENDS="libc++, libraw, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DQT_MAJOR_VERSION=6
+"

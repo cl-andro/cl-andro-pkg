@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X Rendering Extension client library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9.12"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXrender-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=b832128da48b39c8d608224481743403ad1691bf4e554e4be9c174df171d1b97
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--disable-static
+--enable-malloc0returnsnull
+"

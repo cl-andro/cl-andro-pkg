@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/rofl0r/microsocks
+CLANDRO_PKG_DESCRIPTION="tiny, portable SOCKS5 server with very moderate resource usage"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1:1.0.5"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/rofl0r/microsocks/archive/refs/tags/v${CLANDRO_PKG_VERSION:2}.tar.gz
+CLANDRO_PKG_SHA256=939d1851a18a4c03f3cc5c92ff7a50eaf045da7814764b4cb9e26921db15abc8
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true

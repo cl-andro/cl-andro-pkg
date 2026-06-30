@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://qalculate.github.io/
+CLANDRO_PKG_DESCRIPTION="A multi-purpose cross-platform desktop calculator"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.10.0"
+CLANDRO_PKG_SRCURL=https://github.com/Qalculate/qalculate-gtk/releases/download/v${CLANDRO_PKG_VERSION}/qalculate-gtk-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=310875ae42d4af3bef46bb5f0405496c26e8e8abe218caeb1270cde176c02691
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="gdk-pixbuf, glib, gtk3, libc++, libcairo, pango, qalc"

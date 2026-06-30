@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.kde.org/
+CLANDRO_PKG_DESCRIPTION="Utilities for core application functionality and accessing the OS (KDE)"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.116.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kcoreaddons-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=defbb4c068fcfccf7a08298ee6f7b88f9c2d3f34e4ae22b8f8e2df47dfb73174
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, qt5-qtbase, shared-mime-info"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

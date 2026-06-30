@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/imgflo/imgflo
+CLANDRO_PKG_DESCRIPTION="HTTP image processing server & Flowhub.io compatible runtime"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.2
+CLANDRO_PKG_REVISION=9
+CLANDRO_PKG_SRCURL=https://github.com/imgflo/imgflo/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=4dd5fc9d34f3cfc294fd69a14d50ed5401abeb829132f1b1ac316e28223fc393
+CLANDRO_PKG_DEPENDS="babl, gegl, glib, json-glib, libpng, libsoup"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"

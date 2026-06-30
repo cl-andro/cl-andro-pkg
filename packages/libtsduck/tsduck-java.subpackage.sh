@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="share/tsduck/java/"
+CLANDRO_SUBPKG_DESCRIPTION="Java bindings for TSDuck"
+CLANDRO_SUBPKG_DEPENDS="openjdk-21"

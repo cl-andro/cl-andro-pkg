@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE="https://invent.kde.org/frameworks/kunitconversion"
+CLANDRO_PKG_DESCRIPTION="Support for unit conversion"
+CLANDRO_PKG_LICENSE="LGPL-2.0-only, LGPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.26.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kunitconversion-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=94404453011eec373f858ef4a58091d24fbadbb90f96bbbf470c098646d9675e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="kf6-ki18n, libc++, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt6-qttools"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_PYTHON_BINDINGS=OFF
+-DCMAKE_SYSTEM_NAME=Linux
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+"

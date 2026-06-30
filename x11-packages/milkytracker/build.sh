@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE="https://milkytracker.github.io"
+CLANDRO_PKG_DESCRIPTION="music creation tool inspired by Fast Tracker 2"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.05.01"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://github.com/milkytracker/MilkyTracker/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=c487fccf6c97c483f5a624c3a408377393fa45a27cca27323425ad71ee689e16
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, sdl2 | sdl2-compat, zlib"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="sdl2-compat"

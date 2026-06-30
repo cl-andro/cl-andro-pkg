@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 pixmap library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.5.19"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXpm-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=ad3576d689221a39dc728f0e0dc02ca7bb6a0d724c9a77fd1bfa1e9af83be900
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxext, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+ac_cv_path_XPM_PATH_COMPRESS=$CLANDRO_PREFIX/bin/compress
+ac_cv_path_XPM_PATH_UNCOMPRESS=$CLANDRO_PREFIX/bin/uncompress
+ac_cv_path_XPM_PATH_GZIP=$CLANDRO_PREFIX/bin/gzip
+"

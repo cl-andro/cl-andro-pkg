@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://lv2plug.in/
+CLANDRO_PKG_DESCRIPTION="A plugin standard for audio systems"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.18.10
+CLANDRO_PKG_REVISION=7
+CLANDRO_PKG_SRCURL="https://lv2plug.in/spec/lv2-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=78c51bcf21b54e58bb6329accbb4dae03b2ed79b520f9a01e734bd9de530953f
+CLANDRO_PKG_DEPENDS="libxml2, libxslt, python, sord, python-pip, python-lxml"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="-Dplugins=disabled"
+CLANDRO_PKG_PYTHON_TARGET_DEPS="pygments, rdflib"

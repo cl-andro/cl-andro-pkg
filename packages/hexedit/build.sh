@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE=http://rigaux.org/hexedit.html
+CLANDRO_PKG_DESCRIPTION="view and edit files in hexadecimal or in ASCII"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.6
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/pixel/hexedit/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=598906131934f88003a6a937fab10542686ce5f661134bc336053e978c4baae3
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_pre_configure() {
+	./autogen.sh
+}

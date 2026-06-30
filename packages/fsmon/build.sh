@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/nowsecure/fsmon
+CLANDRO_PKG_DESCRIPTION="Filesystem monitor with fanotify and inotify backends"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.8.8"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/nowsecure/fsmon/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=b7f9a7310d7721c58e6e5bc432c5b2099be55b374ab9bf5f639420d2b9e0ab0a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_make() {
+	make FANOTIFY_CFLAGS="-DHAVE_FANOTIFY=1 -DHAVE_SYS_FANOTIFY=0"
+}

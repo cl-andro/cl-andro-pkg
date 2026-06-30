@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X.Org authorization settings program"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.5"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xauth-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=a4000e2f441facebf569026bedecc23ba262cc6927be52070abe0002625cfbe0
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxau, libxext, libxmu"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

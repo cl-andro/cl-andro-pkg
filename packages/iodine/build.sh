@@ -1,0 +1,18 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=http://code.kryo.se/iodine
+CLANDRO_PKG_DESCRIPTION="Tunnel IPv4 data through a DNS server"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.8.0
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://code.kryo.se/iodine/iodine-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=546e92cf8617f7970ea81c850b1063eb189c68c406d0c6a67e02c55e72e714c6
+CLANDRO_PKG_DEPENDS="net-tools, zlib"
+CLANDRO_PKG_EXTRA_MAKE_ARGS="prefix=$CLANDRO_PREFIX"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_pre_configure() {
+	CPPFLAGS+=" -DANDROID"
+	CFLAGS+=" $CPPFLAGS"
+	LDFLAGS+=" -lz"
+}

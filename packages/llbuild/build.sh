@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/swiftlang/swift-llbuild
+CLANDRO_PKG_DESCRIPTION="A low-level build system, used by the Swift Package Manager"
+CLANDRO_PKG_LICENSE="Apache-2.0, NCSA"
+CLANDRO_PKG_MAINTAINER="@finagolfin"
+CLANDRO_PKG_VERSION=6.2.1
+CLANDRO_PKG_SRCURL=https://github.com/swiftlang/swift-llbuild/archive/refs/tags/swift-${CLANDRO_PKG_VERSION}-RELEASE.tar.gz
+CLANDRO_PKG_SHA256=fdc26af47b53779776f1294f674886c774636ef0b0b1b2c2ed90f9626bd018ed
+CLANDRO_PKG_DEPENDS="libc++, libandroid-spawn, libsqlite"
+CLANDRO_PKG_NO_STATICSPLIT=true

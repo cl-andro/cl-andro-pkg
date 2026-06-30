@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Server access control program for X"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.10"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/app/xhost-$CLANDRO_PKG_VERSION.tar.xz
+CLANDRO_PKG_SHA256=a8afd70059479c712948b895e41c35a4a8bfcede3ba2d5a4b855c88bbb725be1
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxmu"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

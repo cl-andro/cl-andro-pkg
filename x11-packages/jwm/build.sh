@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=http://joewing.net/projects/jwm/
+CLANDRO_PKG_DESCRIPTION="Joe's Window Manager is a light-weight X11 window manager"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="Joshua Kahn <tom@termux.dev>"
+CLANDRO_PKG_VERSION="2.4.6"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/joewing/jwm/releases/download/v${CLANDRO_PKG_VERSION}/jwm-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=b5871ec28317594b3fa22b83ed5524cc911d498c455eaab3ae68def195dd802d
+CLANDRO_PKG_DEPENDS="libcairo, libjpeg-turbo, libpng, librsvg, libxext, libxinerama, libxmu, libxpm, libxrender, pango"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true

@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="lib/weechat/plugins/lua.so"
+CLANDRO_SUBPKG_DESCRIPTION="WeeChat Lua Plugin"
+CLANDRO_SUBPKG_DEPENDS="lua53"

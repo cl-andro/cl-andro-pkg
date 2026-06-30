@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://aerc-mail.org/
+CLANDRO_PKG_DESCRIPTION="A pretty good email client"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.21.0"
+CLANDRO_PKG_SRCURL=https://git.sr.ht/~rjarry/aerc/archive/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=3f1469bbaea982fc58352f2682932ecc2fb50c705994d96b2343e771747745a7
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="LDFLAGS="
+CLANDRO_PKG_AUTO_UPDATE=true
+
+clandro_step_pre_configure() {
+	clandro_setup_golang
+}

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://sourceforge.net/projects/gpg-crypter/
+CLANDRO_PKG_DESCRIPTION="A graphical front-end to GnuPG(GPG) using the GTK3 toolkit and libgpgme"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.1
+CLANDRO_PKG_REVISION=27
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/gpg-crypter/gpg-crypter-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=1f7e2b27bf4a27ecbb07bce9cd40d1c08477a3bd065ba7d1a75d1732e4bdc023
+CLANDRO_PKG_DEPENDS="glib, gpgme, gtk3, pinentry-gnome3"
+CLANDRO_PKG_RM_AFTER_INSTALL="lib/locale"

@@ -1,0 +1,67 @@
+name: Forge curl (aarch64)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-curl:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cl-andro/package-builder:latest
+      options: --privileged
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_PAT }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup directories
+        run: |
+          sudo mkdir -p /data/data/com.zk.clandro/files/usr
+          sudo mkdir -p /data/data/com.zk.clandro/files/home
+          sudo chown -R builder:builder /data/data/com.zk.clandro
+
+      - name: Install NDK
+        run: |
+          export HOME=/home/builder
+          ./scripts/setup-android-sdk.sh
+
+      - name: Build curl + deps
+        run: |
+          export HOME=/home/builder
+
+          # curl dependency chain
+          ./build-package.sh -I -a aarch64 ca-certificates
+          ./build-package.sh -I -a aarch64 zlib
+          ./build-package.sh -I -a aarch64 openssl
+          ./build-package.sh -I -a aarch64 libssh2
+          ./build-package.sh -I -a aarch64 libnghttp2
+          ./build-package.sh -I -a aarch64 libnghttp3
+          ./build-package.sh -I -a aarch64 brotli
+          ./build-package.sh -I -a aarch64 libngtcp2
+          ./build-package.sh -I -a aarch64 libcurl
+
+      - name: Sanitize filenames
+        if: success()
+        run: |
+          for f in output/*:*.deb; do
+            [ -e "$f" ] && mv "$f" "$(echo "$f" | tr ':' '_')"
+          done
+
+      - name: Upload artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cl-andro-curl
+          path: output/*.deb
+
+      - name: Publish & Sign
+        if: success()
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          ./scripts/publish-repo-ci.sh

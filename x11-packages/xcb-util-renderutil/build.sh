@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xcb.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Utility libraries for XC Binding - Convenience functions for the Render extension"
+CLANDRO_PKG_LICENSE="HPND, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.3.10
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xcb.freedesktop.org/dist/xcb-util-renderutil-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=3e15d4f0e22d8ddbfbb9f5d77db43eacd7a304029bf25a6166cc63caa96d04ba
+CLANDRO_PKG_DEPENDS="libxcb"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

@@ -1,0 +1,8 @@
+CLANDRO_PKG_HOMEPAGE=https://drobilla.net/software/serd.html
+CLANDRO_PKG_DESCRIPTION="A lightweight C library for RDF syntax"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.32.8"
+CLANDRO_PKG_SRCURL=https://download.drobilla.net/serd-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=f47259bc38ba553b0deb8b6dab6b5b73d3630469a7c9439ccdca80e06d7c1ece
+CLANDRO_PKG_AUTO_UPDATE=true

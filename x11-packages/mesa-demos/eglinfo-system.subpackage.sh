@@ -1,0 +1,6 @@
+CLANDRO_SUBPKG_INCLUDE="
+bin/eglinfo-system
+opt/eglinfo-system/
+"
+CLANDRO_SUBPKG_DESCRIPTION="eglinfo program for system EGL library"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false

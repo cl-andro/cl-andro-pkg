@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Print contents of X events"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.6"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/app/xev-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=61e1c5e008ac9973aca7cdddf36e9df7410e77083b030eb04f4dc737c51807d7
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxrandr"

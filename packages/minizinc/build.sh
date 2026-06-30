@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/MiniZinc/libminizinc"
+CLANDRO_PKG_DESCRIPTION="A medium-level constraint modelling language"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="MPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.9.7"
+CLANDRO_PKG_SRCURL="https://github.com/MiniZinc/libminizinc/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=bb04d783dda4bba58de4004afd51d65b1fa4e8d9714c88c129cac312e267152e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, zlib, gecode"

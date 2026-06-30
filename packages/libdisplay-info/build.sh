@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://emersion.pages.freedesktop.org/libdisplay-info/
+CLANDRO_PKG_DESCRIPTION="EDID and DisplayID library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.3.0"
+CLANDRO_PKG_SRCURL=https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/${CLANDRO_PKG_VERSION}/downloads/libdisplay-info-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=6ae77cd937f9cf7d1321d35c116062c4911e8447010a6a713ac4286f7a9d5987
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_DEPENDS="hwdata"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/tsujan/FeatherPad
+CLANDRO_PKG_DESCRIPTION="Lightweight Qt Plain-Text Editor"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.6.3"
+CLANDRO_PKG_SRCURL=https://github.com/tsujan/FeatherPad/releases/download/V${CLANDRO_PKG_VERSION}/FeatherPad-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=f20a2e1b82524d181c97bb23d1b643ae374b9257a8c2c95bcaf0d0c940a2c9ee
+CLANDRO_PKG_DEPENDS="hunspell, libc++, libx11, qt6-qtbase, qt6-qtsvg"
+CLANDRO_PKG_RECOMMENDS="hicolor-icon-theme"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"

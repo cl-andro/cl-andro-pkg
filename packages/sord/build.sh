@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://drobilla.net/software/sord.html
+CLANDRO_PKG_DESCRIPTION="A lightweight C library for storing RDF data in memory"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.16.22"
+CLANDRO_PKG_SRCURL=https://download.drobilla.net/sord-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=bb23b34b216579136795d518cffa73d91cf205594ce9accebfd408afb839173f
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="pcre2, serd, libzix"

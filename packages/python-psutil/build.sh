@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/giampaolo/psutil
+CLANDRO_PKG_DESCRIPTION="Cross-platform process and system utilities module for Python"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="7.2.2"
+CLANDRO_PKG_SRCURL="https://github.com/giampaolo/psutil/archive/refs/tags/release-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=38f406bf21acc67e45f414b7980463b2e6e6270ba3616ffd41995d997078cbe6
+CLANDRO_PKG_DEPENDS="python, python-pip"
+CLANDRO_PKG_SETUP_PYTHON=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"

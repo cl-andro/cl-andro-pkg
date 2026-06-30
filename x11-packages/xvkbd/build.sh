@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=http://t-sato.in.coocan.jp/xvkbd/
+CLANDRO_PKG_DESCRIPTION="Virtual keyboard for X window system"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=4.1
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=http://t-sato.in.coocan.jp/xvkbd/xvkbd-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=952d07df0fe1e45286520b7c98b4fd00fd60dbf3e3e8ff61e12c259f76a3bef4
+CLANDRO_PKG_DEPENDS="libx11, libxaw, libxmu, libxt, libxtst"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"
+CLANDRO_PKG_BUILD_IN_SRC=true

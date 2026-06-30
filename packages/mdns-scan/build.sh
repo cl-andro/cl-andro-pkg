@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/alteholz/mdns-scan"
+CLANDRO_PKG_DESCRIPTION="A tool for scanning for mDNS/DNS-SD services published on the local network"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.5
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/alteholz/mdns-scan/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=fa830d91b993d15f8a463c8dd68f7106f0dded87928bec36074de934c2c52f73
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true

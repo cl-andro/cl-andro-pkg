@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_DESCRIPTION="Programs for manipulating HEIF (HEIC/AVIF) image files"
+CLANDRO_SUBPKG_INCLUDE="bin/ share/man/man1/"
+CLANDRO_SUBPKG_LICENSE="MIT"
+CLANDRO_SUBPKG_LICENSE_FILE="examples/COPYING"
+CLANDRO_SUBPKG_DEPENDS="libjpeg-turbo, libpng"

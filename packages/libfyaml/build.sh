@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://pantoniou.github.io/libfyaml/
+CLANDRO_PKG_DESCRIPTION="Fully feature complete YAML parser and emitter"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9.6"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/pantoniou/libfyaml/releases/download/v${CLANDRO_PKG_VERSION}/libfyaml-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=a59cc3331e2eb903ec36933ad52a45888041cac31e44f553a00511131242c483
+CLANDRO_PKG_AUTO_UPDATE=true

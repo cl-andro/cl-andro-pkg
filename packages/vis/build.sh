@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.brain-dump.org/projects/vis/
+CLANDRO_PKG_DESCRIPTION="Modern, legacy free, simple yet efficient vim-like editor"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9-p20250111"
+_COMMIT=b7ec2672d626e964da70cda46b132a8306add993
+CLANDRO_PKG_SRCURL="https://github.com/martanne/vis/archive/$_COMMIT.zip"
+CLANDRO_PKG_SHA256=f3839581663071952c273cfc48762a3d343d5f8ac2dd7a8bceb8df4e82d89607
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="lua55, libunibilium, libtermkey, lua-lpeg, ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true

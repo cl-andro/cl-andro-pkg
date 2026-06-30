@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://www.tcpdump.org
+CLANDRO_PKG_DESCRIPTION="Library for network traffic capture"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.10.5
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://www.tcpdump.org/release/libpcap-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=84fa89ac6d303028c1c5b754abff77224f45eca0a94eb1a34ff0aa9ceece3925
+CLANDRO_PKG_BREAKS="libpcap-dev"
+CLANDRO_PKG_REPLACES="libpcap-dev"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--with-pcap=linux --without-libnl"
+CLANDRO_PKG_RM_AFTER_INSTALL="bin/pcap-config share/man/man1/pcap-config.1"

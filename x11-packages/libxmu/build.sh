@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 miscellaneous micro-utility library"
+CLANDRO_PKG_LICENSE="MIT, HPND, ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.3.1"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXmu-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=81a99e94c4501e81c427cbaa4a11748b584933e94b7a156830c3621256857bc4
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxext, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

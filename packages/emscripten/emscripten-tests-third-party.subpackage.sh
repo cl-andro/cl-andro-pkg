@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_DESCRIPTION="Emscripten third party test suite files"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="opt/emscripten/test/third_party"

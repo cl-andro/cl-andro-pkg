@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://mujs.com/
+CLANDRO_PKG_DESCRIPTION="A lightweight Javascript interpreter designed for embedding in other software"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.3.9"
+CLANDRO_PKG_SRCURL="https://mujs.com/downloads/mujs-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="readline"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="HAVE_READLINE=yes"
+
+clandro_step_pre_configure() {
+	CFLAGS+=" $CPPFLAGS"
+}

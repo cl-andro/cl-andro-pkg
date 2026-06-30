@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/kraxarn/spotify-qt
+CLANDRO_PKG_DESCRIPTION="Lightweight Spotify client using Qt"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.0.4"
+CLANDRO_PKG_SRCURL=https://github.com/kraxarn/spotify-qt/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=10656f4c980c8d4b90f11879a6a58fe542e8b0ef1212297a700bcde3d9a6e396
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, qt6-qtbase, qt6-qtsvg"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qtbase-cross-tools"

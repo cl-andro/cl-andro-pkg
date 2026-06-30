@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/xiph/libopusenc
+CLANDRO_PKG_DESCRIPTION="High-level API for encoding .opus files"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.2.1
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://archive.mozilla.org/pub/opus/libopusenc-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=8298db61a8d3d63e41c1a80705baa8ce9ff3f50452ea7ec1c19a564fe106cbb9
+CLANDRO_PKG_DEPENDS="libopus"
+CLANDRO_PKG_BREAKS="libopusenc-dev"
+CLANDRO_PKG_REPLACES="libopusenc-dev"

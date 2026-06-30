@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://ccrypt.sourceforge.net/
+CLANDRO_PKG_DESCRIPTION="Secure encryption and decryption of files and streams utility"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.11
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://ccrypt.sourceforge.net/download/$CLANDRO_PKG_VERSION/ccrypt-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=b19c47500a96ee5fbd820f704c912f6efcc42b638c0a6aa7a4e3dc0a6b51a44f
+CLANDRO_PKG_DEPENDS="libcrypt"

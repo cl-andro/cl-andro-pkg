@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/aperezdc/signify
+CLANDRO_PKG_DESCRIPTION="Lightweight cryptographic signing and verifying tool"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="32"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/aperezdc/signify/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=48cfd7bfe55be01909b37e78045f240b950ea51c954bab205bcdcddc0492dca4
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libbsd"
+CLANDRO_PKG_BUILD_DEPENDS="libbsd"
+CLANDRO_PKG_BUILD_IN_SRC=true

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/enscript/
+CLANDRO_PKG_DESCRIPTION="Enscript converts ASCII text files to PostScript, HTML, RTF, ANSI and overstrikes"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.6.6
+CLANDRO_PKG_REVISION=13
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/enscript/enscript-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=6d56bada6934d055b34b6c90399aa85975e66457ac5bf513427ae7fc77f5c0bb
+CLANDRO_PKG_DEPENDS="cups, perl"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS=" --sysconfdir=$CLANDRO_PREFIX/etc/enscript"

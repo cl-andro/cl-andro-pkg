@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://gstreamer.freedesktop.org/modules/gst-libav.html
+CLANDRO_PKG_DESCRIPTION="GStreamer Libav plug-in contains one plugin with a set of elements using the Libav library code"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.28.2"
+CLANDRO_PKG_SRCURL=https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=45ba65535870aa7c026119d2e90b35dc760e1cf6f50bffbfe8d71223a3043a4e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="ffmpeg, glib, gst-plugins-base, gstreamer"

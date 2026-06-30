@@ -1,0 +1,8 @@
+CLANDRO_SUBPKG_DESCRIPTION="Rust std for target wasm32-unknown-unknown"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_BREAKS="rust-std-wasm32 (<< 1.74.1-1)"
+CLANDRO_SUBPKG_REPLACES="rust-std-wasm32 (<< 1.74.1-1)"
+CLANDRO_SUBPKG_INCLUDE="
+lib/rustlib/wasm32-unknown-unknown
+"

@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://wiki.gnome.org/Projects/DevilsPie
+CLANDRO_PKG_DESCRIPTION="Utility for matching X11 windows and performing actions on them"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.23
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=http://deb.debian.org/debian/pool/main/d/devilspie/devilspie_${CLANDRO_PKG_VERSION}.orig.tar.xz
+CLANDRO_PKG_SHA256=2dd9d4b7424ac999f20c214b0ff71e8c5836d97003d7a8a7391105cd16d36deb
+CLANDRO_PKG_DEPENDS="libx11, gettext, glib, gtk3, libwnck"

@@ -1,0 +1,19 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/flexible-collision-library/fcl"
+CLANDRO_PKG_DESCRIPTION="Flexible collision library"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="Pooya Moradi <pvonmoradi@gmail.com>"
+CLANDRO_PKG_VERSION="0.7.0"
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL="https://github.com/flexible-collision-library/fcl/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=90409e940b24045987506a6b239424a4222e2daf648c86dd146cbcb692ebdcbc
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_FORCE_CMAKE=true
+CLANDRO_PKG_BUILD_DEPENDS="eigen"
+CLANDRO_PKG_DEPENDS="libandroid-support, libc++, libccd, octomap"
+CLANDRO_PKG_BUILD_DEPENDS="octomap-static"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DFCL_STATIC_LIBRARY=OFF
+-DFCL_USE_HOST_NATIVE_ARCH=OFF
+-DFCL_WITH_OCTOMAP=ON
+"

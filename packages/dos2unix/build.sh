@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://waterlan.home.xs4all.nl/dos2unix.html
+CLANDRO_PKG_DESCRIPTION="Converts between DOS and Unix text files"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_LICENSE_FILE="COPYING.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="7.5.4"
+CLANDRO_PKG_SRCURL="https://waterlan.home.xs4all.nl/dos2unix/dos2unix-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=f811a2b9e4a0c936c61ef7c1732993d1820e5cf011f4d93861885ccb8101ca21
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_DEPENDS="libandroid-support"

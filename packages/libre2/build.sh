@@ -1,0 +1,22 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/google/re2
+CLANDRO_PKG_DESCRIPTION="A regular expression library"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2025-11-05"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/google/re2/releases/download/${CLANDRO_PKG_VERSION//./-}/re2-${CLANDRO_PKG_VERSION//./-}.tar.gz
+CLANDRO_PKG_SHA256=87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="abseil-cpp, libc++"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="-DBUILD_SHARED_LIBS=ON"
+
+clandro_step_post_get_source() {
+	# Do not forget to bump revision of reverse dependencies and rebuild them
+	# after SOVERSION is changed.
+	local _SOVERSION=11
+
+	local v=$(sed -E -n 's/^SONAME=([0-9]+)$/\1/p' Makefile)
+	if [ "${_SOVERSION}" != "${v}" ]; then
+		clandro_error_exit "SOVERSION guard check failed."
+	fi
+}

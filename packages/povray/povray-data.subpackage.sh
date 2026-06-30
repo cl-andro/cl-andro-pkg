@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_INCLUDE="share/povray-*/"
+CLANDRO_SUBPKG_DESCRIPTION="Platform-independent data for povray"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_BREAKS="povray (<< 3.8.0-beta.2-2)"
+CLANDRO_SUBPKG_REPLACES="povray (<< 3.8.0-beta.2-2)"

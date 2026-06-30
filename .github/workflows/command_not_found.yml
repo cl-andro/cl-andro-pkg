@@ -1,0 +1,33 @@
+name: Command Not Found Rebuild
+
+on:
+  schedule:
+    - cron: "0 4 * * 0" # Runs at 04:00am UTC every Sunday
+  workflow_dispatch:
+
+permissions: {} # none
+
+jobs:
+  rebuild-command-not-found:
+    permissions:
+      issues: write
+      contents: write
+    if: github.repository == 'cl-andro/clandro-pkg'
+    runs-on: ubuntu-slim
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.CL_ANDRO_PAT }}
+      - name: Revbump main/command-not-found
+        env:
+          GITHUB_TOKEN: ${{ secrets.CL_ANDRO_PAT }}
+        run: |
+          git config --global user.name "cl-andro-packages-bot"
+          git config --global user.email "bot@cl-andro.com"
+
+          ./scripts/bin/revbump command-not-found
+          git add .
+          git commit -m "rebuild(main/command-not-found): to update database"
+          git push

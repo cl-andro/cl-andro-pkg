@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Display information utility for X"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.4.0"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/app/xdpyinfo-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=dc1de6e6e091ed46c4837b0ae9811e8182f7be0d2af638cab3e530ff081a48b6
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxcb, libxcomposite, libxext, libxi, libxinerama, libxrender, libxtst, libxxf86dga, libxxf86vm"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

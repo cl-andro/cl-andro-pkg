@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/baskerville/sxhkd"
+CLANDRO_PKG_DESCRIPTION="Simple X hotkey daemon"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.6.3"
+CLANDRO_PKG_SRCURL="https://github.com/baskerville/sxhkd/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=9d7a64d73f7114a24ff93a35a2662afd9807e0df9ffbfabd24230b4872503fcb
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libxcb, xcb-util-keysyms"
+CLANDRO_PKG_BUILD_DEPENDS="xcb-util"
+CLANDRO_PKG_BUILD_IN_SRC=true

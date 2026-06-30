@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/alexdantas/nSnake
+CLANDRO_PKG_DESCRIPTION="The classic snake game with textual interface"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.0.1
+CLANDRO_PKG_REVISION=7
+CLANDRO_PKG_SRCURL=https://github.com/alexdantas/nSnake/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=7240dafe35e17b01134591d7ae8f09f5a375cded8b01e43ba97ca3610a09ea61
+CLANDRO_PKG_DEPENDS="libc++, ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_GROUPS="games"

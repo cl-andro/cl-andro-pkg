@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://sourceforge.net/projects/opencore-amr/
+CLANDRO_PKG_DESCRIPTION="VisualOn AMR-WB encoder library"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_LICENSE_FILE="COPYING"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.1.3
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://sourceforge.net/projects/opencore-amr/files/vo-amrwbenc/vo-amrwbenc-${CLANDRO_PKG_VERSION}.tar.gz/download
+CLANDRO_PKG_SHA256=5652b391e0f0e296417b841b02987d3fd33e6c0af342c69542cbb016a71d9d4e

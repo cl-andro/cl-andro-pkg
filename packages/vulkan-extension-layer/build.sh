@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/KhronosGroup/Vulkan-ExtensionLayer
+CLANDRO_PKG_DESCRIPTION="Vulkan Extension Layer"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.4.350"
+CLANDRO_PKG_SRCURL="https://github.com/KhronosGroup/Vulkan-ExtensionLayer/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=b4eaf5f96d852007681c4f5def4b1fd5f1d8e104e6b057183a59b38e2ce6bdec
+CLANDRO_PKG_DEPENDS="libc++, vulkan-loader"
+CLANDRO_PKG_BUILD_DEPENDS="libwayland, libx11, libxcb, libxrandr, vulkan-headers (=${CLANDRO_PKG_VERSION}), vulkan-utility-libraries (=${CLANDRO_PKG_VERSION})"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="vulkan-loader"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="v\d+\.\d+\.\d+"
+CLANDRO_PKG_UPDATE_VERSION_SED_REGEXP="s/v//"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_TESTS=OFF
+-DVULKAN_HEADERS_INSTALL_DIR=${CLANDRO_PREFIX}
+"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=http://www.littlecms.com/
+CLANDRO_PKG_DESCRIPTION="Color management library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.19.1"
+CLANDRO_PKG_SRCURL=https://github.com/mm2/Little-CMS/archive/refs/tags/lcms${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=267705e278e2f7c2fb886c259dadcbaeb2be52748bcbc71c79f08aacacb7a709
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_METHOD=repology
+CLANDRO_PKG_BREAKS="littlecms-dev"
+CLANDRO_PKG_REPLACES="littlecms-dev"

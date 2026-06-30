@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xcb.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Utility libraries for XC Binding - client and window-manager helpers for ICCCM"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.2
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xcb.freedesktop.org/dist/xcb-util-wm-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=62c34e21d06264687faea7edbf63632c9f04d55e72114aa4a57bb95e4f888a0b
+CLANDRO_PKG_DEPENDS="libxcb"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

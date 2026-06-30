@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://pybind11.readthedocs.io/
+CLANDRO_PKG_DESCRIPTION="A lightweight header-only library that exposes C++ types in Python and vice versa"
+CLANDRO_PKG_LICENSE="BSD"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.0.4"
+CLANDRO_PKG_SRCURL="https://github.com/pybind/pybind11/archive/refs/tags/v${CLANDRO_PKG_VERSION}/pybind11-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=74b6a2c2b4573a400cafb6ecbf60c98df300cd3d0041296b913d02b2cbbb2676
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="python"
+CLANDRO_PKG_BUILD_DEPENDS="boost, eigen"
+CLANDRO_PKG_PYTHON_COMMON_BUILD_DEPS="setuptools"
+CLANDRO_PKG_CMAKE_BUILD="Unix Makefiles"

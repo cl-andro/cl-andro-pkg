@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE="https://invent.kde.org/plasma/kdecoration"
+CLANDRO_PKG_DESCRIPTION="Plugin-based library to create window decorations"
+CLANDRO_PKG_LICENSE="LGPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.6.4"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/plasma/${CLANDRO_PKG_VERSION}/kdecoration-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=20d9424a018fabbf62987bc138741068ae2384f3128a61f23d906ff4f42a5505
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="kf6-ki18n, libc++, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+"

@@ -1,0 +1,10 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=https://github.com/wiire-a/pixiewps
+CLANDRO_PKG_DESCRIPTION="An offline Wi-Fi Protected Setup brute-force utility"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.4.2
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/wiire-a/pixiewps/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c73ffd58c461a88504cca36e5a29981dc68b78f8fdd31d7c546bc204fad7c435
+CLANDRO_PKG_BUILD_IN_SRC=true

@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/tareksander/clandro-gui-bash"
+CLANDRO_PKG_DESCRIPTION="A bash library for Termux:GUI"
+CLANDRO_PKG_LICENSE="MPL-2.0"
+CLANDRO_PKG_MAINTAINER="@tareksander"
+CLANDRO_PKG_VERSION="0.1.2"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/tareksander/clandro-gui-bash/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=e915af020b8c32b9f26ccdff839befb1d8eb7cc231363c6d96868606b71dc8b2
+CLANDRO_PKG_HAS_DEBUG=false
+CLANDRO_PKG_DEPENDS="jq"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"

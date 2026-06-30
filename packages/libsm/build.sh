@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 Session Management library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.6"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libSM-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=be7c0abdb15cbfd29ac62573c1c82e877f9d4047ad15321e7ea97d1e43d835be
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libice, libuuid"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros, xtrans"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--disable-static
+"

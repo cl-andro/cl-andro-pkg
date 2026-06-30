@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://www.schweikhardt.net/samefile/
+CLANDRO_PKG_DESCRIPTION="Finds files with identical contents, independent of file name"
+CLANDRO_PKG_LICENSE="BSD"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.15
+CLANDRO_PKG_REVISION=6
+CLANDRO_PKG_SRCURL=http://www.schweikhardt.net/samefile-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=26d322e3445ff7273867332311c33a90c8ef037cbd6b19d9468e1742833ea4b6
+CLANDRO_PKG_BUILD_IN_SRC=true

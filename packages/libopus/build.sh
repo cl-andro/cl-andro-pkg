@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.opus-codec.org/
+CLANDRO_PKG_DESCRIPTION="Reference implementation of the Opus codec"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.6.1
+CLANDRO_PKG_SRCURL=https://downloads.xiph.org/releases/opus/opus-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1
+CLANDRO_PKG_BREAKS="libopus-dev"
+CLANDRO_PKG_REPLACES="libopus-dev"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--disable-extra-programs"

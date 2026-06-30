@@ -1,0 +1,19 @@
+CLANDRO_PKG_HOMEPAGE="http://leenissen.dk/fann/wp"
+CLANDRO_PKG_DESCRIPTION="Fast artificial neural network library"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.2.0"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://github.com/libfann/fann/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=f31c92c1589996f97d855939b37293478ac03d24b4e1c08ff21e0bd093449c3c
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag" # As of 2022-08-29T00:33:40 no github releases are available.
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+"
+
+clandro_step_pre_configure() {
+	LDFLAGS+=" -lm"
+}

@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="bin/pzstd"
+CLANDRO_SUBPKG_DESCRIPTION="A Pigz-like tool for Zstandard"
+CLANDRO_SUBPKG_DEPENDS="libc++"

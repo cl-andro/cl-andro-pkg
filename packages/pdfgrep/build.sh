@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://pdfgrep.org/
+CLANDRO_PKG_DESCRIPTION="Command line utility to search text in PDF files"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.2.0"
+CLANDRO_PKG_REVISION=5
+CLANDRO_PKG_SRCURL="https://pdfgrep.org/download/pdfgrep-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=0661e531e4c0ef097959aa1c9773796585db39c72c84a02ff87d2c3637c620cb
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libgcrypt, libgpg-error, pcre2, poppler"

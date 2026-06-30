@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/KDE/trojita
+CLANDRO_PKG_DESCRIPTION="Fast, lightweight and standard-compliant IMAP e-mail client"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION=0.7
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/KDE/trojita/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=7cf5e2202343508904e553db239b02754a98aebf6d2a2d90aa2a089724029a20
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libc++, qt5-qtbase, qt5-qtsvg, qt5-qtwebkit, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="qt5-qtbase-cross-tools, qt5-qttools-cross-tools"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DWITH_TESTS=OFF
+"

@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=https://www.kde.org/
+CLANDRO_PKG_DESCRIPTION="KDE Access to window manager"
+CLANDRO_PKG_LICENSE="LGPL-2.1, LGPL-3.0, MIT"
+CLANDRO_PKG_LICENSE_FILE="\
+LICENSES/CC0-1.0.txt
+LICENSES/LGPL-2.1-only.txt
+LICENSES/LGPL-2.1-or-later.txt
+LICENSES/LGPL-3.0-only.txt
+LICENSES/LicenseRef-KDE-Accepted-LGPL.txt
+LICENSES/MIT.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.116.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kwindowsystem-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=7ec97633752fbde2505b40d762d933b642cae42b6b86d6e801fbdfcd2eeb5334
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, libx11, libxcb, libxfixes, qt5-qtbase, qt5-qtx11extras, xcb-util-keysyms"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt5-qttools-cross-tools"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="-DCMAKE_INSTALL_PREFIX=${CLANDRO_PREFIX}"

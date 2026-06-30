@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://notroj.github.io/neon/
+CLANDRO_PKG_DESCRIPTION="An HTTP/1.1 and WebDAV client library, with a C interface"
+CLANDRO_PKG_LICENSE="GPL-2.0, LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.37.1"
+CLANDRO_PKG_SRCURL=https://notroj.github.io/neon/neon-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=a99b7262525a454d1065cf76dd17240fd808dfc4ef15636990ff83a5d0d9e740
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libexpat, openssl, zlib"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--with-ssl=openssl
+--with-expat
+"

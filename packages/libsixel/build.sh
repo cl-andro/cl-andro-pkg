@@ -1,0 +1,20 @@
+CLANDRO_PKG_HOMEPAGE=https://saitoha.github.io/libsixel/
+CLANDRO_PKG_DESCRIPTION="Encoder/decoder implementation for DEC SIXEL graphics"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.10.5"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/libsixel/libsixel/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=b6654928bd423f92e6da39eb1f40f10000ae2cc6247247fc1882dcff6acbdfc8
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="gdk-pixbuf, glib, libcurl, libgd, libjpeg-turbo, libpng"
+CLANDRO_PKG_BREAKS="libsixel-dev"
+CLANDRO_PKG_REPLACES="libsixel-dev"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-Dgd=enabled
+-Dgdk-pixbuf2=enabled
+-Djpeg=enabled
+-Dlibcurl=enabled
+-Dpng=enabled
+-Dpython=disabled
+"

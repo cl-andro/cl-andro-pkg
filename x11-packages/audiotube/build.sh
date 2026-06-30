@@ -1,0 +1,25 @@
+CLANDRO_PKG_HOMEPAGE="https://apps.kde.org/audiotube/"
+CLANDRO_PKG_DESCRIPTION="AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together"
+CLANDRO_PKG_LICENSE="GPL-2.0-or-later, LGPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="26.04.1"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/release-service/${CLANDRO_PKG_VERSION}/src/audiotube-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=78952113ae9b553a64f1fde1ed532f33871046b1dd40f62688638c1f14bb2216
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="futuresql, gst-plugins-bad, gst-plugins-good, gst-plugins-ugly, kf6-kconfig, kf6-kcoreaddons, kf6-kcrash, kf6-ki18n, kf6-kiconthemes, kf6-kirigami, kf6-kwindowsystem, kf6-purpose, kirigami-addons, libc++, python, python-pip, qt6-qtbase, qt6-qtdeclarative, qt6-qtimageformats, qt6-qtmultimedia, qt6-qtsvg, python-yt-dlp"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, pybind11, qcoro, qcoro-static"
+CLANDRO_PKG_PYTHON_COMMON_BUILD_DEPS="ytmusicapi"
+CLANDRO_PKG_PYTHON_TARGET_DEPS="ytmusicapi"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+-DBUILD_WITH_QT6=ON
+-DPYBIND11_USE_CROSSCOMPILING=ON
+"
+
+clandro_step_pre_configure() {
+	if [[ "$CLANDRO_ON_DEVICE_BUILD" == "false" ]]; then
+		CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" -DKF6_HOST_TOOLING=$CLANDRO_PREFIX/opt/kf6/cross/lib/cmake/"
+	fi
+}

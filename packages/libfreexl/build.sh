@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gaia-gis.it/fossil/freexl
+CLANDRO_PKG_DESCRIPTION="Library to extract valid data from within an Excel (.xls) spreadsheet"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.0.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://www.gaia-gis.it/gaia-sins/freexl-sources/freexl-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=176705f1de58ab7c1eebbf5c6de46ab76fcd8b856508dbd28f5648f7c6e1a7f0
+CLANDRO_PKG_DEPENDS="libiconv, libminizip, libexpat"
+CLANDRO_PKG_GROUPS="science"

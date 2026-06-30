@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/lxqt/lxqt-wayland-session
+CLANDRO_PKG_DESCRIPTION="Files needed for the LXQt Wayland Session"
+CLANDRO_PKG_LICENSE="BSD 3-Clause, GPL-2.0, GPL-3.0, LGPL-2.1, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/lxqt-wayland-session/releases/download/${CLANDRO_PKG_VERSION}/lxqt-wayland-session-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=b9aa41aa0ce3e187877dc6ccef1abb6542faeb1ec4b755cb9f8af716079da68e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_DEPENDS="layer-shell-qt, lxqt-session, qtxdg-tools"
+CLANDRO_PKG_BUILD_DEPENDS="lxqt-build-tools, qt6-qttools"
+CLANDRO_PKG_SUGGESTS="labwc, sway"

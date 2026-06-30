@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 Composite extension library"
+CLANDRO_PKG_LICENSE="HPND, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.7"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXcomposite-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11"
+CLANDRO_PKG_BUILD_DEPENDS="libxfixes, xorgproto, xorg-util-macros"

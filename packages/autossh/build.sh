@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.harding.motd.ca/autossh/
+CLANDRO_PKG_DESCRIPTION="Automatically restart SSH sessions and tunnels"
+CLANDRO_PKG_LICENSE="BSD"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.4g
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://fossies.org/linux/privat/autossh-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=83766463763364a1be56d6bf1a75b40a59302586645bf0c4fa885188cf01ebfc
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_DEPENDS="openssh | dropbear"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--mandir=$CLANDRO_PREFIX/share/man ac_cv_path_ssh=$CLANDRO_PREFIX/bin/ssh"

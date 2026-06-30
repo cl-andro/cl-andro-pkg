@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://manim.community
+CLANDRO_PKG_DESCRIPTION="A community-maintained Python framework for creating mathematical animations"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="Nguyen Khanh @nguynkhn"
+CLANDRO_PKG_VERSION="0.20.1"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://github.com/ManimCommunity/manim/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=384791b838ae5a6f408dcf4eb86e7fe04957fd2910fb26038690457a44204caf
+CLANDRO_PKG_DEPENDS="cmake, ffmpeg, libcairo, pango, xorgproto, python-numpy, python-pillow, python-pip, pycairo, python-scipy, python-skia-pathops"
+CLANDRO_PKG_SUGGESTS="texlive-installer"
+CLANDRO_PKG_PYTHON_COMMON_BUILD_DEPS="poetry"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXCLUDED_ARCHES="arm, i686"

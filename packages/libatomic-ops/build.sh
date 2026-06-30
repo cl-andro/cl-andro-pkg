@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/bdwgc/libatomic_ops
+CLANDRO_PKG_DESCRIPTION="Provides semi-portable access to hardware-provided atomic memory update operations"
+CLANDRO_PKG_LICENSE="GPL-2.0, MIT"
+CLANDRO_PKG_LICENSE_FILE="README.md, LICENSE"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="7.10.0"
+CLANDRO_PKG_SRCURL=https://github.com/bdwgc/libatomic_ops/releases/download/v${CLANDRO_PKG_VERSION}/libatomic_ops-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=0db3ebff755db170f65e74a64ec4511812e9ee3185c232eeffeacd274190dfb0
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"

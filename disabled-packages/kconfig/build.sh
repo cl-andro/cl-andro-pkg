@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.kde.org/
+CLANDRO_PKG_DESCRIPTION="Advanced configuration system (KDE)"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.116.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kconfig-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=2c5de3609273aa167a5c49be42470a3bf87d70fc8565ba6cee3717c00067470e
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, qt5-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

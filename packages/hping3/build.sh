@@ -1,0 +1,19 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=http://www.hping.org/
+CLANDRO_PKG_DESCRIPTION="hping is a command-line oriented TCP/IP packet assembler/analyzer."
+# Same versioning as archlinux:
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.0.0
+CLANDRO_PKG_REVISION=4
+#CLANDRO_PKG_SRCURL=http://www.hping.org/hping3-20051105.tar.gz
+CLANDRO_PKG_SRCURL=https://fossies.org/linux/privat/old/hping3-20051105.tar.gz
+CLANDRO_PKG_SHA256=f5a671a62a11dc8114fa98eade19542ed1c3aa3c832b0e572ca0eb1a5a4faee8
+CLANDRO_PKG_DEPENDS="libandroid-shmem, libpcap, tcl"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_post_configure () {
+	LDFLAGS+=" -Wl,-z,muldefs"
+	export LDFLAGS+=" -landroid-shmem"
+	mkdir -p ${CLANDRO_PREFIX}/share/man/man8
+}

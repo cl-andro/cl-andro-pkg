@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://dotnet.microsoft.com/en-us/
+CLANDRO_PKG_DESCRIPTION="A metapackage for NETStandard.Library 2.1 Targeting Pack"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@truboxl"
+CLANDRO_PKG_VERSION="9.0"
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_DEPENDS="netstandard-targeting-pack-2.1-9.0 | netstandard-targeting-pack-2.1-8.0"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="netstandard-targeting-pack-2.1-9.0, netstandard-targeting-pack-2.1-8.0"
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_EXCLUDED_ARCHES="arm"

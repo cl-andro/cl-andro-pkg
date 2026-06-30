@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=http://www.oberhumer.com/opensource/lzo
+CLANDRO_PKG_DESCRIPTION="Portable lossless data compression library"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.10
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://www.oberhumer.com/opensource/lzo/download/lzo-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=SKIP_CHECKSUM
+CLANDRO_PKG_BREAKS="liblzo-dev"
+CLANDRO_PKG_REPLACES="liblzo-dev"

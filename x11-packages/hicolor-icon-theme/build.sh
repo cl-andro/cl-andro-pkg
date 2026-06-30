@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.freedesktop.org/wiki/Software/icon-theme/
+CLANDRO_PKG_DESCRIPTION="Freedesktop.org Hicolor icon theme"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.18
+CLANDRO_PKG_SRCURL=https://gitlab.freedesktop.org/xdg/default-icon-theme/-/archive/v${CLANDRO_PKG_VERSION}/default-icon-theme-v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9227ec70c6b59a715a18dcedbed590cb08edc9eadb73fb2b0a57034e15c18f36
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE=newest-tag

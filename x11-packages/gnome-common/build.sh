@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnome.org
+CLANDRO_PKG_DESCRIPTION="Common development macros for GNOME"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.18.0
+CLANDRO_PKG_SRCURL=https://download.gnome.org/sources/gnome-common/${CLANDRO_PKG_VERSION%.*}/gnome-common-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=22569e370ae755e04527b76328befc4c73b62bfd4a572499fde116b8318af8cf
+CLANDRO_PKG_DEPENDS="autoconf-archive, intltool, gtk-doc"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--with-autoconf-archive"

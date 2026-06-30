@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://lxqt.github.io
+CLANDRO_PKG_DESCRIPTION="Qt port of volume control of sound server PulseAudio"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/pavucontrol-qt/releases/download/${CLANDRO_PKG_VERSION}/pavucontrol-qt-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=7f813d3029e9f1b66020cf3da143d07196dd8bce01a95bd754489287ca5b6380
+CLANDRO_PKG_DEPENDS="glib, libc++, pulseaudio, pulseaudio-glib, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="lxqt-build-tools, qt6-qttools"
+CLANDRO_PKG_AUTO_UPDATE=true

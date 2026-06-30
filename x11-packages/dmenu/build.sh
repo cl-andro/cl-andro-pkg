@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://tools.suckless.org/dmenu/
+CLANDRO_PKG_DESCRIPTION="Generic menu for X"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.4"
+CLANDRO_PKG_SRCURL=https://dl.suckless.org/tools/dmenu-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=8fbace2a0847aa80fe861066b118252dcc7b4ca0a0a8f3a93af02da8fb6cd453
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="dash, fontconfig, libx11, libxft, libxinerama"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"
+CLANDRO_PKG_BUILD_IN_SRC=true

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://invisible-island.net/byacc/
+CLANDRO_PKG_DESCRIPTION="byacc is generally conceded to be the best yacc variant available"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="20260126"
+CLANDRO_PKG_SRCURL="https://invisible-island.net/archives/byacc/byacc-${CLANDRO_PKG_VERSION}.tgz"
+CLANDRO_PKG_SHA256=b618c5fb44c2f5f048843db90f7d1b24f78f47b07913c8c7ba8c942d3eb24b00
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_BUILD_DEPENDS="groff"
+CLANDRO_PKG_CONFLICTS="bison"

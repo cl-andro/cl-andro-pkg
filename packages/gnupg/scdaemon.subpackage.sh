@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_INCLUDE="libexec/scdaemon share/man/man1/scdaemon.1.gz"
+CLANDRO_SUBPKG_DESCRIPTION="Daemon invoked by gpg to manage smartcards"
+CLANDRO_SUBPKG_DEPENDS="libgcrypt, libksba, libgpg-error, libassuan, libnpth, libusb"
+CLANDRO_SUBPKG_CONFLICTS="gnupg (<< 2.3.3-2)"
+CLANDRO_SUBPKG_REPLACES="gnupg (<< 2.3.3-2)"

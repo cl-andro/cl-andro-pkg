@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE="https://invent.kde.org/plasma/plasma-workspace-wallpapers"
+CLANDRO_PKG_DESCRIPTION="Additional wallpapers for the Plasma Workspace"
+CLANDRO_PKG_LICENSE="LGPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.6.4"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/plasma/${CLANDRO_PKG_VERSION}/plasma-workspace-wallpapers-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=512cf1c9a9440da5f9b4915e515a7d4eb530bb39da1b321848d8d5cfb344d1ad
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt6-qttools"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DBUILD_WITH_QT6=ON
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+"

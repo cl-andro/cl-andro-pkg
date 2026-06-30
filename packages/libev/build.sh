@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=http://software.schmorp.de/pkg/libev.html
+CLANDRO_PKG_DESCRIPTION="Full-featured and high-performance event loop library"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=4.33
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://fossies.org/linux/misc/libev-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=507eb7b8d1015fbec5b935f34ebed15bf346bed04a11ab82b8eee848c4205aea
+CLANDRO_PKG_BREAKS="libev-dev"
+CLANDRO_PKG_REPLACES="libev-dev"

@@ -1,0 +1,18 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=https://github.com/wfeldt/libx86emu
+CLANDRO_PKG_DESCRIPTION="x86 emulation library"
+CLANDRO_PKG_LICENSE="HPND"
+CLANDRO_PKG_LICENSE_FILE="LICENSE, LICENSE_INFO"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.7
+CLANDRO_PKG_SRCURL=https://github.com/wfeldt/libx86emu/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=03754aede79530baa0e862e1aad5527e9c1bd3371736b1ab5a2bc769e4a3d680
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_BREAKS="libx86emu-dev"
+CLANDRO_PKG_REPLACES="libx86emu-dev"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_configure() {
+	echo 'touch changelog' > git2log
+}

@@ -1,0 +1,27 @@
+CLANDRO_SUBPKG_DESCRIPTION=".NET 8.0 SDK"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_DEPENDS="aspnetcore-runtime-8.0, aspnetcore-targeting-pack-8.0, dotnet-apphost-pack-8.0, dotnet-runtime-8.0, dotnet-targeting-pack-8.0, dotnet-templates-8.0, netstandard-targeting-pack-2.1"
+CLANDRO_SUBPKG_INCLUDE=$(cat "${CLANDRO_PKG_TMPDIR}"/dotnet-sdk.txt)
+
+clandro_step_create_subpkg_debscripts() {
+	cat <<- EOF > ./postinst
+	#!${CLANDRO_PREFIX}/bin/sh
+	cat <<- EOL
+
+	====================
+	NET SDK known issues
+	====================
+
+	'export MSBuildDebugEngine=1'
+	variable to capture more build logs.
+
+	Pass '-v n' or '-v d' or '-v diag' to increase
+	log verbosity.
+
+	Initial build only offers Mono runtime.
+	Check logcat for runtime errors.
+	CoreCLR is still WIP.
+
+	EOL
+	EOF
+}

@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://libharu.org/
+CLANDRO_PKG_DESCRIPTION="Free, cross platform, open source library for generating PDF files"
+CLANDRO_PKG_LICENSE="ZLIB"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.6"
+CLANDRO_PKG_SRCURL="https://github.com/libharu/libharu/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=ec8f327520d1d354ce58b5d2af75b64f380cddc522437c169463b39760921348
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libpng, zlib"

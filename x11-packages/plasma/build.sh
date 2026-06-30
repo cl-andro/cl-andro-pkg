@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE="https://kde.org/plasma-desktop/"
+CLANDRO_PKG_DESCRIPTION="Meta package to install KDE Plasma"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=6.6
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="aurorae, breeze, breeze-gtk, kactivitymanagerd, kde-cli-tools, kde-gtk-config, kdecoration, kglobalacceld, kinfocenter, kmenuedit, knighttime, kpipewire, kscreen, ksystemstats, kwayland, kwin-x11, layer-shell-qt, libkscreen, libksysguard, libplasma, milou, ocean-sound-theme, oxygen, oxygen-sounds, plasma-activities, plasma-activities-stats, plasma-browser-integration, plasma-desktop, plasma-integration, plasma-pa, plasma-systemmonitor, plasma-welcome, plasma-workspace, plasma-workspace-wallpapers, print-manager, spectacle, systemsettings, xdg-desktop-portal-kde"
+CLANDRO_PKG_RECOMMENDS="kdeplasma-addons"
+CLANDRO_PKG_SUGGESTS="plasma-sdk"
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

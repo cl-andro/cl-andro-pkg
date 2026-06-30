@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://jackaudio.org/
+CLANDRO_PKG_DESCRIPTION="Official JACK example clients and tools"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_LICENSE="GPL-2.0, GPL-3.0"
+CLANDRO_PKG_VERSION=4
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/jackaudio/jack-example-tools/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=2b1e0dc3cb3b5bfb0423f0aeb21eb611437cf71ee0ace2ca199f05f02705f174
+CLANDRO_PKG_DEPENDS="alsa-lib, jack, libsamplerate, libsndfile"

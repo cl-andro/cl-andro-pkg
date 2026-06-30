@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE="https://codemadness.org/sfeed-simple-feed-parser.html"
+CLANDRO_PKG_DESCRIPTION="Shell-script/crontab oriented feed aggregator and parser utility (curses-based reader included)"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4"
+CLANDRO_PKG_SRCURL="https://codemadness.org/releases/sfeed/sfeed-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=f9503fe9205a8136f76a9b753c6007abad33e2a516807e416a986723db06e879
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_RECOMMENDS="curl"
+CLANDRO_PKG_SUGGESTS="lynx, termux-tools"
+CLANDRO_PKG_BUILD_IN_SRC=true

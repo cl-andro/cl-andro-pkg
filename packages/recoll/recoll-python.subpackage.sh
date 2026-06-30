@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="lib/python*"
+CLANDRO_SUBPKG_DESCRIPTION="Python interface for Recoll"
+CLANDRO_SUBPKG_DEPENDS="python"

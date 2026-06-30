@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/realh/roxterm
+CLANDRO_PKG_DESCRIPTION="ROXTerm is a terminal emulator based on the VTE library"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="3.18.2"
+CLANDRO_PKG_SRCURL=https://github.com/realh/roxterm/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=d20a19abe03798bfc6c9404eb7ce4fbecabf2e1ab527b587aab76d06635a92e7
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="dbus, dbus-glib, glib, gtk3, libcairo, libvte, pango"
+CLANDRO_PKG_BUILD_DEPENDS="xsltproc"
+CLANDRO_PKG_BUILD_IN_SRC=true

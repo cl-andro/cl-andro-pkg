@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://mixxxdj.github.io/libkeyfinder
+CLANDRO_PKG_DESCRIPTION="Musical key detection for digital audio"
+CLANDRO_PKG_LICENSE="GPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.2.8"
+CLANDRO_PKG_SRCURL="https://github.com/mixxxdj/libkeyfinder/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=a54fc6c5ff435bb4b447f175bc97f9081fb5abf0edd5d125e6f5215c8fff4d11
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="fftw, libc++"

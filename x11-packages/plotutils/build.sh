@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://directory.fsf.org/wiki/Plotutils
+CLANDRO_PKG_DESCRIPTION="Set of utilities and libraries for plotting."
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.6
+CLANDRO_PKG_REVISION=33
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/plotutils/plotutils-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=4f4222820f97ca08c7ea707e4c53e5a3556af4d8f1ab51e0da6ff1627ff433ab
+CLANDRO_PKG_DEPENDS="libice, libpng, libsm, libx11, libxaw, libxext, libxmu, libxt, zlib"

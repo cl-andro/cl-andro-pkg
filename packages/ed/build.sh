@@ -1,0 +1,9 @@
+# Contributor: @Neo-Oli
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/ed/
+CLANDRO_PKG_DESCRIPTION="Classic UNIX line editor"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="Oliver Schmidhauser @Neo-Oli"
+CLANDRO_PKG_VERSION="1.22.5"
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/ed/ed-${CLANDRO_PKG_VERSION}.tar.lz
+CLANDRO_PKG_SHA256=56e107ddc2f29dad6690376c15bf9751509e1ee3b8241710e44edbe5c3a158cc
+CLANDRO_PKG_AUTO_UPDATE=true

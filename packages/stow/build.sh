@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/stow/
+CLANDRO_PKG_DESCRIPTION="Tool for managing the installation of multiple software packages into a single directory"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.1"
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/stow/stow-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=2a671e75fc207303bfe86a9a7223169c7669df0a8108ebdf1a7fe8cd2b88780b
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="perl"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/lxqt/qtxdg-tools"
+CLANDRO_PKG_DESCRIPTION="CLI tools for libqtxdg."
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/qtxdg-tools/releases/download/${CLANDRO_PKG_VERSION}/qtxdg-tools-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=f21ba4308eac0effd417d910cc4916df7b6202aaeee777b51bb120f7abc6c5ac
+CLANDRO_PKG_DEPENDS="libc++, libqtxdg, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="lxqt-build-tools, qt6-qttools"
+CLANDRO_PKG_AUTO_UPDATE=true

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://gnupg.org/software/gpgme/index.html"
+CLANDRO_PKG_DESCRIPTION="Qt bindings for GPGME"
+CLANDRO_PKG_LICENSE="GPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.0.0"
+CLANDRO_PKG_SRCURL="https://github.com/gpg/gpgmeqt/archive/refs/tags/gpgmeqt-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256="307572eaf3fe977a6ba28ff41d6573d97de6f008244e787038ffe5ca6b2222da"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP='^gpgmeqt-([0-9.]+)$'
+CLANDRO_PKG_DEPENDS="gpgmepp, libc++, qt6-qtbase"

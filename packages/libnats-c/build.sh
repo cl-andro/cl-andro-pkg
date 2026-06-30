@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://nats-io.github.io/nats.c/
+CLANDRO_PKG_DESCRIPTION="A C client for the NATS messaging system"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.12.0"
+CLANDRO_PKG_SRCURL=https://github.com/nats-io/nats.c/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=06b64d7045fd618c98e5608001b384bdbfa6a17718dba64e732ba72a6f00649b
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libprotobuf-c, openssl"

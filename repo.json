@@ -1,0 +1,9 @@
+{
+  "pkg_format": "debian",
+  "packages": {
+    "name": "clandro-main",
+    "distribution": "stable",
+    "component": "main",
+    "url": "https://cl-andro.github.io/cl-andro-packages"
+  }
+}

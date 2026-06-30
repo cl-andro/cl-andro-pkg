@@ -1,0 +1,6 @@
+CLANDRO_SUBPKG_INCLUDE="bin/calcurse-caldav"
+CLANDRO_SUBPKG_DESCRIPTION="Sync calcurse with remote caldav calendar"
+CLANDRO_SUBPKG_DEPENDS="python, python-pip"
+CLANDRO_SUBPKG_REPLACES="calcurse (<< 4.7.1-1)"
+CLANDRO_SUBPKG_BREAKS="calcurse (<< 4.7.1-1)"
+CLANDRO_SUBPKG_PYTHON_RUNTIME_DEPS="httplib2"

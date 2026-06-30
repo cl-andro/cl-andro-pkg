@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/KDAB/KDDockWidgets"
+CLANDRO_PKG_DESCRIPTION="Dock Widget Framework for Qt"
+CLANDRO_PKG_LICENSE="GPL-2.0, GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/KDAB/KDDockWidgets/releases/download/v${CLANDRO_PKG_VERSION}/kddockwidgets-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=51dbf24fe72e43dd7cb9a289d3cab47112010f1a2ed69b6fc8ac0dff31991ed2
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="fmt, libc++, libspdlog, qt6-qtbase, qt6-qtdeclarative"
+CLANDRO_BUILD_DEPENDS="nlohmann-json"

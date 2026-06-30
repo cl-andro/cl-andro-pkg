@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://mate-session-manager.mate-desktop.dev/
+CLANDRO_PKG_DESCRIPTION="mate-session contains the MATE session manager, as well as a configuration program to choose applications starting on login."
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.28.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/mate-desktop/mate-session-manager/releases/download/v$CLANDRO_PKG_VERSION/mate-session-manager-$CLANDRO_PKG_VERSION.tar.xz
+CLANDRO_PKG_SHA256=d32ce4595ba1da65290777203f2bc82bd973b214a3a04080a1ef5c68990a2d7b
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="dbus, dbus-glib, gdk-pixbuf, glib, gtk3, libcairo, libepoxy, libice, libsm, libx11, libxau, libxcomposite, libxext, libxrender, libxtst, opengl"

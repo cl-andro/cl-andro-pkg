@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_DESCRIPTION="Image output for vnstat"
+CLANDRO_SUBPKG_DEPENDS="libgd"
+CLANDRO_SUBPKG_INCLUDE="bin/vnstati"

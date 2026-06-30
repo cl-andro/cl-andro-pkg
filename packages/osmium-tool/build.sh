@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://osmcode.org/osmium-tool/
+CLANDRO_PKG_DESCRIPTION="A multipurpose command line tool based on the Osmium Library"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_LICENSE_FILE="LICENSE.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.19.0"
+CLANDRO_PKG_SRCURL="https://github.com/osmcode/osmium-tool/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=192713eef894735cf2d0dbeed3f8def67c067198e553de01d4a1f14417a64019
+CLANDRO_PKG_DEPENDS="boost, libbz2, libc++, libexpat, liblz4, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="boost-headers, libosmium, libprotozero, nlohmann-json"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_AUTO_UPDATE=true

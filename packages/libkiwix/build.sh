@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/kiwix/libkiwix
+CLANDRO_PKG_DESCRIPTION="A library that contains a lot of things used by other kiwix programs"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="14.2.0"
+CLANDRO_PKG_SRCURL="https://github.com/kiwix/libkiwix/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=244b69120d132de3079774ee439f9adfb7b556e88b9ef6ce5300f37dfc3737bc
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libcurl, libicu, libmicrohttpd, libpugixml, libxapian, libzim, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="googletest, kainjow-mustache"

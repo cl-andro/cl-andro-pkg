@@ -1,0 +1,19 @@
+CLANDRO_PKG_HOMEPAGE=https://musescore.org/
+CLANDRO_PKG_DESCRIPTION="A music score editor/player"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.6.5"
+CLANDRO_PKG_SRCURL="https://github.com/musescore/MuseScore/archive/refs/tags/v${CLANDRO_PKG_VERSION//\~/-}.tar.gz"
+CLANDRO_PKG_SHA256=c9441c1344d2bd63f86e737e25293fbad532f3edec9380c7d42eab3a8042ced1
+CLANDRO_PKG_DEPENDS="libc++, qt6-qtbase, qt6-qtnetworkauth, qt6-qt5compat, qt6-qtscxml, qt6-qtsvg, libopus, libopusenc, libsndfile, alsa-lib"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qttools"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE=newest-tag
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DCMAKE_PROGRAM_PATH=${CLANDRO_PREFIX}/opt/qt6/cross/bin/;${CLANDRO_PREFIX}/opt/qt6/cross/lib/qt6/bin/
+-DMUE_RUN_LRELEASE=OFF
+-DMUE_COMPILE_USE_SYSTEM_OPUS=TRUE
+-DMUE_COMPILE_USE_SYSTEM_OPUSENC=TRUE
+-DMUSE_ENABLE_UNIT_TESTS=FALSE
+"

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fcitx/fcitx5-unikey
+CLANDRO_PKG_DESCRIPTION="Unikey engine support for Fcitx5"
+CLANDRO_PKG_LICENSE="GPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.1.10"
+CLANDRO_PKG_SRCURL=https://github.com/fcitx/fcitx5-unikey/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=131557bac758b5ed1046779739c91293201d412c0277f1ff087e52d4541ffece
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="fcitx5, fcitx5-qt, libc++, qt6-qtbase"

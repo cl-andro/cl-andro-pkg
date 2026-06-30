@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://libimobiledevice.org/
+CLANDRO_PKG_DESCRIPTION="Library with common code used by the libraries and tools around the libimobiledevice project"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.3.2"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_SRCURL=https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/${CLANDRO_PKG_VERSION}/libimobiledevice-glue-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=6489a3411b874ecd81c87815d863603f518b264a976319725e0ed59935546774
+CLANDRO_PKG_DEPENDS="libplist"

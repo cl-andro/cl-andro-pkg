@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/ros/urdfdom"
+CLANDRO_PKG_DESCRIPTION="Unified Robot Description Format (URDF) parser library and tools"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="Pooya Moradi <pvonmoradi@gmail.com>"
+CLANDRO_PKG_VERSION="6.0.0"
+CLANDRO_PKG_SRCURL="https://github.com/ros/urdfdom/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=3305bb725095c78ca3408a510e11f530cd9bb45229779084695b21b2e693bde9
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libc++, libtinyxml2, urdfdom-headers, console-bridge"
+CLANDRO_PKG_FORCE_CMAKE=true

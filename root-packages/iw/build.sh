@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://wireless.wiki.kernel.org/en/users/documentation/iw
+CLANDRO_PKG_DESCRIPTION="CLI configuration utility for wireless devices"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.17"
+CLANDRO_PKG_SRCURL=https://mirrors.edge.kernel.org/pub/software/network/iw/iw-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=7d182e498289ab39b257da6780d562e415377107f50358ee5b55b8cfe40b1e33
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libnl"
+CLANDRO_PKG_BUILD_IN_SRC=true

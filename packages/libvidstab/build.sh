@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/georgmartius/vid.stab
+CLANDRO_PKG_DESCRIPTION="video stabilization library"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.1"
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/georgmartius/vid.stab/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9001b6df73933555e56deac19a0f225aae152abbc0e97dc70034814a1943f3d4
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+-DSSE2_FOUND=OFF
+"
+
+clandro_step_pre_configure() {
+	LDFLAGS+=" -fopenmp -static-openmp"
+}

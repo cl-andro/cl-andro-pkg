@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://docs.xfce.org/panel-plugins/xfce4-eyes-plugin/start
+CLANDRO_PKG_DESCRIPTION="This plugin adds eyes to the Xfce panel which follow your cursor, similar to the xeyes program."
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="4.7.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://archive.xfce.org/src/panel-plugins/xfce4-eyes-plugin/${CLANDRO_PKG_VERSION%.*}/xfce4-eyes-plugin-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=87f9b978ca75abb3aa5edb1315eb65ef98654a662c14621847ddffe8aa6574ad
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="glib, gdk-pixbuf, gtk3, libxfce4ui, libxfce4util, xfce4-panel"

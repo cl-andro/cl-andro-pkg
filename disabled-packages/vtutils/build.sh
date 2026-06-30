@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fornwall/vtutils
+CLANDRO_PKG_DESCRIPTION="Utilities for testing and working with virtual terminals"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.5
+CLANDRO_PKG_REVISION=5
+CLANDRO_PKG_SRCURL=https://github.com/fornwall/vtutils/releases/download/v$CLANDRO_PKG_VERSION/vtutils-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=ef0b11f9570697f53bcda7a61093f8d472afee2c8551b5b35e9b5b7c1539c2c6
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"

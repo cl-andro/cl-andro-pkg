@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://quassel-irc.org/
+CLANDRO_PKG_DESCRIPTION="Quassel IRC is a modern, cross-platform, distributed IRC client"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.14.0
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/quassel/quassel/releases/download/$CLANDRO_PKG_VERSION/quassel-$CLANDRO_PKG_VERSION.tar.xz
+CLANDRO_PKG_SHA256=090777f37a6ae1057a046d5c2896ce5e4bef2382377e3ba52c63efe6b5fe4e10
+CLANDRO_PKG_DEPENDS="boost, dbus, qt5-qtbase, qt5-qtsvg, qt5-qtx11extras, qt5-qtmultimedia, qt5-qtwebengine, libdbusmenu-qt, libnotify, sqlite, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="boost-headers, qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

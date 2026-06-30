@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="lib/weechat/plugins/perl.so"
+CLANDRO_SUBPKG_DESCRIPTION="WeeChat Perl Plugin"
+CLANDRO_SUBPKG_DEPENDS="perl"

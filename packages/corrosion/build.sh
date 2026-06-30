@@ -1,0 +1,22 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/corrosion-rs/corrosion"
+CLANDRO_PKG_DESCRIPTION="Tool for integrating Rust into an existing CMake project"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.6.1"
+CLANDRO_PKG_SRCURL="https://github.com/corrosion-rs/corrosion/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=e9e95b1ee2bad52681f347993fb1a5af5cce458c5ce8a2636c9e476e4babf8e3
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_RECOMMENDS="cmake, rust"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+="
+-DCORROSION_BUILD_TESTS=OFF
+"
+
+clandro_step_pre_configure() {
+	clandro_setup_rust
+
+	[[ "${CLANDRO_ARCH}" == "arm" ]] && CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" -DCMAKE_ANDROID_ARM_MODE=ON"
+
+	CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" -DRust_CARGO_TARGET=$CARGO_TARGET_NAME"
+}

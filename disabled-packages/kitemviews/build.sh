@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.kde.org/
+CLANDRO_PKG_DESCRIPTION="Set of item views extending the Qt model-view framework (KDE)"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.116.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kitemviews-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=6c0efbf408dab60c58bb13bb3a7488827283a5eea947ef3cfd0fbcb4f09e01eb
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, qt5-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

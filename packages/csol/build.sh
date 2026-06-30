@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/nielssp/csol
+CLANDRO_PKG_DESCRIPTION="A small collection of solitaire games implemented in C using ncurses"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.6.0
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/nielssp/csol/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9fa45da2b73fcb4e58b5e0734c92e5325e664fab95ca31873760244ef9ddedd9
+CLANDRO_PKG_DEPENDS="libandroid-support, ncurses"
+CLANDRO_PKG_CMAKE_BUILD="Unix Makefiles"
+CLANDRO_PKG_GROUPS="games"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+"

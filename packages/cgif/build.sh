@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/dloebl/cgif
+CLANDRO_PKG_DESCRIPTION="A fast and lightweight GIF encoding library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.5.3"
+CLANDRO_PKG_SRCURL=https://github.com/dloebl/cgif/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=dcc7731e974ee77db75df26c99aca4d95f11ca2d267d870d42bce1e0d1e1e75f
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP='\d+(\.\d+)*'

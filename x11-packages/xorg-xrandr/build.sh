@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://xorg.freedesktop.org/"
+CLANDRO_PKG_DESCRIPTION="Primitive command line interface to RandR extension"
+CLANDRO_PKG_LICENSE="HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.5.4"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xrandr-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=2cafccb2aaf2491a4068676117a0d4f90ab307724b96fffc54cd1da953779400
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxrandr"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros, xorgproto"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/xapp-project/xapp-symbolic-icons
+CLANDRO_PKG_DESCRIPTION="A set of symbolic icons for Gtk applications and projects"
+CLANDRO_PKG_LICENSE="GPL-3.0-only, LGPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.9"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://github.com/xapp-project/xapp-symbolic-icons/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=0ebb603eaa34f34d44bc419119595c91785caf0e29a2ad2adaa7fea9cc2e6ebb
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="hicolor-icon-theme, python"

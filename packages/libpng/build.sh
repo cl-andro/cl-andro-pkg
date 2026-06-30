@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=http://www.libpng.org/pub/png/libpng.html
+CLANDRO_PKG_DESCRIPTION="Official PNG reference library"
+CLANDRO_PKG_LICENSE="Libpng"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.6.58"
+CLANDRO_PKG_SRCURL=https://download.sourceforge.net/libpng/libpng-$CLANDRO_PKG_VERSION.tar.xz
+CLANDRO_PKG_SHA256=28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="zlib"
+CLANDRO_PKG_BREAKS="libpng-dev"
+CLANDRO_PKG_REPLACES="libpng-dev"
+CLANDRO_PKG_RM_AFTER_INSTALL="bin/png-fix-itxt bin/pngfix"

@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=http://isync.sourceforge.net
+CLANDRO_PKG_DESCRIPTION="IMAP and MailDir mailbox synchronizer"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.5.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/project/isync/isync/${CLANDRO_PKG_VERSION}/isync-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=28cc90288036aa5b6f5307bfc7178a397799003b96f7fd6e4bd2478265bb22fa
+CLANDRO_PKG_DEPENDS="openssl, zlib"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--without-sasl
+ac_cv_header_db=no
+ac_cv_berkdb4=no
+"

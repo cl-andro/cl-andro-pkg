@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/bison/
+CLANDRO_PKG_DESCRIPTION="General-purpose parser generator"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=3.8.2
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/bison/bison-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=9bba0214ccf7f1079c5d59210045227bcf619519840ebfa80cd3849cff5a5bf2
+CLANDRO_PKG_DEPENDS="m4"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+M4=m4
+ac_cv_have_decl_posix_spawn=no
+ac_cv_header_spawn_h=no
+"
+
+CLANDRO_PKG_RM_AFTER_INSTALL="share/info/dir"
+CLANDRO_PKG_GROUPS="base-devel"

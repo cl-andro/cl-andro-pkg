@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE='https://sourceforge.net/projects/ebook-tools/'
+CLANDRO_PKG_DESCRIPTION='Tools for accessing and converting various ebook file formats'
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.2.2"
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/ebook-tools/ebook-tools-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=cbc35996e911144fa62925366ad6a6212d6af2588f1e39075954973bbee627ae
+CLANDRO_PKG_DEPENDS="convertlit, libxml2, libzip"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+"

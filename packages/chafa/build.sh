@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE="https://hpjansson.org/chafa/"
+CLANDRO_PKG_DESCRIPTION="Image-to-text converter supporting a wide range of symbols, etc."
+CLANDRO_PKG_LICENSE="LGPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.18.2"
+CLANDRO_PKG_SRCURL="https://github.com/hpjansson/chafa/releases/download/${CLANDRO_PKG_VERSION}/chafa-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=0b8d9ba9f347e8b6c0c71878217c9b0e478b4a42aa4babea0bf20840567239c2
+CLANDRO_PKG_DEPENDS="freetype, glib, libavif, libcairo, libheif, libjpeg-turbo, libjxl, librsvg, libtiff, libwebp"
+CLANDRO_PKG_AUTO_UPDATE=true

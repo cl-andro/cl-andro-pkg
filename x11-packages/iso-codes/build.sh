@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://salsa.debian.org/iso-codes-team/iso-codes
+CLANDRO_PKG_DESCRIPTION="Lists of the country, language, and currency names"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.20.1"
+CLANDRO_PKG_SRCURL=https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v${CLANDRO_PKG_VERSION}/iso-codes-v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=2d7d9f6084ab9ce6c534ce71a3dd5144b6e474f3c97616459a88f73f44a64bff
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE=newest-tag
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

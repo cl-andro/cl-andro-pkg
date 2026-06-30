@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://jedisct1.github.io/minisign/
+CLANDRO_PKG_DESCRIPTION="A dead simple tool to sign files and verify signatures"
+CLANDRO_PKG_LICENSE="ISC"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.12"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/jedisct1/minisign/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=796dce1376f9bcb1a19ece729c075c47054364355fe0c0c1ebe5104d508c7db0
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libsodium"

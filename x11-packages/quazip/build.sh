@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://stachenov.github.io/quazip/
+CLANDRO_PKG_DESCRIPTION="Qt/C++ wrapper over minizip library"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_LICENSE_FILE="COPYING"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="1.5"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/stachenov/quazip/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=405b72b6e76c8987ff41a762523b8f64876ba406d8a831d268ee0b63f1369582
+CLANDRO_PKG_DEPENDS="libbz2, libc++, qt6-qtbase, qt6-qt5compat, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qtbase-cross-tools"

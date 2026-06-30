@@ -1,0 +1,21 @@
+CLANDRO_PKG_HOMEPAGE=https://tintin.mudhalla.net
+CLANDRO_PKG_DESCRIPTION="Classic text-based MUD client"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.02.61"
+CLANDRO_PKG_SRCURL=https://github.com/scandum/tintin/releases/download/$CLANDRO_PKG_VERSION/tintin-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=640b4823b6f24ada6d417311bfd6263ab13be2422573c3b4ad4352223b535d88
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="ac_cv_file__dev_ptmx=no"
+CLANDRO_PKG_DEPENDS="pcre, libgnutls, zlib"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"
+
+clandro_step_post_get_source() {
+	CLANDRO_PKG_SRCDIR+="/src"
+	CLANDRO_PKG_BUILDDIR="$CLANDRO_PKG_SRCDIR"
+}
+
+clandro_step_pre_configure() {
+	CFLAGS+=" $CPPFLAGS"
+}

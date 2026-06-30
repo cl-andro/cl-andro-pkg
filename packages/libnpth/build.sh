@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnupg.org/related_software/npth/
+CLANDRO_PKG_DESCRIPTION="New GNU Portable Threads Library"
+CLANDRO_PKG_LICENSE="LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.6
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://www.gnupg.org/ftp/gcrypt/npth/npth-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1
+CLANDRO_PKG_BREAKS="libnpth-dev"
+CLANDRO_PKG_REPLACES="libnpth-dev"

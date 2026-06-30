@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fornwall/utfdecode
+CLANDRO_PKG_DESCRIPTION="Tool for decoding, encoding and debugging unicode"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.3.4
+CLANDRO_PKG_REVISION=7
+CLANDRO_PKG_SRCURL=https://github.com/fornwall/utfdecode/releases/download/v$CLANDRO_PKG_VERSION/utfdecode-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=5fd1473f6cf6bdedeb33569c3b0f6823aceda366c714f6a475e2d28767f99b5a
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag" # As of 2022-11-29T12:17:41 no github releases are available.

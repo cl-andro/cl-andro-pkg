@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://www.lenguajelatino.org/
+CLANDRO_PKG_DESCRIPTION="Lenguaje de programación de código abierto para latinos y de habla hispana"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.3.1
+CLANDRO_PKG_SRCURL=https://github.com/primitivorm/latino-termux/archive/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=7c67875a1db1c1180a7579545d8981c77444cba99c5d4b46664889732765608c
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="readline, pcre2"
+CLANDRO_PKG_FORCE_CMAKE=true

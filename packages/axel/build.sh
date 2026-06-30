@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/axel-download-accelerator/axel
+CLANDRO_PKG_DESCRIPTION="light command line download accelerator"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.17.14"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/axel-download-accelerator/axel/releases/download/v${CLANDRO_PKG_VERSION}/axel-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=575f73f640ee836a95d27b54aeed216c45bc1e914cad92da6f00b907d1c94925
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="openssl"

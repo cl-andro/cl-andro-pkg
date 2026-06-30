@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://cmocka.org/"
+CLANDRO_PKG_DESCRIPTION="cmocka is an unit testing framework for C"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.0.2"
+CLANDRO_PKG_SRCURL="https://gitlab.com/cmocka/cmocka/-/archive/cmocka-${CLANDRO_PKG_VERSION}/cmocka-cmocka-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=bba20112c8293d938b24dd1ca701389a9cf0f2143e8f8e8365e55359637cd2a9
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"

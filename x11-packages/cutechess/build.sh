@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://cutechess.com/
+CLANDRO_PKG_DESCRIPTION="Graphical user interface, command-line interface and library for playing chess"
+CLANDRO_PKG_LICENSE="GPL-3.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/cutechess/cutechess/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=7adf8e8d867c13acf5273b568a39bf9d0d722d3de0141cea953e624f8839b506
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="qt6-qt5compat, qt6-qtbase, qt6-qtsvg"
+CLANDRO_PKG_RECOMMENDS="stockfish"

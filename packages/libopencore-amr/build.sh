@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://sourceforge.net/projects/opencore-amr/
+CLANDRO_PKG_DESCRIPTION="Open source implementation of the Adaptive Multi Rate (AMR) speech codec"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_LICENSE_FILE="LICENSE"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.1.6
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://sourceforge.net/projects/opencore-amr/files/opencore-amr/opencore-amr-${CLANDRO_PKG_VERSION}.tar.gz/download
+CLANDRO_PKG_SHA256=483eb4061088e2b34b358e47540b5d495a96cd468e361050fae615b1809dc4a1
+CLANDRO_PKG_BREAKS="libopencore-amr-dev"
+CLANDRO_PKG_REPLACES="libopencore-amr-dev"

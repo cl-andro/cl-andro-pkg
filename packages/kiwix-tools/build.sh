@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/kiwix/kiwix-tools
+CLANDRO_PKG_DESCRIPTION="A collection of Kiwix related command line tools"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.8.2"
+CLANDRO_PKG_SRCURL=https://github.com/kiwix/kiwix-tools/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=7148522730a66cffb58a3b3674c6cbac548a1f95fd08c5f330565aad70c14d14
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="docopt, libc++, libkiwix, libzim"

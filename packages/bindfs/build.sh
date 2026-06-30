@@ -1,0 +1,11 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE="https://bindfs.org/"
+CLANDRO_PKG_DESCRIPTION="A FUSE filesystem for mirroring a directory to another directory."
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.18.4"
+CLANDRO_PKG_SRCURL="https://bindfs.org/downloads/bindfs-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=3266d0aab787a9328bbb0ed561a371e19f1ff077273e6684ca92a90fedb2fe24
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libfuse3"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--with-fuse3"

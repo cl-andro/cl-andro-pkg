@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 Athena Widget library"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.16"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXaw-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=731d572b54c708f81e197a6afa8016918e2e06dfd3025e066ca642a5b8c39c8f
+CLANDRO_PKG_DEPENDS="libx11, libxext, libxmu, libxpm, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"

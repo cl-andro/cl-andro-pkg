@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin
+CLANDRO_PKG_DESCRIPTION="Display cyclically run script or program output onto the panel"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.3.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/${CLANDRO_PKG_VERSION%.*}/xfce4-genmon-plugin-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=077197911d84e5ba22e7bb895ce6c038dbbd8e8e0067ed6f4e48502b7167a282
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="glib, gtk3, pango, libxfce4ui, libxfce4util, xfce4-panel, xfconf"
+CLANDRO_PKG_RECOMMENDS="hicolor-icon-theme"

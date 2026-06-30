@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/ib/xarchiver
+CLANDRO_PKG_DESCRIPTION="GTK+ frontend to various command line archivers"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.5.4.26"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://github.com/ib/xarchiver/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=58e4fb2c1fb8421573a31cf3b4dfec301076d61f48ac5720df632986c87e9573
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="gdk-pixbuf, glib, gtk3"
+CLANDRO_PKG_RECOMMENDS="arj, llvm, bzip2, cpio, gzip, lz4, lzip, lzop, p7zip, tar, unar, unrar, unzip, xz-utils, zip, zstd"

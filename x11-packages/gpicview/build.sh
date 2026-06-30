@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE=http://www.lxde.org/
+CLANDRO_PKG_DESCRIPTION="Lightweight image viewer"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.3.1"
+CLANDRO_PKG_SRCURL="https://github.com/lxde/gpicview/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=b65dd991368ed2b08645a50cb6d4831e21e3c0d0f7d72394d40105ddba754533
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="gtk3"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-gtk3"
+
+clandro_step_pre_configure() {
+	./autogen.sh
+}

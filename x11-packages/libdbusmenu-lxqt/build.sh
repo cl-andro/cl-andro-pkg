@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/lxqt/libdbusmenu-lxqt
+CLANDRO_PKG_DESCRIPTION="A library that provides a Qt implementation of the DBusMenu protocol"
+CLANDRO_PKG_LICENSE="LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/libdbusmenu-lxqt/releases/download/${CLANDRO_PKG_VERSION}/libdbusmenu-lxqt-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=b7f94d653559f021932aada76291e933535431a337c39c1a146d0461dd27a103
+CLANDRO_PKG_DEPENDS="libc++, qt6-qtbase"
+CLANDRO_PKG_AUTO_UPDATE=true

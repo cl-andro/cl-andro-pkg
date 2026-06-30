@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE="http://ceres-solver.org"
+CLANDRO_PKG_DESCRIPTION="C++ library for modeling and solving large, complicated optimization problems"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.2.0"
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL="http://ceres-solver.org/ceres-solver-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=48b2302a7986ece172898477c3bcd6deb8fb5cf19b3327bc49969aad4cede82d
+CLANDRO_PKG_DEPENDS="libc++, eigen, google-glog, gflags"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_SHARED_LIBS=ON
+-DMINIGLOG=ON
+"

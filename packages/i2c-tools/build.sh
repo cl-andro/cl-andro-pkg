@@ -1,0 +1,11 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=https://i2c.wiki.kernel.org/index.php/I2C_Tools
+CLANDRO_PKG_DESCRIPTION="Tools for interacting with I2C devices"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="Henrik Grimler @Grimler91"
+CLANDRO_PKG_VERSION="4.4"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://mirrors.edge.kernel.org/pub/software/utils/i2c-tools/i2c-tools-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=8b15f0a880ab87280c40cfd7235cfff28134bf14d5646c07518b1ff6642a2473
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true

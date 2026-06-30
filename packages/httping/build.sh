@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/folkertvanheusden/HTTPing
+CLANDRO_PKG_DESCRIPTION="ping-like program for http-requests"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.4.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/folkertvanheusden/HTTPing/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=87fa2da5ac83c4a0edf4086161815a632df38e1cc230e1e8a24a8114c09da8fd
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_DEPENDS="fftw, libandroid-support, ncurses, openssl"

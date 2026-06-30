@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/CDrummond/cantata
+CLANDRO_PKG_DESCRIPTION="Qt client for the music player daemon (MPD)"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.5.0"
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/CDrummond/cantata/releases/download/v${CLANDRO_PKG_VERSION}/cantata-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=eb7e00ab3f567afaa02ea2c86e2fe811a475afab93182b95922c6eb126821724
+CLANDRO_PKG_DEPENDS="qt5-qtbase, qt5-qtmultimedia, qt5-qtsvg, qt5-qtxmlpatterns, zlib, taglib, ffmpeg, mpg123, libcddb, libmusicbrainz, mpd"
+CLANDRO_PKG_BUILD_DEPENDS="qt5-qtbase-cross-tools, qt5-qttools-cross-tools"

@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://glew.sourceforge.net/
+CLANDRO_PKG_DESCRIPTION="The OpenGL Extension Wrangler Library"
+CLANDRO_PKG_LICENSE="BSD, GPL-2.0, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.2.0
+CLANDRO_PKG_REVISION=13
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/glew/glew-${CLANDRO_PKG_VERSION}.tgz
+CLANDRO_PKG_SHA256=d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1
+CLANDRO_PKG_DEPENDS="glu, libxi, libxmu"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="SYSTEM=linux-egl"
+
+clandro_step_pre_configure() {
+	LD=$CC
+}

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 font rasterisation library"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.0.7"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libXfont2-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=8b7b82fdeba48769b69433e8e3fbb984a5f6bf368b0d5f47abeec49de3e58efb
+CLANDRO_PKG_DEPENDS="freetype, libfontenc, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto, xorg-util-macros, xtrans"
+CLANDRO_PKG_AUTO_UPDATE=true

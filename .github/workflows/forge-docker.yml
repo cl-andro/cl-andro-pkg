@@ -1,0 +1,101 @@
+name: Forge Docker Stack (aarch64)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cl-andro/package-builder:latest
+      options: --privileged
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_PAT }}
+    steps:
+      - name: Checkout Sovereign Code
+        uses: actions/checkout@v4
+
+      - name: Architect the Custom OS Directories
+        run: |
+          sudo mkdir -p /data/data/com.zk.clandro/files/usr
+          sudo mkdir -p /data/data/com.zk.clandro/files/home
+          sudo chown -R builder:builder /data/data/com.zk.clandro
+
+      - name: Install the C++ Compiler (The Missing NDK)
+        run: |
+          export HOME=/home/builder
+          ./scripts/setup-android-sdk.sh
+
+      - name: Import GPG Key for Local Repo Verification
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          export HOME=/home/builder
+          if [ -n "$GPG_PRIVATE_KEY" ]; then
+            echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          else
+            echo "GPG_PRIVATE_KEY not set, repo verification may fail"
+          fi
+
+      - name: Forge Docker Stack (Surgical Execution)
+        run: |
+          export HOME=/home/builder
+
+          # Bedrock Dependencies
+          ./build-package.sh -a aarch64 ndk-sysroot
+          ./build-package.sh -a aarch64 libc++
+
+          # Layer 1: Library dependencies (libseccomp auto-generates libseccomp-static subpackage)
+          ./build-package.sh -a aarch64 -i libaio
+          ./build-package.sh -a aarch64 -i libseccomp
+
+          # Layer 2: Device mapper (produces libdevmapper subpackage)
+          ./build-package.sh -a aarch64 -i lvm2
+
+          # Layer 3: OCI runtime
+          ./build-package.sh -a aarch64 -i runc
+
+          # Layer 4: Container runtime
+          ./build-package.sh -a aarch64 -i containerd
+
+          # Layer 5: Docker engine + CLI
+          ./build-package.sh -a aarch64 -i docker
+
+          # Layer 6: Docker Compose
+          ./build-package.sh -a aarch64 -i docker-compose
+
+      - name: Sanitize Artifact Filenames
+        if: success()
+        run: |
+          for f in output/*:*.deb; do
+            if [ -e "$f" ]; then
+              new_name=$(echo "$f" | tr ':' '_')
+              mv "$f" "$new_name"
+            fi
+          done
+
+      - name: The Autopsy (Catch the Crash)
+        if: failure()
+        run: |
+          echo "========== CONFIG.LOG AUTOPSY START =========="
+          find /home/builder/.clandro-build/ -name "config.log" -exec cat {} +
+          echo "========== CONFIG.LOG AUTOPSY END =========="
+
+      - name: Upload Docker Artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cl-andro-docker-stack
+          path: output/*.deb
+
+      - name: Publish & Sign Packages
+        if: success()
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          ./scripts/publish-repo-ci.sh

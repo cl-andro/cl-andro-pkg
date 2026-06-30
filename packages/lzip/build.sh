@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://www.nongnu.org/lzip/
+CLANDRO_PKG_DESCRIPTION="Lossless data compressor similar to gzip and bzip2"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.26"
+CLANDRO_PKG_SRCURL=https://download.savannah.gnu.org/releases/lzip/lzip-${CLANDRO_PKG_VERSION}.tar.lz
+CLANDRO_PKG_SHA256=1746f1e4ec4359a728692ce2db45641c9267b048aa13c044e9d581d50394713d
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"

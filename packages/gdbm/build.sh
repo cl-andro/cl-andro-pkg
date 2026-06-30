@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org.ua/software/gdbm/
+CLANDRO_PKG_DESCRIPTION="Library of database functions that use extensible hashing"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.26"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/gdbm/gdbm-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=6a24504a14de4a744103dcb936be976df6fbe88ccff26065e54c1c47946f4a5e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="readline"
+CLANDRO_PKG_BREAKS="gdbm-dev"
+CLANDRO_PKG_REPLACES="gdbm-dev"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-libgdbm-compat"

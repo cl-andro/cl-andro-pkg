@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/carlobaldassi/liblqr
+CLANDRO_PKG_DESCRIPTION="Provides a C/C++ API for performing non-uniform resizing of images by the seam-carving technique"
+CLANDRO_PKG_LICENSE="GPL-3.0, LGPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.3"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/carlobaldassi/liblqr/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=64b0c4ac76d39cca79501b3f53544af3fc5f72b536ac0f28d2928319bfab6def
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="glib"

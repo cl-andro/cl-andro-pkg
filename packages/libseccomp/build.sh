@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/seccomp/libseccomp
+CLANDRO_PKG_DESCRIPTION="Enhanced seccomp library"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.6.0"
+CLANDRO_PKG_SRCURL="https://github.com/seccomp/libseccomp/releases/download/v${CLANDRO_PKG_VERSION}/libseccomp-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=83b6085232d1588c379dc9b9cae47bb37407cf262e6e74993c61ba72d2a784dc
+CLANDRO_PKG_BREAKS="libseccomp-dev"
+CLANDRO_PKG_REPLACES="libseccomp-dev"

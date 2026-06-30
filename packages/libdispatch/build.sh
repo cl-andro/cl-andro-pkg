@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/swiftlang/swift-corelibs-libdispatch
+CLANDRO_PKG_DESCRIPTION="The libdispatch project, for concurrency on multicore hardware"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@finagolfin"
+CLANDRO_PKG_VERSION="1:6.2.1"
+CLANDRO_PKG_SRCURL=https://github.com/swiftlang/swift-corelibs-libdispatch/archive/refs/tags/swift-${CLANDRO_PKG_VERSION:2}-RELEASE.tar.gz
+CLANDRO_PKG_SHA256=18c6d5945e6668c1928deb72f524dfa26ad9d1b226c7d618cdf766885ccc433c
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_DEPENDS="libc++, libblocksruntime"

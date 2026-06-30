@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE="https://invent.kde.org/frameworks/kguiaddons"
+CLANDRO_PKG_DESCRIPTION="The KDE GUI Add-ons"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.26.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kguiaddons-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=8375342f852104f36fd72a6870eb9795183af4516592cd6fa73445ea6b813172
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libwayland, libx11, qt6-qtbase, qt6-qtdeclarative"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules (>= ${CLANDRO_PKG_VERSION%.*}), plasma-wayland-protocols, qt6-qttools"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_PYTHON_BINDINGS=OFF
+-DCMAKE_SYSTEM_NAME=Linux
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+"

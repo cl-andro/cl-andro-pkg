@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/fcitx/fcitx5-rime"
+CLANDRO_PKG_DESCRIPTION="RIME support for Fcitx5"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.1.13"
+CLANDRO_PKG_SRCURL="https://github.com/fcitx/fcitx5-rime/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=e71469d15a2530cbb4d35a37d6c86d850eb9e5e230ed1ba7979c02c4e22516d5
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="fcitx5, libc++, librime"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://dotnet.microsoft.com/en-us/
+CLANDRO_PKG_DESCRIPTION="A metapackage for .NET Host"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@truboxl"
+CLANDRO_PKG_VERSION="10.0"
+CLANDRO_PKG_DEPENDS="dotnet-host-10.0 | dotnet-host-9.0 | dotnet-host-8.0"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="dotnet-host-10.0, dotnet-host-9.0, dotnet-host-8.0"
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_EXCLUDED_ARCHES="arm"

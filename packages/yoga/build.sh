@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE="https://www.yogalayout.dev/"
+CLANDRO_PKG_DESCRIPTION="Embeddable layout engine targeting web standards"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.2.1"
+CLANDRO_PKG_SRCURL="https://github.com/facebook/yoga/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=86b399ac31fd820d8ffa823c3fae31bb690b6fc45301b2a8a966c09b5a088b55
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"

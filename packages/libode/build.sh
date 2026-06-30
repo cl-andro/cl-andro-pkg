@@ -1,0 +1,36 @@
+CLANDRO_PKG_HOMEPAGE="https://www.ode.org"
+CLANDRO_PKG_DESCRIPTION="An open source, high performance library for simulating rigid body dynamics"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 3-Clause, LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="Pooya Moradi <pvonmoradi@gmail.com>"
+CLANDRO_PKG_VERSION="0.16.6"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL="https://bitbucket.org/odedevs/ode/downloads/ode-$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=c91a28c6ff2650284784a79c726a380d6afec87ecf7a35c32a6be0c5b74513e8
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_FORCE_CMAKE=true
+CLANDRO_PKG_DEPENDS="libc++, libccd"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS='
+-DBUILD_SHARED_LIBS=ON
+-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+-DODE_WITH_DEMOS=OFF
+-DODE_WITH_TESTS=OFF
+-DODE_WITH_LIBCCD=ON
+-DODE_WITH_LIBCCD_SYSTEM=ON
+'
+
+clandro_step_pre_configure() {
+	# Use double-precision for 64-bit archs, otherwise use single-precision
+	case "$CLANDRO_ARCH" in
+		"aarch64" |  "x86_64")
+			CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=' -DODE_DOUBLE_PRECISION=ON'
+			;;
+		"arm" | "i686")
+			CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=' -DODE_DOUBLE_PRECISION=OFF'
+			;;
+		*)
+			CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=' -DODE_DOUBLE_PRECISION=OFF'
+			;;
+	esac
+}

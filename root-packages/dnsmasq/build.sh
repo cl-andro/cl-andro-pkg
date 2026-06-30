@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://www.thekelleys.org.uk/dnsmasq/doc.html
+CLANDRO_PKG_DESCRIPTION="Dnsmasq provides network infrastructure for small networks"
+CLANDRO_PKG_LICENSE="GPL-2.0-only, GPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.92"
+CLANDRO_PKG_SRCURL=https://www.thekelleys.org.uk/dnsmasq/dnsmasq-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=4bf50c2c1018f9fbc26037df51b90ecea0cb73d46162846763b92df0d6c3a458
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true

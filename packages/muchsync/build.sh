@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://www.muchsync.org/
+CLANDRO_PKG_DESCRIPTION="Synchronize notmuch mail across machines"
+CLANDRO_PKG_LICENSE="GPL-2.0-or-later"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="7"
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL="https://www.muchsync.org/src/muchsync-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=f83e2f6fcd0ef4813475fddc8d39285686654da5f41565a1e9a9acd781a3beac
+CLANDRO_PKG_DEPENDS="libc++, libsqlite, libxapian, notmuch, openssl"

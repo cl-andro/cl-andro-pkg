@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.flameeyes.com/projects/unpaper
+CLANDRO_PKG_DESCRIPTION="A post-processing tool for scanned sheets of paper"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1:7.0.0
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://github.com/unpaper/unpaper/archive/refs/tags/unpaper-${CLANDRO_PKG_VERSION#*:}.tar.gz
+CLANDRO_PKG_SHA256=601b64b030edb4a734510a7bdcab371c7a33c4501f9a0e231e3d326df50e2313
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"
+CLANDRO_PKG_DEPENDS="ffmpeg"

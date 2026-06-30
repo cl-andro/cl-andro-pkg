@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://www.vamp-plugins.org/
+CLANDRO_PKG_DESCRIPTION="An API for audio analysis and feature extraction plugins"
+CLANDRO_PKG_LICENSE="MIT, BSD 3-Clause"
+CLANDRO_PKG_LICENSE_FILE="COPYING"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2.10
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/vamp-plugins/vamp-plugin-sdk/archive/refs/tags/vamp-plugin-sdk-v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=b552bc91817294c7f90ea07d70938642ebf15d5e3bafc81cf7d55efab9995399
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_METHOD=repology
+CLANDRO_PKG_DEPENDS="libc++, libsndfile"
+CLANDRO_PKG_BUILD_IN_SRC=true

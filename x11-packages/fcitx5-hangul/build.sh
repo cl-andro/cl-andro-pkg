@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fcitx/fcitx5-hangul
+CLANDRO_PKG_DESCRIPTION="libhangul input method support for fcitx5"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="5.1.9"
+CLANDRO_PKG_SRCURL="https://github.com/fcitx/fcitx5-hangul/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=2d26f9663cb75f4d4e8409be7ad32871361c357f1ed73385d78340e0f850ce5c
+CLANDRO_PKG_DEPENDS="fcitx5, libc++, libhangul"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"

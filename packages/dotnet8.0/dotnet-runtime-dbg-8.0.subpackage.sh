@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_DESCRIPTION=".NET 8.0 Runtime Managed Debug Symbols"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_DEPENDS="dotnet-runtime-8.0"
+CLANDRO_SUBPKG_INCLUDE=$(cat "${CLANDRO_PKG_TMPDIR}"/dotnet-runtime-dbg.txt)

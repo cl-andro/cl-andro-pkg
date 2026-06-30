@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE=https://en.wikipedia.org/wiki/Mathomatic
+CLANDRO_PKG_DESCRIPTION="Simple CAS and symbolic calculator"
+CLANDRO_PKG_LICENSE="LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=16.0.5
+CLANDRO_PKG_REVISION=7
+CLANDRO_PKG_SRCURL="https://fossies.org/linux/misc/old/mathomatic-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=7f525bdb2e13006549dd8f17906c26f926f5ac51174f02f074107c612491e05c
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_MAKE_ARGS="READLINE=1"
+CLANDRO_PKG_DEPENDS="readline"
+CLANDRO_PKG_RM_AFTER_INSTALL="share/applications/mathomatic.desktop share/pixmaps"
+
+clandro_step_pre_configure() {
+	rm $CLANDRO_PKG_SRCDIR/CMakeLists.txt
+	CPPFLAGS+=" -DUSE_TGAMMA -DBOLD_COLOR"
+}

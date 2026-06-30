@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://nelua.io
+CLANDRO_PKG_DESCRIPTION="Minimal, efficient, statically-typed and meta-programmable systems programming language"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=2024.01.13
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/edubart/nelua-lang/archive/refs/tags/${CLANDRO_PKG_VERSION//.}.tar.gz
+CLANDRO_PKG_SHA256=30e230f275840d35625d086fe47a2e7ded4290c8eb834c273eb58b7fc6270cb6
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_SUGGESTS="gdb, sdl2"

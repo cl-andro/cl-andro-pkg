@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=http://www.catb.org/~esr/greed/
+CLANDRO_PKG_DESCRIPTION="Game where you try to eat as much as possible of the board before munching yourself into a corner"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.5"
+CLANDRO_PKG_SRCURL=http://www.catb.org/~esr/greed/greed-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=17e57e27423a9b3380aeea4e780e4247d9a10c60351c7a8c710744dcf9133ea6
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_GROUPS="games"

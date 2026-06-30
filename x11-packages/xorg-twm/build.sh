@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Tab Window Manager for the X Window System"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.0.13.1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/twm-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=a52534755aa8b492c884e52fa988bac84ab4d54641954679b9aaf08e323df2c5
+CLANDRO_PKG_DEPENDS="libice, libsm, libx11, libxext, libxmu, libxrandr, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"
+CLANDRO_PKG_AUTO_UPDATE=true

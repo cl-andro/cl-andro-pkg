@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://gitlab.com/mdds/mdds
+CLANDRO_PKG_DESCRIPTION="A collection of multi-dimensional data structures and indexing algorithms"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.2.1"
+CLANDRO_PKG_SRCURL="https://gitlab.com/api/v4/projects/mdds%2Fmdds/packages/generic/source/${CLANDRO_PKG_VERSION}/mdds-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=673f5bb94612dbba581fc92b99b5e5dd1a53e29496a5dbc936432f6b0687c112
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

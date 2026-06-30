@@ -1,0 +1,3 @@
+CLANDRO_SUBPKG_INCLUDE="share/tsduck/python/"
+CLANDRO_SUBPKG_DESCRIPTION="Python bindings for TSDuck"
+CLANDRO_SUBPKG_DEPENDS="python"

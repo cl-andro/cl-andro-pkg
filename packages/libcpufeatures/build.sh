@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/google/cpu_features
+CLANDRO_PKG_DESCRIPTION="A cross-platform C library to retrieve CPU features (such as available instructions) at runtime"
+CLANDRO_PKG_LICENSE="Apache-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.10.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/google/cpu_features/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=52639b380fced11d738f8b151dbfee63fb94957731d07f1966c812e5b90cbad4
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_NO_STATICSPLIT=true

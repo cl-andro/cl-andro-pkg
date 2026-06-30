@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE=http://www.lxde.org/
+CLANDRO_PKG_DESCRIPTION="VTE-based terminal emulator"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.4.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://github.com/lxde/lxterminal/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=d5da0646e20ad2be44ef69a9d620be5f1ec43b156dc585ebe203dd7b05c31d88
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libvte, gtk3"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-gtk3"
+
+clandro_step_pre_configure() {
+	./autogen.sh
+}

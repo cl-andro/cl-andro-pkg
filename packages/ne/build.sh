@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE=https://ne.di.unimi.it/
+CLANDRO_PKG_DESCRIPTION="Easy-to-use and powerful text editor"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.3.4"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://github.com/vigna/ne/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=6958b5cd051d85dcdebbf45aeed2af077346a58d1d18ad14e1db477ce5519d29
+CLANDRO_PKG_DEPENDS="libandroid-support, ncurses"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_MAKE_PROCESSES=1
+
+clandro_step_pre_configure() {
+	export OPTS="$CFLAGS $CPPFLAGS"
+}

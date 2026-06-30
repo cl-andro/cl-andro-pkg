@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE="https://herbstluftwm.org"
+CLANDRO_PKG_DESCRIPTION="Manual tiling window manager for X"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9.5"
+CLANDRO_PKG_SRCURL="https://herbstluftwm.org/tarballs/herbstluftwm-${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=b2d4600909e5bece5ad63818dfb30bb19fd2ac9f52847b1a7a74ad4040718105
+CLANDRO_PKG_DEPENDS="freetype, libx11, libxext, libxfixes, libxft, libxinerama, libxrandr"
+CLANDRO_PKG_RECOMMENDS="xorg-xsetroot"
+CLANDRO_PKG_BUILD_DEPENDS="xorgproto"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="-DCMAKE_INSTALL_SYSCONF_PREFIX=${CLANDRO_PREFIX}/etc"

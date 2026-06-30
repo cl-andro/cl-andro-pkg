@@ -1,0 +1,7 @@
+CLANDRO_SUBPKG_DESCRIPTION="Wheels for Python ensurepip"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="
+lib/python${_MAJOR_VERSION}/ensurepip/_bundled/
+"
+CLANDRO_SUBPKG_BREAKS="python (<< 3.11.1-3)"
+CLANDRO_SUBPKG_REPLACES="python (<< 3.11.1-3)"

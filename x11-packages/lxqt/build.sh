@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/lxqt/lxqt
+CLANDRO_PKG_DESCRIPTION="A metapackage that installs all parts of the LXQt desktop environment"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.3"
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="lximage-qt, lxqt-about, lxqt-archiver, lxqt-config, lxqt-globalkeys, lxqt-notificationd, lxqt-openssh-askpass, lxqt-panel, lxqt-powermanagement, lxqt-qtplugin, lxqt-runner, lxqt-session, lxqt-themes, obconf-qt, pavucontrol-qt, pcmanfm-qt, qterminal"
+CLANDRO_PKG_RECOMMENDS="kvantum"
+CLANDRO_PKG_SUGGESTS="papirus-icon-theme"
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

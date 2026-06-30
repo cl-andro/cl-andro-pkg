@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=http://silicone.homelinux.org/projects/netsed/
+CLANDRO_PKG_DESCRIPTION="Alter the contents of packets forwarded through network in real time"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.4
+CLANDRO_PKG_SRCURL=http://silicone.homelinux.org/release/netsed/netsed-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=1e23686b8887ebe461786c059d848b412188c635929071955d134041b07996a7
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true

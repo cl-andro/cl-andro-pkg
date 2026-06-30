@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_DESCRIPTION="Platform-independent data for speechd"
+CLANDRO_SUBPKG_PLATFORM_INDEPENDENT=true
+CLANDRO_SUBPKG_INCLUDE="share/speech-dispatcher/"
+CLANDRO_SUBPKG_BREAKS="speechd (<< 0.11.4-1)"
+CLANDRO_SUBPKG_REPLACES="speechd (<< 0.11.4-1)"

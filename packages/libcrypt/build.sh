@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=http://michael.dipperstein.com/crypt/
+CLANDRO_PKG_DESCRIPTION="A crypt(3) implementation"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.2
+CLANDRO_PKG_REVISION=6
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="openssl"
+CLANDRO_PKG_BREAKS="libcrypt-dev"
+CLANDRO_PKG_REPLACES="libcrypt-dev"
+
+clandro_step_make_install() {
+	$CC $CFLAGS $CPPFLAGS $LDFLAGS -Wall -Wextra -fPIC -shared $CLANDRO_PKG_BUILDER_DIR/crypt3.c -lcrypto -o $CLANDRO_PREFIX/lib/libcrypt.so
+	mkdir -p $CLANDRO_PREFIX/include/
+	cp $CLANDRO_PKG_BUILDER_DIR/crypt.h $CLANDRO_PREFIX/include/
+	cp $CLANDRO_PKG_BUILDER_DIR/LICENSE $CLANDRO_PKG_SRCDIR/
+}

@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://www.texstudio.org/
+CLANDRO_PKG_DESCRIPTION="A fully featured LaTeX editor"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.9.3"
+CLANDRO_PKG_SRCURL="https://github.com/texstudio-org/texstudio/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=51cab5c7cd27fb801e27ecad93a4cd7e3f4b253e39cf730da8dd3e363f7bbbbc
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="hunspell, libc++, libx11, poppler-qt, qt6-qtbase, qt6-qtdeclarative, qt6-qtsvg, qt6-qttools, quazip, texstudio-data, zlib"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qtbase-cross-tools, qt6-qtdeclarative-cross-tools, qt6-qttools-cross-tools"
+CLANDRO_PKG_RECOMMENDS="ghostscript"
+CLANDRO_PKG_SUGGESTS="texlive-installer"
+CLANDRO_PKG_BUILD_IN_SRC=true

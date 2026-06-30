@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE="https://invent.kde.org/frameworks/kdnssd"
+CLANDRO_PKG_DESCRIPTION="Abstraction to system DNSSD features"
+CLANDRO_PKG_LICENSE="LGPL-2.0-only, LGPL-3.0-only"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="6.26.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/frameworks/${CLANDRO_PKG_VERSION%.*}/kdnssd-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=8439daed9c4b942a74393daf23c8d97fdaabd81b93dc347f91bbb45a2bf85248
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt6-qttools"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DCMAKE_SYSTEM_NAME=Linux
+-DKDE_INSTALL_QMLDIR=lib/qt6/qml
+-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
+"

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://lxqt.github.io
+CLANDRO_PKG_DESCRIPTION="GUI to query passwords on behalf of SSH agents"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/lxqt-openssh-askpass/releases/download/${CLANDRO_PKG_VERSION}/lxqt-openssh-askpass-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=1a4d5c9c9450cc08cacd1646fc55dc9c78c297ab1fbae49b8047df78665b5c55
+CLANDRO_PKG_DEPENDS="libc++, liblxqt, qt6-qtbase"
+CLANDRO_PKG_BUILD_DEPENDS="lxqt-build-tools, qt6-qttools"
+CLANDRO_PKG_AUTO_UPDATE=true

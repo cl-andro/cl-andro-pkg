@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://www.ivarch.com/programs/pv.shtml
+CLANDRO_PKG_DESCRIPTION="Terminal-based tool for monitoring the progress of data through a pipeline"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.10.5"
+CLANDRO_PKG_SRCURL=https://www.ivarch.com/programs/sources/pv-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=ab21b4f8662280646b6a02e1b9f096790918f89c952bbe0d06fef75d3b52fb15
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--disable-ipc"

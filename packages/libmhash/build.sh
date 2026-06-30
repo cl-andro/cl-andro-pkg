@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://mhash.sourceforge.net/
+CLANDRO_PKG_DESCRIPTION="A thread-safe hash library which provides a uniform interface to hash algorithms"
+CLANDRO_PKG_LICENSE="LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.9.9.9
+CLANDRO_PKG_REVISION=4
+CLANDRO_PKG_SRCURL=https://downloads.sourceforge.net/sourceforge/mhash/mhash-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=56521c52a9033779154432d0ae47ad7198914785265e1f570cee21ab248dfef0
+CLANDRO_PKG_BREAKS="libmhash-dev"
+CLANDRO_PKG_REPLACES="libmhash-dev"
+CLANDRO_PKG_BUILD_IN_SRC=true

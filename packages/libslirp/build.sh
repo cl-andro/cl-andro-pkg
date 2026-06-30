@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://gitlab.freedesktop.org/slirp/libslirp
+CLANDRO_PKG_DESCRIPTION="A general purpose TCP-IP emulator"
+CLANDRO_PKG_LICENSE="BSD 3-Clause, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=4.8.0
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v${CLANDRO_PKG_VERSION}/libslirp-v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=2a98852e65666db313481943e7a1997abff0183bd9bea80caec1b5da89fda28c
+CLANDRO_PKG_DEPENDS="glib"

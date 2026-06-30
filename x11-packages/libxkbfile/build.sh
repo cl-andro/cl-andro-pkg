@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X11 keyboard file manipulation library"
+CLANDRO_PKG_LICENSE="HPND, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.0"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

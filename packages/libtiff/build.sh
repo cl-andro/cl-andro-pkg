@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=http://www.simplesystems.org/libtiff/ # Note that http://libtiff.org/ is hijacked
+CLANDRO_PKG_DESCRIPTION="Support for the Tag Image File Format (TIFF) for storing image data"
+CLANDRO_PKG_LICENSE="custom"
+CLANDRO_PKG_LICENSE_FILE="LICENSE.md"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.7.1"
+CLANDRO_PKG_SRCURL=https://download.osgeo.org/libtiff/tiff-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=b92017489bdc1db3a4c97191aa4b75366673cb746de0dce5d7a749d5954681ba
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libjpeg-turbo, liblzma, zlib, zstd"
+CLANDRO_PKG_BREAKS="libtiff-dev"
+CLANDRO_PKG_REPLACES="libtiff-dev"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-cxx --disable-webp"

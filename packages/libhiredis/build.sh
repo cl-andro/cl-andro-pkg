@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://redis.com/lp/hiredis
+CLANDRO_PKG_DESCRIPTION="Hiredis is a minimalistic C client library for the Redis database"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.3.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL="https://github.com/redis/hiredis/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256=25cee4500f359cf5cad3b51ed62059aadfc0939b05150c1f19c7e2829123631c
+CLANDRO_PKG_BUILD_DEPENDS="binutils"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"

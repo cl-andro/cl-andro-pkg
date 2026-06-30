@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fmang/opustags
+CLANDRO_PKG_DESCRIPTION="Ogg Opus tags editor"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.10.1"
+CLANDRO_PKG_SRCURL=https://github.com/fmang/opustags/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=703096e9c41481e30ab90eefdd8fafc4c3a138998b3f8281aa4f023e7058bc86
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libiconv, libogg"

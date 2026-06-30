@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X clock"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.1.1
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xclock-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=df7ceabf8f07044a2fde4924d794554996811640a45de40cb12c2cf1f90f742c
+CLANDRO_PKG_DEPENDS="libiconv, libx11, libxaw, libxft, libxkbfile, libxmu, libxrender, libxt"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"
+CLANDRO_PKG_CONFLICTS="xclock"
+CLANDRO_PKG_REPLACES="xclock"

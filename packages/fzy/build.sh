@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/jhawthorn/fzy
+CLANDRO_PKG_DESCRIPTION="A simple, fast fuzzy finder for the terminal"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="Krishna Kanhaiya @kcubeterm"
+CLANDRO_PKG_VERSION="1.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/jhawthorn/fzy/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=93d300d9c6c7063b2c6bda4e08a9704a029ec33f609718cd95443d1a890aff4e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true

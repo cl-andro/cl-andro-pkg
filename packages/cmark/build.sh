@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/commonmark/cmark
+CLANDRO_PKG_DESCRIPTION="CommonMark parsing and rendering program"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.31.2"
+CLANDRO_PKG_SRCURL=https://github.com/commonmark/cmark/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=f9bc5ca38bcb0b727f0056100fac4d743e768872e3bacec7746de28f5700d697
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BREAKS="cmark-dev"
+CLANDRO_PKG_REPLACES="cmark-dev"

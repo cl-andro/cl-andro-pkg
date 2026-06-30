@@ -1,0 +1,11 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Utility to print properties of X11 windows"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.2.8"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xprop-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=d689e2adb7ef7b439f6469b51cda8a7daefc83243854c2a3b8f84d0f029d67ee
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

@@ -1,0 +1,18 @@
+CLANDRO_PKG_HOMEPAGE=http://www.lxde.org/
+CLANDRO_PKG_DESCRIPTION="LXDE GTK+ theme switcher"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="0.6.4"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/lxde/lxappearance/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9f067a8a126b9779ba12648c76136d9ba3e7ec7920c568df7819d128fdf39e03
+CLANDRO_PKG_DEPENDS="dbus-glib, gdk-pixbuf, glib, gtk3, libx11, xsltproc"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="--enable-gtk3 --enable-dbus"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_MAKE_PROCESSES=1
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+
+clandro_step_pre_configure() {
+	autoreconf -fiv
+}

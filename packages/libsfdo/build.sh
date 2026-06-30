@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE="https://gitlab.freedesktop.org/vyivel/libsfdo"
+CLANDRO_PKG_DESCRIPTION="A collection of libraries which implement some of the freedesktop.org specifications."
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.1.4"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://gitlab.freedesktop.org/vyivel/libsfdo/-/archive/v${CLANDRO_PKG_VERSION}/libsfdo-v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=9d74a9bff1f872e38ab662d8e2b5f6ecd404d7f82f84e9c324013f856688fa2d
+CLANDRO_PKG_AUTO_UPDATE=true

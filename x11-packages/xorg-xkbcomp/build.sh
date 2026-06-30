@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="X Keyboard description compiler"
+CLANDRO_PKG_LICENSE="HPND, MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.5.0"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/app/xkbcomp-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=2ac31f26600776db6d9cd79b3fcd272263faebac7eb85fb2f33c7141b8486060
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxkbfile"

@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/nfc-tools/libnfc
+CLANDRO_PKG_DESCRIPTION="Free/Libre Near Field Communication (NFC) library"
+CLANDRO_PKG_LICENSE="LGPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.8.0"
+CLANDRO_PKG_REVISION=2
+CLANDRO_PKG_SRCURL=https://github.com/nfc-tools/libnfc/releases/download/libnfc-${CLANDRO_PKG_VERSION}/libnfc-${CLANDRO_PKG_VERSION}.tar.bz2
+CLANDRO_PKG_SHA256=6d9ad31c86408711f0a60f05b1933101c7497683c2e0d8917d1611a3feba3dd5
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"
+CLANDRO_PKG_BUILD_DEPENDS="readline"
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+--with-drivers=acr122s,arygon,pn532_uart,pn532_spi,pn532_i2c
+"

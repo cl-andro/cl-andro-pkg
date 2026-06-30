@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://zipios.sourceforge.io/
+CLANDRO_PKG_DESCRIPTION="A small C++ library for reading and writing zip files"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.3.4"
+CLANDRO_PKG_SRCURL=https://github.com/Zipios/Zipios/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c3ad6be0f6fbd035f7d4942caab77da9bca027ba0c1c8ba0f0cd8621803abb8e
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, zlib"

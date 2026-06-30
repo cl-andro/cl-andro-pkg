@@ -1,0 +1,13 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/termux/x11-packages
+CLANDRO_PKG_DESCRIPTION="A metapackage that installs all parts of the XFCE desktop environment"
+CLANDRO_PKG_LICENSE="Public Domain"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.20"
+CLANDRO_PKG_AUTO_UPDATE=false
+CLANDRO_PKG_SKIP_SRC_EXTRACT=true
+CLANDRO_PKG_DEPENDS="thunar, xfce4-panel, xfce4-session, xfce4-settings, xfconf, xfwm4, xfce4-notifyd, xfce4-power-manager, xfce4-terminal"
+CLANDRO_PKG_CONFLICTS="xfce"
+CLANDRO_PKG_REPLACES="xfce"
+CLANDRO_PKG_PROVIDES="xfce"
+CLANDRO_PKG_METAPACKAGE=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

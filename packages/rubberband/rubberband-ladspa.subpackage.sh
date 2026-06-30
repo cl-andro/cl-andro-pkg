@@ -1,0 +1,5 @@
+CLANDRO_SUBPKG_DESCRIPTION="LADSPA plugin for Rubber Band"
+CLANDRO_SUBPKG_INCLUDE="lib/ladspa/ share/ladspa/"
+CLANDRO_SUBPKG_DEPENDS="ladspa-sdk"
+CLANDRO_SUBPKG_BREAKS="rubberband (<< 3.1.2-1)"
+CLANDRO_SUBPKG_REPLACES="rubberband (<< 3.1.2-1)"

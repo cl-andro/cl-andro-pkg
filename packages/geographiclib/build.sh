@@ -1,0 +1,16 @@
+CLANDRO_PKG_HOMEPAGE="https://geographiclib.sourceforge.io"
+CLANDRO_PKG_DESCRIPTION="Utilities and C++ library to solve some geodesic problems"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.7"
+CLANDRO_PKG_SRCURL="https://sourceforge.net/projects/geographiclib/files/distrib-C%2B%2B/GeographicLib-$CLANDRO_PKG_VERSION.tar.gz/download"
+CLANDRO_PKG_SHA256=f35158cfb8bbc18ddc4930ee4db754b0a50d8d8d8b6700a5cad0dc987546764d
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_FORCE_CMAKE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DBUILD_SHARED_LIBS=ON
+-DBUILD_BOTH_LIBS=OFF
+"

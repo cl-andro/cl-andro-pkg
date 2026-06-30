@@ -1,0 +1,22 @@
+# Contributor: @Neo-Oli
+CLANDRO_PKG_HOMEPAGE=https://github.com/Parchive/par2cmdline
+CLANDRO_PKG_DESCRIPTION="par2cmdline is a PAR 2.0 compatible file verification and repair tool"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="Oliver Schmidhauser @Neo-Oli"
+CLANDRO_PKG_VERSION="1.1.1"
+CLANDRO_PKG_SRCURL=https://github.com/Parchive/par2cmdline/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=923c244a8b35c085ed5ab5fc10829d009bf78bef7c1be4c0a0c55733057c485f
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++"
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_pre_configure() {
+	if [ $CLANDRO_ARCH = "i686" ]; then
+		# Avoid undefined reference to __atomic_* functions:
+		export LIBS=" -latomic"
+	fi
+	LDFLAGS+=" -fopenmp -static-openmp"
+	aclocal
+	automake --add-missing
+	autoconf
+}

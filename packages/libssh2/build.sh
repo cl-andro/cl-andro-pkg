@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.libssh2.org
+CLANDRO_PKG_DESCRIPTION="Client-side library implementing the SSH2 protocol"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.11.1"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://www.libssh2.org/download/libssh2-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
+CLANDRO_PKG_DEPENDS="openssl, zlib"
+CLANDRO_PKG_BREAKS="libssh2-dev"
+CLANDRO_PKG_REPLACES="libssh2-dev"

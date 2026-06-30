@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE="https://github.com/ros/urdfdom_headers"
+CLANDRO_PKG_DESCRIPTION="Headers for URDF parsers"
+CLANDRO_PKG_GROUPS="science"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_MAINTAINER="Pooya Moradi <pvonmoradi@gmail.com>"
+CLANDRO_PKG_VERSION="3.0.0"
+CLANDRO_PKG_SRCURL="https://github.com/ros/urdfdom_headers/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz"
+CLANDRO_PKG_SHA256=314b322696cbc64d87c31e859f1d4e9983873c1db2706d13d7c2aa8c1a31119e
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_FORCE_CMAKE=true

@@ -1,0 +1,12 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/fcitx/xcb-imdkit
+CLANDRO_PKG_DESCRIPTION="An implementation of xim protocol in xcb"
+CLANDRO_PKG_LICENSE="LGPL-2.1"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.9"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/fcitx/xcb-imdkit/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=c2f0bbad8a335a64cdc7c19ac7b6ea1f0887dd6300ca9a4fa2e2fec6b9d3f695
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="libxcb, xcb-util"
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, uthash, xcb-util-keysyms"

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/AyatanaIndicators/libayatana-indicator
+CLANDRO_PKG_DESCRIPTION="Ayatana Indicators Shared Library"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.9.4"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/AyatanaIndicators/libayatana-indicator/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=a18d3c682e29afd77db24366f8475b26bda22b0e16ff569a2ec71cd6eb4eac95
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_TAG_TYPE="newest-tag"
+CLANDRO_PKG_DEPENDS="ayatana-ido, gdk-pixbuf, glib, gtk3"

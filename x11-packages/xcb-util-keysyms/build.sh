@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xcb.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Utility libraries for XC Binding - Standard X key constants and conversion to/from keycodes"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.4.1
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xcb.freedesktop.org/dist/xcb-util-keysyms-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=7c260a5294412aed429df1da2f8afd3bd07b7cba3fec772fba15a613a6d5c638
+CLANDRO_PKG_DEPENDS="libxcb"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="Scientific calculator for X"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.1.3"
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/archive/individual/app/xcalc-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=86e157b6174678675a4a912995dccd0ff4e2ce32b01bdd6f91bfe93333324980
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libx11, libxaw, libxt, xorg-fonts-75dpi | xorg-fonts-100dpi"
+CLANDRO_PKG_BUILD_DEPENDS="xorg-util-macros"

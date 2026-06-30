@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://wiki.gnome.org/Accessibility
+CLANDRO_PKG_DESCRIPTION="A python client library for the AT-SPI D-Bus accessibility infrastructure"
+CLANDRO_PKG_LICENSE="LGPL-2.0, GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.58.2"
+CLANDRO_PKG_SRCURL=https://download.gnome.org/sources/pyatspi/${CLANDRO_PKG_VERSION%.*}/pyatspi-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=24590e5b60fec8dfb59fcd27d2a90de7034060be318ca3f7770e0f984f1f94e2
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="at-spi2-core, dbus, dbus-python, pygobject, python"
+CLANDRO_PKG_SETUP_PYTHON=true
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true

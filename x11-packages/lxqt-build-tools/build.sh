@@ -1,0 +1,17 @@
+CLANDRO_PKG_HOMEPAGE=https://lxqt.github.io
+CLANDRO_PKG_DESCRIPTION="Building tools required by LXQt project"
+CLANDRO_PKG_LICENSE="BSD 3-Clause"
+CLANDRO_PKG_LICENSE_FILE="BSD-3-Clause"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.4.0"
+CLANDRO_PKG_SRCURL="https://github.com/lxqt/lxqt-build-tools/releases/download/${CLANDRO_PKG_VERSION}/lxqt-build-tools-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=14999ff954e820a23af44389b9f7c65f9e58b2f1c0a559f0badd38f9b459aee6
+CLANDRO_PKG_DEPENDS="qt6-qttools"
+CLANDRO_PKG_ANTI_BUILD_DEPENDS="qt6-qttools"
+CLANDRO_PKG_BUILD_DEPENDS="qt6-qtbase, qt6-qtbase-cross-tools"
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
+-DLXQT_ETC_XDG_DIR=${CLANDRO_PREFIX}/etc/xdg
+-DQt6CoreTools_DIR=${CLANDRO_PREFIX}/opt/qt6/cross/lib/cmake/Qt6CoreTools
+"

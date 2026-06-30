@@ -1,0 +1,14 @@
+CLANDRO_PKG_HOMEPAGE=https://gif.ski/
+CLANDRO_PKG_DESCRIPTION="GIF encoder based on libimagequant"
+CLANDRO_PKG_LICENSE="AGPL-V3"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.34.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/ImageOptim/gifski/archive/refs/tags/$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=c9711473615cb20d7754e8296621cdd95cc068cb04b640f391cd71f8787b692c
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+
+clandro_step_pre_configure() {
+	clandro_setup_rust
+}

@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://www.multiprecision.org/
+CLANDRO_PKG_DESCRIPTION="Library for the arithmetic of complex numbers with arbitrarily high precision"
+CLANDRO_PKG_LICENSE="LGPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.3.1
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/mpc/mpc-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=ab642492f5cf882b74aa0cb730cd410a81edcdbec895183ce930e706c1c759b8
+CLANDRO_PKG_DEPENDS="libgmp, libmpfr"
+CLANDRO_PKG_BREAKS="libmpc-dev"
+CLANDRO_PKG_REPLACES="libmpc-dev"

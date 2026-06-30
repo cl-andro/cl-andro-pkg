@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=http://rkeene.org/oss/freecolor/
+CLANDRO_PKG_DESCRIPTION="Freecolor is a replacement for Linux that displays free memory graphically"
+CLANDRO_PKG_LICENSE="custom"
+CLANDRO_PKG_LICENSE_FILE="COPYING"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.9.3
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=http://rkeene.org/files/oss/freecolor/freecolor-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=58cda97d444405918f1e15b698a5cb2a72dd152a1d93e3ac23e001634690d6cf
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_BUILD_DEPENDS="procps"

@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/Airblader/xcb-util-xrm/
+CLANDRO_PKG_DESCRIPTION="XCB utility functions for the X resource manager"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.3
+CLANDRO_PKG_REVISION=28
+CLANDRO_PKG_SRCURL=https://github.com/Airblader/xcb-util-xrm/releases/download/v${CLANDRO_PKG_VERSION}/xcb-util-xrm-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=0129f74c327ae65e2f4ad4002f300b4f02c9aff78c00997f1f1c5a430f922f34
+CLANDRO_PKG_DEPENDS="libxcb, xcb-util"
+CLANDRO_PKG_BUILD_DEPENDS="libx11, xorgproto"

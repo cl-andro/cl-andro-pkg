@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_DESCRIPTION="ASP.NET Core 10.0 Runtime Managed Debug Symbols"
+CLANDRO_SUBPKG_DEPEND_ON_PARENT=false
+CLANDRO_SUBPKG_DEPENDS="aspnetcore-runtime-10.0"
+CLANDRO_SUBPKG_INCLUDE=$(cat "${CLANDRO_PKG_TMPDIR}"/aspnetcore-runtime-dbg.txt)

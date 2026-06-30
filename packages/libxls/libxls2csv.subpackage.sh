@@ -1,0 +1,4 @@
+CLANDRO_SUBPKG_INCLUDE="bin/ share/man/man1/"
+CLANDRO_SUBPKG_DESCRIPTION="A command-line tool for converting XLS to CSV"
+CLANDRO_SUBPKG_BREAKS="xls2csv"
+CLANDRO_SUBPKG_REPLACES="xls2csv"

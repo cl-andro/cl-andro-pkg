@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://docs.xfce.org/panel-plugins/xfce4-wavelan-plugin/start
+CLANDRO_PKG_DESCRIPTION="wavelan status plugin for the Xfce4 panel"
+CLANDRO_PKG_LICENSE="BSD 2-Clause"
+CLANDRO_PKG_MAINTAINER="@Yisus7u7"
+CLANDRO_PKG_VERSION="0.7.0"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/${CLANDRO_PKG_VERSION%.*}/xfce4-wavelan-plugin-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=5fdce1e1b0d29d0a258dca86bab9d4edcbc12098134b92e00ea1502086a49116
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="glib, gtk3, libxfce4ui, libxfce4util, xfce4-panel"

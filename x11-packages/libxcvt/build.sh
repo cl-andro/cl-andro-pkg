@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://xorg.freedesktop.org/
+CLANDRO_PKG_DESCRIPTION="A Library to generate VESA CVT standard timing modelines"
+CLANDRO_PKG_LICENSE="MIT, HPND"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="0.1.3"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/lib/libxcvt-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=a929998a8767de7dfa36d6da4751cdbeef34ed630714f2f4a767b351f2442e01
+CLANDRO_PKG_AUTO_UPDATE=true

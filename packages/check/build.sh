@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://libcheck.github.io/check
+CLANDRO_PKG_DESCRIPTION="A unit testing framework for C"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=0.15.2
+CLANDRO_PKG_REVISION=3
+CLANDRO_PKG_SRCURL=https://github.com/libcheck/check/releases/download/${CLANDRO_PKG_VERSION}/check-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libtool, pkg-config, texinfo"
+CLANDRO_PKG_BUILD_IN_SRC=true

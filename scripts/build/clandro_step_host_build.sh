@@ -1,0 +1,4 @@
+clandro_step_host_build() {
+	"$CLANDRO_PKG_SRCDIR/configure" ${CLANDRO_PKG_EXTRA_HOSTBUILD_CONFIGURE_ARGS}
+	make -j "$CLANDRO_PKG_MAKE_PROCESSES"
+}

@@ -1,0 +1,11 @@
+# cl-andro (alamgir-zk) — ported from termux
+CLANDRO_PKG_HOMEPAGE=https://github.com/libfuse/sshfs
+CLANDRO_PKG_DESCRIPTION="FUSE client based on the SSH File Transfer Protocol"
+CLANDRO_PKG_LICENSE="GPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="3.7.5"
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://github.com/libfuse/sshfs/archive/refs/tags/sshfs-${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=99d294101f1b8997653a84c35674c2e50c18323ea2c449412c0ed46b9d31ac35
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libfuse3, glib, openssh | dropbear"

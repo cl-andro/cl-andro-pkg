@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/tsujan/FeatherNotes
+CLANDRO_PKG_DESCRIPTION="Lightweight Qt Notes-Manager for Linux"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.4.0"
+CLANDRO_PKG_SRCURL=https://github.com/tsujan/FeatherNotes/archive/refs/tags/V${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=ba665905b5b1575ce13ba4b7386020c0901f2a552447a73065b761b856081e26
+CLANDRO_PKG_DEPENDS="hunspell, libc++, libx11, qt6-qtbase, qt6-qtsvg"
+CLANDRO_PKG_RECOMMENDS="hicolor-icon-theme"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_UPDATE_VERSION_REGEXP="\d+\.\d+\.\d+"

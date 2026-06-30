@@ -1,0 +1,15 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/labbots/google-drive-upload
+CLANDRO_PKG_DESCRIPTION="Bash scripts to upload files to google drive"
+CLANDRO_PKG_LICENSE="MIT"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="4.5"
+CLANDRO_PKG_SRCURL=$CLANDRO_PKG_HOMEPAGE/archive/v$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=143bf7521fab80f5b8f5edf4180648043f900c8aa357f0b021f9ce8b06207df5
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_IN_SRC=true
+CLANDRO_PKG_DEPENDS='bash, curl'
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+
+clandro_step_make_install() {
+	install -D release/bash/* -t "$CLANDRO_PREFIX/bin"
+}

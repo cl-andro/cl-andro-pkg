@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://www.gnu.org/software/time/
+CLANDRO_PKG_DESCRIPTION="GNU time program for measuring CPU resource usage"
+CLANDRO_PKG_LICENSE="GPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION=1.9
+CLANDRO_PKG_REVISION=1
+CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/time/time-$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SHA256=fbacf0c81e62429df3e33bda4cee38756604f18e01d977338e23306a3e3b521e
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="ac_cv_func_wait3_rusage=yes"

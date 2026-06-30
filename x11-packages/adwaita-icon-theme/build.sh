@@ -1,0 +1,11 @@
+CLANDRO_PKG_HOMEPAGE=https://gitlab.gnome.org/GNOME/adwaita-icon-theme
+CLANDRO_PKG_DESCRIPTION="GNOME standard icons"
+CLANDRO_PKG_LICENSE="LGPL-3.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="50.0"
+CLANDRO_PKG_SRCURL=https://download.gnome.org/sources/adwaita-icon-theme/${CLANDRO_PKG_VERSION%.*}/adwaita-icon-theme-${CLANDRO_PKG_VERSION}.tar.xz
+CLANDRO_PKG_SHA256=fac6e0401fca714780561a081b8f7e27c3bc1db34ebda4da175081f26b24d460
+CLANDRO_PKG_PLATFORM_INDEPENDENT=true
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="adwaita-icon-theme-legacy, hicolor-icon-theme"
+CLANDRO_PKG_RM_AFTER_INSTALL="share/icons/Adwaita/icon-theme.cache"

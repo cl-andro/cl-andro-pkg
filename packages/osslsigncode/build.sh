@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE=https://github.com/mtrojnar/osslsigncode
+CLANDRO_PKG_DESCRIPTION="OpenSSL based Authenticode signing for PE/MSI/Java CAB files"
+CLANDRO_PKG_LICENSE="GPL-3.0-or-later"
+CLANDRO_PKG_LICENSE_FILE="COPYING.txt, LICENSE.txt"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="2.13"
+CLANDRO_PKG_SRCURL=https://github.com/mtrojnar/osslsigncode/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=ee95638b8bec0c019ddf28cb14988645abbd180dcd017536338b7d0d5eaaea96
+CLANDRO_PKG_DEPENDS="libcurl, openssl, zlib"
+CLANDRO_PKG_AUTO_UPDATE=true

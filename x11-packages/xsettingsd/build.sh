@@ -1,0 +1,10 @@
+CLANDRO_PKG_HOMEPAGE="https://codeberg.org/derat/xsettingsd"
+CLANDRO_PKG_DESCRIPTION="Provides settings to X11 applications via the XSETTINGS specification"
+CLANDRO_PKG_LICENSE="BSD"
+CLANDRO_PKG_LICENSE_FILE="COPYING"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.0.2"
+CLANDRO_PKG_SRCURL="https://codeberg.org/derat/xsettingsd/archive/v${CLANDRO_PKG_VERSION}.tar.gz"
+CLANDRO_PKG_SHA256="f751c7ff3f93ab088f3d31a4cb70ec415c22ec1bf832647d650b2b383cb1bf5d"
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_DEPENDS="libc++, libx11"

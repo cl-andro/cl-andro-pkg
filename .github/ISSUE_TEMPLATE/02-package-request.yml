@@ -1,0 +1,34 @@
+name: "Package request"
+description: "Request a new package"
+title: "[Package]: "
+labels: ["package request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use search to check whether package is already available. If package does not exist in our repositories, fill the form below to request it.
+
+        Package requests are recommendational and are served at low priority. There is no guarantee that package will be added at all.
+  - type: textarea
+    attributes:
+      label: Why is it worth to add this package?
+      description: Provide us a detailed explanation how you plan to use the requested package and why it would be a nice addition to the cl-andro repository.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Home page URL
+  - type: input
+    attributes:
+      label: Source code URL
+      placeholder: Link to Git or source archive
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: |
+        Have you tried to compile it on device? If it did not work then provide the error you ran into. Otherwise please share build steps and any patches that you had to apply.
+
+        Does your package have special device requirements such as root permissions, custom kernel or even additional hardware? If yes, then list all details here.

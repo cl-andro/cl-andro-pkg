@@ -1,0 +1,9 @@
+CLANDRO_PKG_HOMEPAGE=https://kde.org/plasma-desktop
+CLANDRO_PKG_DESCRIPTION="Plasma Specific Protocols for Wayland"
+CLANDRO_PKG_LICENSE="LGPL-2.0"
+CLANDRO_PKG_MAINTAINER="@clandro"
+CLANDRO_PKG_VERSION="1.20.0"
+CLANDRO_PKG_SRCURL="https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-${CLANDRO_PKG_VERSION}.tar.xz"
+CLANDRO_PKG_SHA256=9818bb1462211ce5982e670abf0d964eb11fe1d0c02a1c26084db30695a79d6a
+CLANDRO_PKG_AUTO_UPDATE=true
+CLANDRO_PKG_BUILD_DEPENDS="extra-cmake-modules, qt6-qtbase"

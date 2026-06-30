@@ -136,7 +136,7 @@ __flang_build_runtime() {
 # shellcheck disable=SC2031
 clandro_step_configure() {
 	# Add unknown vendor, otherwise it screws with the default LLVM triple detection.
-	export LLVM_DEFAULT_TARGET_TRIPLE="${CCTERMUX_HOST_PLATFORM/-/-unknown-}"
+	export LLVM_DEFAULT_TARGET_TRIPLE="${CCCLANDRO_HOST_PLATFORM/-/-unknown-}"
 
 	# Compile flang-rt
 	__flang_build_runtime

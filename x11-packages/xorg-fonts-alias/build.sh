@@ -10,6 +10,6 @@ CLANDRO_PKG_PLATFORM_INDEPENDENT=true
 # if any of these are not installed while xorg-fonts-misc is installed, in particular xorg-fonts-misc,
 # then strange and unxpected behavior can happen in Termux:X11 particularly with certain programs
 # such as xcalc and xmessage, resulting in 'Error: Aborting: no font found'
-# https://github.com/termux/clandro-x11/issues/880
+# https://github.com/cl-andro/clandro-x11/issues/880
 # https://github.com/termux/termux-packages/issues/23002
 CLANDRO_PKG_RECOMMENDS="xorg-fonts-75dpi, xorg-fonts-100dpi, xorg-fonts-cyrillic, xorg-fonts-misc"

@@ -1,7 +1,7 @@
 # Build with:
-#	docker build -t ghcr.io/clandro/package-builder .
+#	docker build -t ghcr.io/cl-andro/package-builder .
 # Push to GitHub registry with:
-#	docker push ghcr.io/clandro/package-builder
+#	docker push ghcr.io/cl-andro/package-builder
 # This is done after changing this file or any of the
 # scripts/setup-{ubuntu,android-sdk,cgct}.sh setup scripts.
 FROM ubuntu:24.04

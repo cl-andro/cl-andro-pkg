@@ -1,10 +1,10 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/clandro/clandro-am-socket
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-am-socket
 CLANDRO_PKG_DESCRIPTION="A faster version of am with less features that only works while Termux is running"
 CLANDRO_PKG_LICENSE="GPL-3.0"
 CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION=1.5.0
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/clandro/clandro-am-socket/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-am-socket/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=5175023c7fd675492451a72d06b75c772f257685b69fe117227bae5a5e6f5494
 CLANDRO_PKG_DEPENDS="libc++"
 

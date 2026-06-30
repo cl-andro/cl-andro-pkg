@@ -1,10 +1,10 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/clandro/clandro-exec-package
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-exec-package
 CLANDRO_PKG_DESCRIPTION="Utils and libraries for Termux exec including a LD_PRELOAD shared library for proper functioning of the Termux execution environment"
 CLANDRO_PKG_LICENSE="Apache-2.0"
 CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION=1:2.4.0
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/clandro/clandro-exec-package/archive/refs/tags/v${CLANDRO_PKG_VERSION:2}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-exec-package/archive/refs/tags/v${CLANDRO_PKG_VERSION:2}.tar.gz
 CLANDRO_PKG_SHA256=ed82c94592a4fc18845d5d45b6f2f36f78ad5910e5ffdccaaa10dbd9279e3682
 CLANDRO_PKG_BUILD_DEPENDS="clandro-core-static"
 CLANDRO_PKG_ESSENTIAL=true
@@ -53,15 +53,15 @@ clandro_step_post_massage() {
 		make $QUIET_BUILD $CLANDRO_PKG_EXTRA_MAKE_ARGS CLANDRO_EXEC_PKG__TESTS__API_LEVEL=28 build-libclandro-exec_nos_c_tre_runtime-binary-tests
 
 		local CLANDRO_EXEC__TESTS__TESTS_PATH="$CLANDRO_PKG_MASSAGEDIR/$CLANDRO_PREFIX/libexec/installed-tests/clandro-exec"
-		local LIBTERMUX_EXEC__NOS__C__TESTS_PATH="$CLANDRO_EXEC__TESTS__TESTS_PATH/lib/clandro-exec_nos_c/tre"
+		local LIBCLANDRO_EXEC__NOS__C__TESTS_PATH="$CLANDRO_EXEC__TESTS__TESTS_PATH/lib/clandro-exec_nos_c/tre"
 
 		install -m700 build/output/usr/libexec/installed-tests/clandro-exec/lib/clandro-exec_nos_c/tre/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-fsanitize28 \
-			"$LIBTERMUX_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-fsanitize28"
-		$CLANDRO_ELF_CLEANER --api-level 28 "$LIBTERMUX_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-fsanitize28"
+			"$LIBCLANDRO_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-fsanitize28"
+		$CLANDRO_ELF_CLEANER --api-level 28 "$LIBCLANDRO_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-fsanitize28"
 
 		install -m700 build/output/usr/libexec/installed-tests/clandro-exec/lib/clandro-exec_nos_c/tre/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-nofsanitize28 \
-			"$LIBTERMUX_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-nofsanitize28"
-		$CLANDRO_ELF_CLEANER --api-level 28 "$LIBTERMUX_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-nofsanitize28"
+			"$LIBCLANDRO_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-nofsanitize28"
+		$CLANDRO_ELF_CLEANER --api-level 28 "$LIBCLANDRO_EXEC__NOS__C__TESTS_PATH/bin/libclandro-exec_nos_c_tre_runtime-binary-tests-nofsanitize28"
 		printf "%s\n\n" "Install libclandro-exec_nos_c_tre_runtime-binary-tests for CLANDRO_PKG_API_LEVEL '$CLANDRO_PKG_API_LEVEL' successful"
 	fi
 }

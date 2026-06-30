@@ -1,0 +1,86 @@
+name: Test CLANDRO Rebrand (aarch64)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-rebrand:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cl-andro/package-builder:latest
+      options: --privileged
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GHCR_PAT }}
+    steps:
+      - name: Checkout CLANDRO Source
+        uses: actions/checkout@v4
+
+      - name: Architect the Custom OS Directories
+        run: |
+          sudo mkdir -p /data/data/com.zk.clandro/files/usr
+          sudo mkdir -p /data/data/com.zk.clandro/files/home
+          sudo chown -R builder:builder /data/data/com.zk.clandro
+
+      - name: Install the C++ Compiler
+        run: |
+          export HOME=/home/builder
+          ./scripts/setup-android-sdk.sh
+
+      - name: Import GPG Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          export HOME=/home/builder
+          if [ -n "$GPG_PRIVATE_KEY" ]; then
+            echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          else
+            echo "GPG_PRIVATE_KEY not set"
+          fi
+
+      - name: Build cjson (zero-dep test package)
+        run: |
+          export HOME=/home/builder
+
+          # Build bedrock
+          ./build-package.sh -a aarch64 ndk-sysroot
+          ./build-package.sh -a aarch64 libc++
+
+          # Build test package (cjson — pure C, zero dependencies)
+          ./build-package.sh -a aarch64 cjson
+
+      - name: Sanitize Artifact Filenames
+        if: success()
+        run: |
+          for f in output/*:*.deb; do
+            if [ -e "$f" ]; then
+              new_name=$(echo "$f" | tr ':' '_')
+              mv "$f" "$new_name"
+            fi
+          done
+
+      - name: Upload Test Artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clandro-rebrand-test
+          path: output/*.deb
+
+      - name: Publish & Sign Packages
+        if: success()
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          ./scripts/publish-repo-ci.sh
+
+      - name: Print Build Summary
+        if: always()
+        run: |
+          echo "=== CLANDRO Rebrand Test Complete ==="
+          echo "Build system: TERMUX_ → CLANDRO_ rename applied"
+          echo "Test package: cjson"
+          ls -la output/ 2>/dev/null || echo "No output"

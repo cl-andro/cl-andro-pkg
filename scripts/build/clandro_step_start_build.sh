@@ -130,7 +130,7 @@ clandro_step_start_build() {
 			local CLANDRO_ELF_CLEANER_VERSION
 			CLANDRO_ELF_CLEANER_VERSION=$(bash -c ". $CLANDRO_SCRIPTDIR/packages/clandro-elf-cleaner/build.sh; echo \$CLANDRO_PKG_VERSION")
 			clandro_download \
-				"https://github.com/termux/clandro-elf-cleaner/releases/download/v${CLANDRO_ELF_CLEANER_VERSION}/clandro-elf-cleaner" \
+				"https://github.com/cl-andro/clandro-elf-cleaner/releases/download/v${CLANDRO_ELF_CLEANER_VERSION}/clandro-elf-cleaner" \
 				"$CLANDRO_ELF_CLEANER" \
 				59645fb25b84d11f108436e83d9df5e874ba4eb76ab62948869a23a3ee692fa7
 			chmod u+x "$CLANDRO_ELF_CLEANER"

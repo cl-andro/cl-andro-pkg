@@ -1,11 +1,11 @@
 # Contributor: @michalbednarski
-CLANDRO_PKG_HOMEPAGE=https://github.com/clandro/TermuxAm
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/ClandroAm
 CLANDRO_PKG_DESCRIPTION="Android Oreo-compatible am command reimplementation"
 CLANDRO_PKG_LICENSE="Apache-2.0"
 CLANDRO_PKG_MAINTAINER="Michal Bednarski @michalbednarski"
 CLANDRO_PKG_VERSION=0.8.0
 CLANDRO_PKG_REVISION=3
-CLANDRO_PKG_SRCURL=https://github.com/clandro/TermuxAm/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/ClandroAm/archive/refs/tags/v$CLANDRO_PKG_VERSION.tar.gz
 CLANDRO_PKG_SHA256=7d4cfa2bfff93d5fc89fc89e537d2c072e08918276b140b7ed48ea45ebfbe8f3
 CLANDRO_PKG_PLATFORM_INDEPENDENT=true
 CLANDRO_PKG_BUILD_IN_SRC=true

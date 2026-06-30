@@ -14,7 +14,7 @@ index b1d060328bc..218c9215260 100755
                          -DSWIFT_ANDROID_DEPLOY_DEVICE_PATH:STRING="${ANDROID_DEPLOY_DEVICE_PATH}"
                          -DSWIFT_SDK_ANDROID_ARCHITECTURES:STRING="${ANDROID_ARCH}"
                      )
-+                    cross_c_flags="$CFLAGS --target=$CCTERMUX_HOST_PLATFORM"
++                    cross_c_flags="$CFLAGS --target=$CCCLANDRO_HOST_PLATFORM"
 +                    call ln -sf "$(build_directory ${host} swift)/lib/swift" "${ANDROID_NDK}/sysroot/usr/lib"
                  fi
  
@@ -66,8 +66,8 @@ index b1d060328bc..218c9215260 100755
                      cmake_options+=(
                          -DCMAKE_FIND_ROOT_PATH:PATH="${CROSS_COMPILE_DEPS_PATH}"
                          -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER
-+                        -DCMAKE_CXX_FLAGS="$CXXFLAGS --target=$CCTERMUX_HOST_PLATFORM $CPPFLAGS"
-+                        -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCTERMUX_HOST_PLATFORM"
++                        -DCMAKE_CXX_FLAGS="$CXXFLAGS --target=$CCCLANDRO_HOST_PLATFORM $CPPFLAGS"
++                        -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCCLANDRO_HOST_PLATFORM"
                      )
                  fi
  
@@ -77,7 +77,7 @@ index b1d060328bc..218c9215260 100755
                    if [[ $(is_cross_tools_host ${host}) ]] ; then
 -                      cmake_options+=("${SWIFT_TARGET_CMAKE_OPTIONS[@]}")
 +                      cmake_options+=("${SWIFT_TARGET_CMAKE_OPTIONS[@]}"
-+                      -DCMAKE_C_FLAGS="$CFLAGS --target=$CCTERMUX_HOST_PLATFORM $CPPFLAGS")
++                      -DCMAKE_C_FLAGS="$CFLAGS --target=$CCCLANDRO_HOST_PLATFORM $CPPFLAGS")
                    fi
                  ;;
                  esac
@@ -86,9 +86,9 @@ index b1d060328bc..218c9215260 100755
                      cmake_options+=(
                          -DCMAKE_FIND_ROOT_PATH:PATH="${CROSS_COMPILE_DEPS_PATH}"
 +                        -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER
-+                        -DCMAKE_C_FLAGS="$CFLAGS --target=$CCTERMUX_HOST_PLATFORM $CPPFLAGS"
-+                        -DCMAKE_CXX_FLAGS="$CXXFLAGS --target=$CCTERMUX_HOST_PLATFORM $CPPFLAGS"
-+                        -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCTERMUX_HOST_PLATFORM"
++                        -DCMAKE_C_FLAGS="$CFLAGS --target=$CCCLANDRO_HOST_PLATFORM $CPPFLAGS"
++                        -DCMAKE_CXX_FLAGS="$CXXFLAGS --target=$CCCLANDRO_HOST_PLATFORM $CPPFLAGS"
++                        -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCCLANDRO_HOST_PLATFORM"
                      )
                  fi
                  if [[ "${host}" == "android-"* ]]; then
@@ -97,9 +97,9 @@ index b1d060328bc..218c9215260 100755
                    if [[ $(is_cross_tools_host ${host}) ]] ; then
                        cmake_options+=("${SWIFT_TARGET_CMAKE_OPTIONS[@]}")
 +                      cmake_options+=(
-+                          -DCMAKE_C_FLAGS="$CFLAGS --target=$CCTERMUX_HOST_PLATFORM $CPPFLAGS"
-+                          -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCTERMUX_HOST_PLATFORM"
-+                          -DCMAKE_SHARED_LINKER_FLAGS="$LDFLAGS --target=$CCTERMUX_HOST_PLATFORM"
++                          -DCMAKE_C_FLAGS="$CFLAGS --target=$CCCLANDRO_HOST_PLATFORM $CPPFLAGS"
++                          -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS --target=$CCCLANDRO_HOST_PLATFORM"
++                          -DCMAKE_SHARED_LINKER_FLAGS="$LDFLAGS --target=$CCCLANDRO_HOST_PLATFORM"
 +                      )
                    fi
                  ;;

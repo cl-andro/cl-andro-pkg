@@ -1,10 +1,10 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/termux/clandro-services/
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-services/
 CLANDRO_PKG_DESCRIPTION="Service daemon for Termux"
 CLANDRO_PKG_LICENSE="GPL-3.0"
 CLANDRO_PKG_MAINTAINER="Henrik Grimler @Grimler91"
 CLANDRO_PKG_VERSION=0.13
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/termux/clandro-services/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-services/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=486a2b21332e0557764c706e6d01a33af54425ee4ac9cc3d3e74ee574799ffb9
 CLANDRO_PKG_DEPENDS="coreutils, dpkg, runit"
 CLANDRO_PKG_PLATFORM_INDEPENDENT=true

@@ -115,11 +115,11 @@ clandro_step_configure() {
 	if [[ "${CMAKE_PROC}" == "arm" ]]; then
 		CMAKE_PROC="armv7-a"
 	fi
-	export CFLAGS+=" --target=${CCTERMUX_HOST_PLATFORM}"
+	export CFLAGS+=" --target=${CCCLANDRO_HOST_PLATFORM}"
 	# https://github.com/dotnet/android/pull/4958
 	# apphost remove dependency on libc++_shared.so
 	# by linking statically
-	export CXXFLAGS+=" --target=${CCTERMUX_HOST_PLATFORM} -stdlib=libc++ -static-libstdc++"
+	export CXXFLAGS+=" --target=${CCCLANDRO_HOST_PLATFORM} -stdlib=libc++ -static-libstdc++"
 
 	# easier to embed in toolchain file than CMakeArgs
 	mkdir -p "${CLANDRO_PKG_TMPDIR}/build/cmake"

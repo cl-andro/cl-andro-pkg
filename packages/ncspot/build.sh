@@ -47,7 +47,7 @@ clandro_step_pre_configure() {
 	chmod +x "$_CMAKE"
 
 	export PATH="$(dirname "$_CMAKE"):$PATH"
-	CXXFLAGS+=" --target=$CCTERMUX_HOST_PLATFORM"
-	CFLAGS+=" --target=$CCTERMUX_HOST_PLATFORM"
-	LDFLAGS+=" --target=$CCTERMUX_HOST_PLATFORM"
+	CXXFLAGS+=" --target=$CCCLANDRO_HOST_PLATFORM"
+	CFLAGS+=" --target=$CCCLANDRO_HOST_PLATFORM"
+	LDFLAGS+=" --target=$CCCLANDRO_HOST_PLATFORM"
 }

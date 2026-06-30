@@ -45,7 +45,7 @@ index fde8755..343f3b4 100644
  target_compile_options(_FoundationICU INTERFACE
    "$<$<COMPILE_LANGUAGE:Swift>:SHELL:-Xcc -fmodule-map-file=${CMAKE_CURRENT_SOURCE_DIR}/include/_foundation_unicode/module.modulemap>")
 -
-+target_link_options(_FoundationICU PRIVATE "SHELL:--target=$ENV{CCTERMUX_HOST_PLATFORM} -Xlinker -rpath=@CLANDRO_PREFIX@/lib")
++target_link_options(_FoundationICU PRIVATE "SHELL:--target=$ENV{CCCLANDRO_HOST_PLATFORM} -Xlinker -rpath=@CLANDRO_PREFIX@/lib")
  add_subdirectory(common)
  add_subdirectory(i18n)
  add_subdirectory(io)

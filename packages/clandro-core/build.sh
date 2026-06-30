@@ -1,10 +1,10 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/clandro/clandro-core-package
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-core-package
 CLANDRO_PKG_DESCRIPTION="Utils and libraries for Termux core"
 CLANDRO_PKG_LICENSE="MIT"
 CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION=0.4.0
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/clandro/clandro-core-package/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-core-package/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=af6299f341292ca98d1748a06e342fe29fbc9eb485a7c1ba5c9f91ba72b4f44a
 CLANDRO_PKG_ESSENTIAL=true
 CLANDRO_PKG_BUILD_IN_SRC=true

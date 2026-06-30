@@ -21,7 +21,7 @@ CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
 CLANDRO_PKG_CONFLICTS="libblocksruntime"
 
 clandro_step_pre_configure() {
-	local target="$CCTERMUX_HOST_PLATFORM"
+	local target="$CCCLANDRO_HOST_PLATFORM"
 	if [[ "$CLANDRO_ARCH" == "arm" ]]; then
 		target="armv7a-linux-androideabi$CLANDRO_PKG_API_LEVEL"
 	fi

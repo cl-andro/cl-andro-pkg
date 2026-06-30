@@ -1024,8 +1024,8 @@ CLANDRO__PREFIX__BIN_DIR___MAX_LEN="$((CLANDRO__PREFIX_DIR___MAX_LEN + 1 + 3))" 
 #
 # **See Also:**
 # - https://github.com/termux/termux-packages/wiki/Clandro-file-system-layout#file-path-limits
-# - https://github.com/termux/clandro-core-package/blob/master/lib/clandro-core_nos_c/tre/include/clandro/clandro_core__nos__c/v1/clandro/file/TermuxFile.h
-# - https://github.com/termux/termux-exec-package/blob/master/lib/clandro-exec_nos_c/tre/include/clandro/clandro_exec__nos__c/v1/clandro/api/clandro_exec/service/ld_preload/direct/exec/ExecIntercept.h
+# - https://github.com/cl-andro/clandro-core-package/blob/master/lib/clandro-core_nos_c/tre/include/clandro/clandro_core__nos__c/v1/clandro/file/TermuxFile.h
+# - https://github.com/cl-andro/clandro-exec-package/blob/master/lib/clandro-exec_nos_c/tre/include/clandro/clandro_exec__nos__c/v1/clandro/api/clandro_exec/service/ld_preload/direct/exec/ExecIntercept.h
 #
 # Constant value: `127`
 ##
@@ -1035,7 +1035,7 @@ CLANDRO__PREFIX__BIN_FILE___SAFE_MAX_LEN="$((CLANDRO__PREFIX__BIN_DIR___MAX_LEN 
 # The max length for entire shebang line for `clandro-exec`.
 #
 # **See Also:**
-# - https://github.com/termux/termux-exec-package/blob/master/lib/clandro-exec_nos_c/tre/include/clandro/clandro_exec__nos__c/v1/clandro/api/clandro_exec/service/ld_preload/direct/exec/ExecIntercept.h
+# - https://github.com/cl-andro/clandro-exec-package/blob/master/lib/clandro-exec_nos_c/tre/include/clandro/clandro_exec__nos__c/v1/clandro/api/clandro_exec/service/ld_preload/direct/exec/ExecIntercept.h
 #
 # Default value: `340`
 ##
@@ -1497,7 +1497,7 @@ CLANDRO__UNIX_PATH_MAX=108
 # variable names and/or get their values, with support for fallback
 # to the build values defined here if `$CLANDRO_ENV__S_ROOT` variable
 # is not exported.**
-# - https://github.com/termux/clandro-core-package/blob/master/site/pages/en/projects/docs/usage/utils/clandro/shell/command/environment/termux-scoped-env-variable.md
+# - https://github.com/cl-andro/clandro-core-package/blob/master/site/pages/en/projects/docs/usage/utils/clandro/shell/command/environment/termux-scoped-env-variable.md
 #
 # The value of this variable `CLANDRO_ENV__S_ROOT` may be modified,
 # although not advisable since external programs would be using
@@ -2041,7 +2041,7 @@ __clandro_build_props__add_variables_validator_actions "CLANDRO_API_APP__APP_DIR
 #
 # **See Also:**
 # - https://github.com/termux/termux-api/blob/master/app/src/main/java/com/clandro/api/TermuxApiReceiver.java
-# - https://github.com/termux/clandro-api-package/blob/master/termux-api.c
+# - https://github.com/cl-andro/clandro-api-package/blob/master/termux-api.c
 #
 # Default value: `com.zk.clandro.api.TermuxApiReceiver`
 ##
@@ -2054,7 +2054,7 @@ CLANDRO_API_APP__ANDROID_API__ANDROID_API_RECEIVER__CLASS_NAME="$CLANDRO_API_APP
 ####
 # Variables for the `termux-api` package.
 #
-# - https://github.com/termux/clandro-api-package
+# - https://github.com/cl-andro/clandro-api-package
 ####
 
 ##
@@ -2067,7 +2067,7 @@ CLANDRO_API_PKG__REPO_NAME="clandro-api-package"
 ##
 # The `termux-api` package repo url.
 #
-# Default value: `https://github.com/termux/clandro-api-package`
+# Default value: `https://github.com/cl-andro/clandro-api-package`
 ##
 CLANDRO_API_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_API_PKG__REPO_NAME"
 
@@ -2083,7 +2083,7 @@ CLANDRO_API_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_API_PKG__REPO_N
 ####
 # Variables for the `clandro-core` package.
 #
-# - https://github.com/termux/clandro-core-package
+# - https://github.com/cl-andro/clandro-core-package
 ####
 
 ##
@@ -2096,7 +2096,7 @@ CLANDRO_CORE_PKG__REPO_NAME="clandro-core-package"
 ##
 # The `clandro-core` package repo url.
 #
-# Default value: `https://github.com/termux/clandro-core-package`
+# Default value: `https://github.com/cl-andro/clandro-core-package`
 ##
 CLANDRO_CORE_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_CORE_PKG__REPO_NAME"
 
@@ -2107,7 +2107,7 @@ CLANDRO_CORE_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_CORE_PKG__REPO
 ####
 # Variables for the `termux-am` package.
 #
-# - https://github.com/termux/TermuxAm
+# - https://github.com/cl-andro/ClandroAm
 ####
 
 ##
@@ -2120,7 +2120,7 @@ CLANDRO_AM_PKG__REPO_NAME="ClandroAm"
 ##
 # The `termux-am` package repo url.
 #
-# Default value: `https://github.com/termux/TermuxAm`
+# Default value: `https://github.com/cl-andro/ClandroAm`
 ##
 CLANDRO_AM_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_AM_PKG__REPO_NAME"
 
@@ -2135,7 +2135,7 @@ CLANDRO_AM_PKG__REPO_URL="$CLANDRO__REPOS_HOST_ORG_URL/$CLANDRO_AM_PKG__REPO_NAM
 #
 # **See Also:**
 # - https://developer.android.com/build/configure-app-module#set-namespace
-# - https://github.com/termux/TermuxAm/tree/master/app/src/main/java/com/clandro/termuxam
+# - https://github.com/cl-andro/ClandroAm/tree/master/app/src/main/java/com/clandro/termuxam
 #
 # Constant value: `com.zk.clandro.termuxam`
 ##
@@ -2149,8 +2149,8 @@ __clandro_build_props__add_variables_validator_actions "CLANDRO_AM_APP__NAMESPAC
 # TermuxAm main class that is passed as `start-class-name` to
 # `/system/bin/app_process` when running `am.apk` set in `$CLASSPATH`.
 #
-# - https://github.com/termux/TermuxAm/blob/master/app/src/main/java/com/clandro/termuxam/Am.java
-# - https://github.com/termux/TermuxAm/blob/v0.8.0/am-libexec-packaged#L30
+# - https://github.com/cl-andro/ClandroAm/blob/master/app/src/main/java/com/clandro/termuxam/Am.java
+# - https://github.com/cl-andro/ClandroAm/blob/v0.8.0/am-libexec-packaged#L30
 # - https://cs.android.com/android/platform/superproject/+/android-14.0.0_r1:frameworks/base/cmds/app_process/app_main.cpp;l=31
 #
 # Default value: `com.zk.clandro.termuxam.Am`

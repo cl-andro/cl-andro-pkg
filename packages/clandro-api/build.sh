@@ -4,7 +4,7 @@ CLANDRO_PKG_LICENSE="MIT"
 CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION=0.59.1
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/termux/clandro-api-package/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-api-package/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=92c2da07991a0191735539428aabb793e0ddb8e33baac305bcf38d77aa1eda80
 CLANDRO_PKG_BUILD_IN_SRC=true
 CLANDRO_PKG_DEPENDS="bash, util-linux, clandro-am (>= 0.8.0)"

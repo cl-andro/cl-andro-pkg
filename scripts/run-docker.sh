@@ -2,7 +2,7 @@
 set -euo pipefail
 
 CLANDRO_SCRIPTDIR=$(cd "$(realpath "$(dirname "$0")")"; cd ..; pwd)
-: ${CLANDRO_BUILDER_IMAGE_NAME:=ghcr.io/clandro/package-builder}
+: ${CLANDRO_BUILDER_IMAGE_NAME:=ghcr.io/cl-andro/package-builder}
 : ${CONTAINER_NAME:=clandro-package-builder}
 : ${CLANDRO_DOCKER_RUN_EXTRA_ARGS:=}
 : ${CLANDRO_DOCKER_EXEC_EXTRA_ARGS:=}

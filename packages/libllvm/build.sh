@@ -94,7 +94,7 @@ clandro_step_host_build() {
 clandro_step_pre_configure() {
 	# Add unknown vendor, otherwise it screws with the default LLVM triple
 	# detection.
-	local llvm_default_target_triple="${CCTERMUX_HOST_PLATFORM/-/-unknown-}"
+	local llvm_default_target_triple="${CCCLANDRO_HOST_PLATFORM/-/-unknown-}"
 	local llvm_target_arch
 	case "$CLANDRO_ARCH" in
 		"aarch64") llvm_target_arch="AArch64";;
@@ -148,7 +148,7 @@ clandro_step_post_make_install() {
 
 	# Instead of symlinks, for executables named after target triplets, create the same type of
 	# wrapper that the cross-compiling NDK uses to choose the correct target, including the API level
-	local target="$CCTERMUX_HOST_PLATFORM"
+	local target="$CCCLANDRO_HOST_PLATFORM"
 	if [[ "$CLANDRO_ARCH" == "arm" ]]; then
 		target="armv7a-linux-androideabi$CLANDRO_PKG_API_LEVEL"
 	fi

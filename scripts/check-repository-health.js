@@ -252,10 +252,10 @@ async function getErrorsForArch(arch) {
             pkgName.length - "-static".length,
           );
           if (termuxPackages.has(basePkgName)) {
-            // Check for TERMUX_PKG_NO_STATICSPLIT
+            // Check for CLANDRO_PKG_NO_STATICSPLIT
             if (!termuxPackages.get(basePkgName).mayHaveStaticSubpkg) {
               errors.push(
-                `"${pkgName}" ${pkgInfo.version}: static package should not exist as parent package "${basePkgName}" has TERMUX_PKG_NO_STATICSPLIT=true`,
+                `"${pkgName}" ${pkgInfo.version}: static package should not exist as parent package "${basePkgName}" has CLANDRO_PKG_NO_STATICSPLIT=true`,
               );
               proposedAutomatedFixes.push(
                 `aptly repo remove "${pkgInfo.repo}" "${pkgName} (=${pkgInfo.version}) {${arch}}"`,

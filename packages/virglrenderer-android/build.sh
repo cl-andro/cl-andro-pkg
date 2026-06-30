@@ -25,9 +25,9 @@ clandro_step_host_build() {
 	# our custom toolchain, so I'd like to compile it in the hostbuild step.
 	if [[ "$CLANDRO_ON_DEVICE_BUILD" == "false" ]]; then
 		export PATH="$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH"
-		export CCTERMUX_HOST_PLATFORM="$CLANDRO_HOST_PLATFORM$CLANDRO_PKG_API_LEVEL"
+		export CCCLANDRO_HOST_PLATFORM="$CLANDRO_HOST_PLATFORM$CLANDRO_PKG_API_LEVEL"
 		if [[ "$CLANDRO_ARCH" == "arm" ]]; then
-			CCTERMUX_HOST_PLATFORM="armv7a-linux-androideabi$CLANDRO_PKG_API_LEVEL"
+			CCCLANDRO_HOST_PLATFORM="armv7a-linux-androideabi$CLANDRO_PKG_API_LEVEL"
 		fi
 	fi
 
@@ -45,8 +45,8 @@ clandro_step_host_build() {
 
 	AR=$(command -v llvm-ar)
 	if [[ "$CLANDRO_ON_DEVICE_BUILD" == "false" ]]; then
-		CC=$(command -v "$CCTERMUX_HOST_PLATFORM-clang")
-		CXX=$(command -v "$CCTERMUX_HOST_PLATFORM-clang++")
+		CC=$(command -v "$CCCLANDRO_HOST_PLATFORM-clang")
+		CXX=$(command -v "$CCCLANDRO_HOST_PLATFORM-clang++")
 	else
 		CC=$(command -v "$CLANDRO_HOST_PLATFORM-clang")
 		CXX=$(command -v "$CLANDRO_HOST_PLATFORM-clang++")

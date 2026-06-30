@@ -20,7 +20,7 @@ set -e
 (( $# )) || {
 	echo "Usage: update-checksum [package name] ..."
 	echo
-	echo "Update TERMUX_PKG_SHA256 of package and optionally commit changes."
+	echo "Update CLANDRO_PKG_SHA256 of package and optionally commit changes."
 	echo
 	exit 1
 }
@@ -95,11 +95,11 @@ for package_dir in "$@"; do
 		# If there's more than 1 it's an array.
 		# Meaning it's probably multi-line, so use -z
 		checksum="(\n$(printf '\\t%s\\n' "${new_checksum[@]}"))"
-		sed -zi "s/\(TERMUX_PKG_SHA256=\)([^)]*)/\1${checksum}/g" "${buildsh_path}"
+		sed -zi "s/\(CLANDRO_PKG_SHA256=\)([^)]*)/\1${checksum}/g" "${buildsh_path}"
 	else
 		# Otherwise it's a standard string
 		checksum="${new_checksum[0]}"
-		sed -i "s/\(TERMUX_PKG_SHA256=\).*/\1${checksum}/g" "${buildsh_path}"
+		sed -i "s/\(CLANDRO_PKG_SHA256=\).*/\1${checksum}/g" "${buildsh_path}"
 	fi
 
 	# Delete the revision as it shouldn't be present if the package was updated.

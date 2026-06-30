@@ -2,7 +2,7 @@
 set -e -u
 
 CONTAINER=clandro-package-builder
-IMAGE=ghcr.io/clandro/package-builder
+IMAGE=ghcr.io/cl-andro/package-builder
 
 docker pull $IMAGE
 

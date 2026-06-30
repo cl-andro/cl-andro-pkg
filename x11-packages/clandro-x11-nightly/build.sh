@@ -1,10 +1,10 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/termux/clandro-x11
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-x11
 CLANDRO_PKG_DESCRIPTION="Termux X11 add-on."
 CLANDRO_PKG_LICENSE="GPL-3.0"
 CLANDRO_PKG_MAINTAINER="Twaik Yont @twaik"
 CLANDRO_PKG_VERSION="1.03.01"
 CLANDRO_PKG_REVISION=5
-CLANDRO_PKG_SRCURL=https://github.com/termux/clandro-x11/archive/25c8dbc3e8cbf08c9dd233b29adbe1e3a1df52f4.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-x11/archive/25c8dbc3e8cbf08c9dd233b29adbe1e3a1df52f4.tar.gz
 CLANDRO_PKG_SHA256=8626aab0900d208f2ca484b5053ae5b952eff55537a4424042a35d6e935c8c04
 CLANDRO_PKG_AUTO_UPDATE=false
 CLANDRO_PKG_PLATFORM_INDEPENDENT=true
@@ -22,7 +22,7 @@ clandro_step_make() {
 
 clandro_step_make_install() {
 	# Downloading full JDK to compile 7kb apk seems excessive, let's download a prebuilt.
-	local LOADER_URL="https://github.com/termux/clandro-x11/releases/download/nightly/clandro-x11-nightly-1.03.01-0-any.pkg.tar.xz"
+	local LOADER_URL="https://github.com/cl-andro/clandro-x11/releases/download/nightly/clandro-x11-nightly-1.03.01-0-any.pkg.tar.xz"
 	install -t "$CLANDRO_PREFIX/bin" -m 755 clandro-x11 clandro-x11-preference
 	mkdir -p "$CLANDRO_PREFIX/libexec/clandro-x11"
 	wget -qO- "$LOADER_URL" | tar -OJxf - --wildcards "*loader.apk" > "$CLANDRO_PREFIX/libexec/clandro-x11/loader.apk"

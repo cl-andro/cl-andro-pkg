@@ -26,7 +26,7 @@ clandro_step_pre_configure() {
 	# Not sure if this is necessary for on-device build
 	# Follow clandro_step_configure_cmake.sh for now
 	if [[ "$CLANDRO_ON_DEVICE_BUILD" == "false" ]]; then
-		_TERMUX_CLANG_TARGET="--target=${CCTERMUX_HOST_PLATFORM}"
+		_TERMUX_CLANG_TARGET="--target=${CCCLANDRO_HOST_PLATFORM}"
 	fi
 
 	if [[ "$CLANDRO_ARCH" = arm || "$CLANDRO_ARCH" = i686 ]]; then

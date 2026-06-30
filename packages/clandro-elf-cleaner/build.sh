@@ -1,4 +1,4 @@
-CLANDRO_PKG_HOMEPAGE=https://github.com/termux/clandro-elf-cleaner
+CLANDRO_PKG_HOMEPAGE=https://github.com/cl-andro/clandro-elf-cleaner
 CLANDRO_PKG_DESCRIPTION="Cleaner of ELF files for Android"
 CLANDRO_PKG_LICENSE="GPL-3.0"
 CLANDRO_PKG_MAINTAINER="@clandro"
@@ -6,7 +6,7 @@ CLANDRO_PKG_MAINTAINER="@clandro"
 # updating the package.
 CLANDRO_PKG_VERSION=3.0.1
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/termux/clandro-elf-cleaner/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-elf-cleaner/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=1c3c6fb33ad8d1fdfe035eee3a5419f54442b93b1a97c4151b31b82c5626a06a
 CLANDRO_PKG_DEPENDS="libc++"
 

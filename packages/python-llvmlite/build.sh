@@ -87,7 +87,7 @@ __llvmlite_build_llvm() {
 
 	# Add unknown vendor, otherwise it screws with the default LLVM triple
 	# detection.
-	export LLVM_DEFAULT_TARGET_TRIPLE="${CCTERMUX_HOST_PLATFORM/-/-unknown-}"
+	export LLVM_DEFAULT_TARGET_TRIPLE="${CCCLANDRO_HOST_PLATFORM/-/-unknown-}"
 	export LLVM_TARGET_ARCH
 	case "$CLANDRO_ARCH" in
 		"aarch64") LLVM_TARGET_ARCH=AArch64;;

@@ -74,7 +74,7 @@ jobs:
 
       - name: Upload Language Artifacts
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cl-andro-languages
           path: output/*.deb

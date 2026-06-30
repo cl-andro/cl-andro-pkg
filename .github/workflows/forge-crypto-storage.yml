@@ -77,7 +77,7 @@ jobs:
 
       - name: Upload Crypto Storage Artifacts
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cl-andro-crypto-storage
           path: output/*.deb

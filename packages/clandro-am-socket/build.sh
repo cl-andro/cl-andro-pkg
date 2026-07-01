@@ -12,6 +12,7 @@ clandro_step_post_get_source() {
 
 	for file in "${CLANDRO_PKG_SRCDIR}/"*; do
 		sed -i'' -E -e "s|^(CLANDRO_AM_SOCKET_VERSION=).*|\1$CLANDRO_PKG_FULLVERSION|" \
+			-e "s|\@CLANDRO_PREFIX\@|${CLANDRO_PREFIX}|g" \
 			-e "s|\@CLANDRO_APP_PACKAGE\@|${CLANDRO_APP_PACKAGE}|g" \
 			-e "s|\@CLANDRO_APPS_DIR\@|${CLANDRO_APPS_DIR}|g" \
 			"$file"

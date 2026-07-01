@@ -1,0 +1,100 @@
+#!/data/data/com.zk.clandro/files/usr/bin/bash
+# ============================================================
+# clandro-xfce-start - Launch Alpine XFCE Desktop inside PRoot
+# ============================================================
+# This script:
+#   1. Checks for the Alpine XFCE rootfs
+#   2. Downloads it if missing (via proot-distro)
+#   3. Starts PRoot with Alpine XFCE
+#   4. Launches VNC server for mobile VNC client connection
+# ============================================================
+
+set -euo pipefail
+
+PREFIX="/data/data/com.zk.clandro/files/usr"
+DISTRO_NAME="alpine-xfce"
+DISTRO_DIR="${PREFIX}/var/lib/proot-distro/installed-distro/${DISTRO_NAME}"
+VNC_RESOLUTION="${VNC_RESOLUTION:-1080x2400}"
+VNC_DISPLAY="${VNC_DISPLAY:-:1}"
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+echo -e "${CYAN}"
+echo "╔═══════════════════════════════════════╗"
+echo "║   Alpine XFCE Mobile Desktop          ║"
+echo "║   for cl-andro + PRoot                ║"
+echo "╚═══════════════════════════════════════╝"
+echo -e "${NC}"
+
+# ---- Check PRoot & proot-distro ----
+if ! command -v proot &>/dev/null; then
+    echo -e "${RED}[!] PRoot not found. Install it:${NC}"
+    echo "    pkg install proot"
+    exit 1
+fi
+if ! command -v proot-distro &>/dev/null; then
+    echo -e "${RED}[!] proot-distro not found. Install it:${NC}"
+    echo "    pkg install proot-distro"
+    exit 1
+fi
+
+# ---- Ensure rootfs exists ----
+if [ ! -d "${DISTRO_DIR}" ]; then
+    echo -e "${YELLOW}[*] Alpine XFCE rootfs not found.${NC}"
+    echo -e "${YELLOW}[*] Install it with:${NC}"
+    echo "    proot-distro install ${DISTRO_NAME}"
+    echo ""
+    echo -e "${YELLOW}Or place alpine-xfce-aarch64.tar.gz in ${DISTRO_DIR}/../${NC}"
+    echo -e "${YELLOW}and run this script again.${NC}"
+
+    # Try installing via proot-distro
+    read -r -p "Attempt to install now? [Y/n] " REPLY
+    if [[ "${REPLY}" =~ ^[Yy]$ ]] || [ -z "${REPLY}" ]; then
+        mkdir -p "${DISTRO_DIR}"
+        if [ -f "${HOME}/alpine-xfce-aarch64.tar.gz" ]; then
+            echo -e "${GREEN}[*] Installing from local tarball...${NC}"
+            tar -xzf "${HOME}/alpine-xfce-aarch64.tar.gz" -C "${DISTRO_DIR}"
+        else
+            echo -e "${RED}[!] No tarball found at ~/alpine-xfce-aarch64.tar.gz${NC}"
+            echo -e "${YELLOW}[*] Download from: https://github.com/cl-andro/cl-andro-packages/releases${NC}"
+            exit 1
+        fi
+    else
+        exit 1
+    fi
+fi
+
+echo -e "${GREEN}[✓] Alpine XFCE rootfs found${NC}"
+
+# ---- Setup resolv.conf for networking inside proot ----
+echo "nameserver 8.8.8.8" > "${DISTRO_DIR}/etc/resolv.conf"
+echo "nameserver 1.1.1.1" >> "${DISTRO_DIR}/etc/resolv.conf"
+
+# ---- Launch PRoot with Alpine XFCE ----
+echo -e "${GREEN}[*] Starting Alpine XFCE environment...${NC}"
+echo -e "${CYAN}[*] VNC will be available at localhost:1${NC}"
+echo -e "${CYAN}[*] Resolution: ${VNC_RESOLUTION}${NC}"
+echo -e "${CYAN}[*] Password:   clusterauto${NC}"
+echo -e "${CYAN}[*] (change with: vncpasswd)${NC}"
+echo ""
+
+# Start proot with Alpine XFCE
+# Bind mounts for Android integration
+exec proot \
+    --root-id \
+    --kill-on-exit \
+    --link2symlink \
+    --rootfs="${DISTRO_DIR}" \
+    -b "${PREFIX}/tmp:/tmp" \
+    -b "/sdcard:/sdcard" \
+    -b "/data/data/com.zk.clandro:/data/data/com.zk.clandro" \
+    -b "/proc:/proc" \
+    -b "/sys:/sys" \
+    -b "/dev:/dev" \
+    -w /home/clandro \
+    /usr/local/bin/clandro-xfce

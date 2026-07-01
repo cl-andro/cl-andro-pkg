@@ -6,7 +6,7 @@ CLANDRO_PKG_VERSION="0.112.2"
 CLANDRO_PKG_SRCURL=https://github.com/nushell/nushell/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=32ebcfe41b6390145e90eb86273e221f22eeacd53ecac5274405f148fb4258c2
 CLANDRO_PKG_DEPENDS="openssl"
-CLANDRO_PKG_RECOMMENDS="command-not-found, termux-api"
+CLANDRO_PKG_RECOMMENDS="command-not-found, clandro-api"
 CLANDRO_PKG_BUILD_IN_SRC=true
 CLANDRO_PKG_AUTO_UPDATE=true
 

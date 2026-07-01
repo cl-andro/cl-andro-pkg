@@ -7,7 +7,7 @@ CLANDRO_PKG_SRCURL=https://github.com/gopasspw/gopass/archive/refs/tags/v$CLANDR
 CLANDRO_PKG_SHA256=33451a782b66266c59560a5ec7f4e34c104c501a36b445fc574fad71e3b3d884
 CLANDRO_PKG_AUTO_UPDATE=true
 CLANDRO_PKG_DEPENDS="git, gnupg"
-CLANDRO_PKG_SUGGESTS="termux-api, openssh"
+CLANDRO_PKG_SUGGESTS="clandro-api, openssh"
 
 clandro_step_make() {
 	clandro_setup_golang
@@ -22,7 +22,7 @@ clandro_step_make() {
 	ln -sf "$CLANDRO_PKG_SRCDIR" ./src/github.com/gopasspw/gopass
 
 	rm -f ./src/github.com/gopasspw/gopass/gopass
-	make -C ./src/github.com/gopasspw/gopass build CLIPHELPERS="-X github.com/gopasspw/gopass/pkg/clipboard.Helpers=termux-api'"
+	make -C ./src/github.com/gopasspw/gopass build CLIPHELPERS="-X github.com/gopasspw/gopass/pkg/clipboard.Helpers=clandro-api'"
 	install -Dm700 \
 		./src/github.com/gopasspw/gopass/gopass \
 		"$CLANDRO_PREFIX"/bin/gopass

@@ -6,7 +6,7 @@ diff -uNr lastpass-cli-1.3.3/clipboard.c lastpass-cli-1.3.3.mod/clipboard.c
  		if (clipboard_command) {
  			exec_command(clipboard_command);
 -			die("Unable to copy contents to clipboard. Please make sure you have `wl-clip`, `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
-+			die("Unable to copy contents to clipboard. Please make sure you have `termux-api`, `wl-clip`, `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
++			die("Unable to copy contents to clipboard. Please make sure you have `clandro-api`, `wl-clip`, `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
  		} else {
 +			execlp("clandro-clipboard-set", "clandro-clipboard-set", NULL);
  			execlp("wl-copy", "wl-copy", NULL);
@@ -15,7 +15,7 @@ diff -uNr lastpass-cli-1.3.3/clipboard.c lastpass-cli-1.3.3.mod/clipboard.c
  			execlp("pbcopy", "pbcopy", NULL);
  			execlp("putclip", "putclip", "--dos", NULL);
 -			die("Unable to copy contents to clipboard. Please make sure you have `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
-+			die("Unable to copy contents to clipboard. Please make sure you have `termux-api`, `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
++			die("Unable to copy contents to clipboard. Please make sure you have `clandro-api`, `xclip`, `xsel`, `pbcopy`, or `putclip` installed.");
  		}
  	}
  	close(pipefd[0]);

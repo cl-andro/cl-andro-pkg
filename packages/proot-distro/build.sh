@@ -5,7 +5,7 @@ CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION="4.38.0"
 CLANDRO_PKG_SRCURL=https://github.com/termux/proot-distro/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
 CLANDRO_PKG_SHA256=10ddabe1df5f3b433e9add0d6c6460ece607ea39b3decb338ccde78c86c80aec
-CLANDRO_PKG_DEPENDS="bash, bzip2, coreutils, curl, file, findutils, gzip, ncurses-utils, proot (>= 5.1.107-32), sed, tar, termux-tools, unzip, util-linux, xz-utils"
+CLANDRO_PKG_DEPENDS="bash, bzip2, coreutils, curl, file, findutils, gzip, ncurses-utils, proot (>= 5.1.107-32), sed, tar, clandro-tools, unzip, util-linux, xz-utils"
 CLANDRO_PKG_SUGGESTS="bash-completion, termux-api"
 CLANDRO_PKG_BUILD_IN_SRC=true
 CLANDRO_PKG_PLATFORM_INDEPENDENT=true

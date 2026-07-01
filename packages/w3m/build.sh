@@ -19,8 +19,8 @@ CLANDRO_PKG_SUGGESTS="libsixel, perl"
 # breaks 64-bit builds where NDK headers define bcopy as a macro:
 CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="ac_cv_func_setpgrp_void=yes ac_cv_func_bcopy=yes"
 
-#Overwrite the default /usr/bin/firefox with termux-open-url as default external browser. That way, pressing "M" on a URL will open a link in Androids default Browser.
-CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" --with-browser=termux-open-url"
+#Overwrite the default /usr/bin/firefox with clandro-open-url as default external browser. That way, pressing "M" on a URL will open a link in Androids default Browser.
+CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" --with-browser=clandro-open-url"
 #Overwrite the default editor to just vi, as the default was /usr/bin/vi.
 CLANDRO_PKG_EXTRA_CONFIGURE_ARGS+=" --with-editor=editor"
 # Build w3mimg with X11/imlib2.

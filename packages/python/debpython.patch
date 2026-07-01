@@ -22,7 +22,7 @@ index 39ef978..5899a7a 100644
 -    process = Popen(('/usr/bin/dpkg', '-L', package_name), stdout=PIPE,
 +    env["LD_PRELOAD"] = ""
 +    process = Popen(['@CLANDRO_PREFIX@/bin/bash', '-c',
-+        'source @CLANDRO_PREFIX_CLASSICAL@/bin/termux-setup-package-manager && echo ${CLANDRO_APP_PACKAGE_MANAGER}'],
++        'source @CLANDRO_PREFIX_CLASSICAL@/bin/clandro-setup-package-manager && echo ${CLANDRO_APP_PACKAGE_MANAGER}'],
 +        stdout=PIPE)
 +    clandro_app_package_manager = process.communicate()[0].decode()[0:-1]
 +    if clandro_app_package_manager == "apt":

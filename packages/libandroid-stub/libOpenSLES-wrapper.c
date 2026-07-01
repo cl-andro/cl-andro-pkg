@@ -92,7 +92,7 @@ __attribute__((constructor)) static void init() {
     if (skcodec_handle)
         dlclose(skcodec_handle); // if the library is needed by any of libOpenSLES dependencies it will not be unloaded
 
-    // Nothing bad happened, normal case for termux-docker.
+    // Nothing bad happened, normal case for clandro-docker.
     if (!handle)
         return;
     #define IID(s) s = *((SLInterfaceID*) dlsym(handle, #s));

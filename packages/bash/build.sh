@@ -6,7 +6,7 @@ CLANDRO_PKG_VERSION=5.3.9
 CLANDRO_PKG_SRCURL=https://mirrors.kernel.org/gnu/bash/bash-${CLANDRO_PKG_VERSION%.*}.tar.gz
 CLANDRO_PKG_SHA256=0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba
 CLANDRO_PKG_AUTO_UPDATE=false
-CLANDRO_PKG_DEPENDS="libandroid-support, libiconv, readline (>= 8.3), termux-tools"
+CLANDRO_PKG_DEPENDS="libandroid-support, libiconv, readline (>= 8.3), clandro-tools"
 CLANDRO_PKG_RECOMMENDS="command-not-found, bash-completion"
 CLANDRO_PKG_BREAKS="bash-dev"
 CLANDRO_PKG_REPLACES="bash-dev"

@@ -15,9 +15,9 @@ clandro_step_configure() {
 }
 
 clandro_step_make() {
-	termux-tree-sitter build -s "xml/src"
+	clandro-tree-sitter build -s "xml/src"
 }
 
 clandro_step_make_install() {
-	termux-tree-sitter install -s "xml/src"
+	clandro-tree-sitter install -s "xml/src"
 }

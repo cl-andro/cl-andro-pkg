@@ -19,7 +19,7 @@ index 59e1337599b2..656545555349 100644
  defm stack_check : BooleanFFlag<"stack-check">, Group<clang_ignored_f_Group>;
  defm strength_reduce :
      BooleanFFlag<"strength-reduce">, Group<clang_ignored_gcc_optimization_f_Group>;
-+defm clandro_rpath : BoolFOption<"termux-rpath",
++defm clandro_rpath : BoolFOption<"clandro-rpath",
 +  LangOpts<"OpenMP">, DefaultTrue,
 +  NegFlag<SetFalse, [], [ClangOption, CC1Option], "Disable">, PosFlag<SetTrue, [], [ClangOption, CC1Option], "Enable">,
 +  BothFlags<[], [ClangOption, CC1Option], " setting rpaths for the Termux environment">>;

@@ -22,13 +22,13 @@ clandro_step_configure() {
 clandro_step_make() {
 	local parser
 	for parser in "markdown" "markdown-inline"; do
-		termux-tree-sitter build -s "tree-sitter-$parser/src"
+		clandro-tree-sitter build -s "tree-sitter-$parser/src"
 	done
 }
 
 clandro_step_make_install() {
 	local parser
 	for parser in "markdown" "markdown-inline"; do
-		termux-tree-sitter install -s "tree-sitter-$parser/src"
+		clandro-tree-sitter install -s "tree-sitter-$parser/src"
 	done
 }

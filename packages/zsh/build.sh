@@ -7,7 +7,7 @@ CLANDRO_PKG_VERSION=5.9
 CLANDRO_PKG_REVISION=9
 CLANDRO_PKG_SRCURL=https://www.zsh.org/pub/old/zsh-${CLANDRO_PKG_VERSION}.tar.xz
 CLANDRO_PKG_SHA256=9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
-CLANDRO_PKG_DEPENDS="libandroid-support, libcap, ncurses, termux-tools"
+CLANDRO_PKG_DEPENDS="libandroid-support, libcap, ncurses, clandro-tools"
 CLANDRO_PKG_RECOMMENDS="command-not-found, zsh-completions"
 CLANDRO_PKG_EXTRA_CONFIGURE_ARGS="
 --disable-gdbm

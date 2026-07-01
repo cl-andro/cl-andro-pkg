@@ -1,4 +1,4 @@
-CLANDRO_SUBPKG_DESCRIPTION="AOSP-based mksh, toybox and iputils for termux-docker"
+CLANDRO_SUBPKG_DESCRIPTION="AOSP-based mksh, toybox and iputils for clandro-docker"
 # It doesn't seem trivial to "wildcard" include most files in the bin folder
 # while excluding linker, debuggerd and crash_dump, which belong in the
 # main package.

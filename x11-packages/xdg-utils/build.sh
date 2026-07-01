@@ -24,7 +24,7 @@ clandro_step_pre_configure() {
 }
 
 clandro_step_post_make_install() {
-	# `bin/xdg-open` conflicts with termux-tools.
+	# `bin/xdg-open` conflicts with clandro-tools.
 	mv $CLANDRO_PREFIX/bin/{,xdg-utils-}xdg-open
 	mv $CLANDRO_PREFIX/share/man/man1/{,xdg-utils-}xdg-open.1
 }

@@ -16,10 +16,10 @@ clandro_step_configure() {
 }
 
 clandro_step_make() {
-	termux-tree-sitter generate
-	termux-tree-sitter build
+	clandro-tree-sitter generate
+	clandro-tree-sitter build
 }
 
 clandro_step_make_install() {
-	termux-tree-sitter install
+	clandro-tree-sitter install
 }

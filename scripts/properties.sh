@@ -1911,7 +1911,7 @@ CLANDRO_APP__RUN_COMMAND_API__RUN_COMMAND_API_SERVICE__CLASS_NAME="$CLANDRO_APP_
 #
 # **See Also:**
 # - https://github.com/termux/termux-app/blob/master/app/src/main/java/com/clandro/app/TermuxOpenReceiver.java
-# - https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in
+# - https://github.com/termux/clandro-tools/blob/master/scripts/termux-open.in
 #
 # Default value: `com.zk.clandro.app.TermuxOpenReceiver`
 ##

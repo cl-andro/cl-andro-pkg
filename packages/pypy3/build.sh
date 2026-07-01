@@ -93,27 +93,27 @@ __setup_termux_docker_rootfs() {
 	fi
 
 	# Get host platform rootfs tar if needed
-	if [ ! -f "$CLANDRO_PKG_CACHEDIR/clandro_termux-docker_$__pypy3_host_arch.tar" ]; then
+	if [ ! -f "$CLANDRO_PKG_CACHEDIR/clandro_clandro-docker_$__pypy3_host_arch.tar" ]; then
 		(
 			cd "$CLANDRO_PKG_CACHEDIR"
-			python docker-utils/docker_pull.py termux/termux-docker:$__pypy3_host_arch
-			mv clandro_termux-docker.tar clandro_termux-docker_$__pypy3_host_arch.tar
+			python docker-utils/docker_pull.py termux/clandro-docker:$__pypy3_host_arch
+			mv clandro_clandro-docker.tar clandro_clandro-docker_$__pypy3_host_arch.tar
 		)
 	fi
 
-	# Download busybox, update-static-dns and static-dns-hosts.txt from older termux-docker commit
-	mkdir -p "$CLANDRO_PKG_CACHEDIR"/termux-docker-utils
+	# Download busybox, update-static-dns and static-dns-hosts.txt from older clandro-docker commit
+	mkdir -p "$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils
 	clandro_download \
-		https://github.com/termux/termux-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/static-dns-hosts.txt \
-		"$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/static-dns-hosts.txt \
+		https://github.com/termux/clandro-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/static-dns-hosts.txt \
+		"$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/static-dns-hosts.txt \
 		f5e28c8d37dc69e4876372cc05dcfd07aadc8499f5fa05bb6af1cfbff7cd656a
 	clandro_download \
-		https://github.com/termux/termux-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/system/x86/bin/update-static-dns \
-		"$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/update-static-dns \
+		https://github.com/termux/clandro-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/system/x86/bin/update-static-dns \
+		"$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/update-static-dns \
 		14b6ba13506dd90b691e5dbb84bf79ca155837dd43eb05c0e68fbe991c05ee5e
 	clandro_download \
-		https://github.com/termux/termux-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/system/x86/bin/busybox \
-		"$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/busybox \
+		https://github.com/termux/clandro-docker/raw/98af62205f4da832b71bb4de09cb8d6b17ceeaca/system/x86/bin/busybox \
+		"$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/busybox \
 		6c63a8623659aff24843d9b0720fa4aa216d44a5d60f29979a4073f3f80ce69c
 
 	# Extract host platform rootfs tar
@@ -121,15 +121,15 @@ __setup_termux_docker_rootfs() {
 	if [ ! -d "$__pypy3_host_rootfs" ]; then
 		rm -rf "$__pypy3_host_rootfs".tmp
 		mkdir -p "$__pypy3_host_rootfs".tmp
-		cat "$CLANDRO_PKG_CACHEDIR"/clandro_termux-docker_$__pypy3_host_arch.tar | \
+		cat "$CLANDRO_PKG_CACHEDIR"/clandro_clandro-docker_$__pypy3_host_arch.tar | \
 			python "$CLANDRO_PKG_CACHEDIR"/docker-utils/undocker.py -o "$__pypy3_host_rootfs".tmp
 		mkdir -p "$__pypy3_host_rootfs".tmp/"$CLANDRO_PREFIX"/bin
 		mkdir -p "$__pypy3_host_rootfs".tmp/"$CLANDRO_ANDROID_HOME"
-		cp "$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/static-dns-hosts.txt \
+		cp "$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/static-dns-hosts.txt \
 			"$__pypy3_host_rootfs".tmp/system/etc/
-		cp "$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/update-static-dns \
+		cp "$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/update-static-dns \
 			"$__pypy3_host_rootfs".tmp/"$CLANDRO_PREFIX"/bin/
-		cp "$CLANDRO_PKG_CACHEDIR"/termux-docker-utils/busybox \
+		cp "$CLANDRO_PKG_CACHEDIR"/clandro-docker-utils/busybox \
 			"$__pypy3_host_rootfs".tmp/system/bin/
 		cp "$CLANDRO_PKG_CACHEDIR"/proot-bin/proot \
 			"$__pypy3_host_rootfs".tmp/"$CLANDRO_PREFIX"/bin/

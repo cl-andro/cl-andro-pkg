@@ -1,5 +1,5 @@
 CLANDRO_PKG_HOMEPAGE=https://source.android.com/
-CLANDRO_PKG_DESCRIPTION="bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and termux-docker"
+CLANDRO_PKG_DESCRIPTION="bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and clandro-docker"
 CLANDRO_PKG_LICENSE="BSD 3-Clause, Apache-2.0, ZLIB, Public Domain, BSD 2-Clause, OpenSSL, MirOS, BSD"
 CLANDRO_PKG_LICENSE_FILE="
 bionic/libc/NOTICE

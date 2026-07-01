@@ -18,9 +18,9 @@ clandro_step_post_get_source() {
 	local encabi=39
 	local decabi=12
 
-	mkdir -p termux-abi-test
+	mkdir -p clandro-abi-test
 	( # build the ABI test in a subshell to isolate the `cd`.
-		cd termux-abi-test && \
+		cd clandro-abi-test && \
 		gcc "$CLANDRO_PKG_BUILDER_DIR"/abi-test.c -o abi-test -I../
 		local abi_got eabi_got dabi_got
 		IFS=' ' read -r abi_got eabi_got dabi_got < <(./abi-test)
@@ -28,7 +28,7 @@ clandro_step_post_get_source() {
 			clandro_error_exit "ABI version mismatch in libvpx, got $abi_got $eabi_got $dabi_got."
 		fi
 	)
-	rm -rf termux-abi-test
+	rm -rf clandro-abi-test
 }
 
 clandro_step_configure() {

@@ -228,7 +228,7 @@ static struct {
 
 __attribute__((constructor)) static void init() {
     void* handle = dlopen(LIB, RTLD_LOCAL);
-    // Nothing bad happened, normal case for termux-docker.
+    // Nothing bad happened, normal case for clandro-docker.
     if (!handle)
         return;
 #define LOAD(s) stubs.s = dlsym(handle, #s);

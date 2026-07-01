@@ -94,33 +94,45 @@ EOF
 echo "nameserver 8.8.8.8" > "${ROOTFS_DIR}/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "${ROOTFS_DIR}/etc/resolv.conf"
 
-# ---- Bootstrap APK ----
-# Get apk-tools static binary from Alpine's CDN
-APK_BIN="${BOOTSTRAP_CACHE}/apk.static"
+# ---- Bootstrap APK using native apk binary ----
+# Strategy: use apk from the x86_64 minirootfs (native host arch) to
+# manage the aarch64 target rootfs via --arch flag. This avoids needing
+# binfmt_misc/qemu for package management.
+echo "[*] Preparing native apk binary..."
+APK_BIN="${BOOTSTRAP_CACHE}/apk-native"
 if [ ! -x "$APK_BIN" ]; then
-    APK_PKG="apk-tools-static-2.14.4-r0.apk"
-    APK_ARCH_URL="x86_64"
-    [ "$(uname -m)" = "aarch64" ] && APK_ARCH_URL="aarch64"
-    APK_URL="${ALPINE_MIRROR}/v${ALPINE_VERSION}/main/${APK_ARCH_URL}/${APK_PKG}"
-    echo "[*] Downloading ${APK_PKG}..."
-    wget -q --show-progress -O "${BOOTSTRAP_CACHE}/${APK_PKG}" "${APK_URL}"
-
-    APK_EXTRACT_DIR="${BOOTSTRAP_CACHE}/apk-extract"
-    mkdir -p "${APK_EXTRACT_DIR}"
-    tar -xzf "${BOOTSTRAP_CACHE}/${APK_PKG}" -C "${APK_EXTRACT_DIR}"
-    find "${APK_EXTRACT_DIR}" -name "apk.static" -exec cp {} "${APK_BIN}" \;
-    rm -rf "${APK_EXTRACT_DIR}"
-    chmod +x "${APK_BIN}"
+    if command -v apk &>/dev/null; then
+        # Host already has apk (unlikely on Ubuntu, but possible)
+        APK_BIN="$(command -v apk)"
+    else
+        # Download x86_64 minirootfs and extract its apk
+        HOST_ROOTFS_TAR="alpine-minirootfs-${ALPINE_VERSION}.0-x86_64.tar.gz"
+        HOST_ROOTFS_URL="${ALPINE_MIRROR}/v${ALPINE_VERSION}/releases/x86_64/${HOST_ROOTFS_TAR}"
+        if [ ! -f "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" ]; then
+            echo "[*] Downloading Alpine minirootfs for host (x86_64) to extract apk..."
+            wget -q --show-progress -O "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" "${HOST_ROOTFS_URL}"
+        fi
+        HOST_EXTRACT="${BOOTSTRAP_CACHE}/host-rootfs"
+        rm -rf "${HOST_EXTRACT}"
+        mkdir -p "${HOST_EXTRACT}"
+        tar -xzf "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" -C "${HOST_EXTRACT}"
+        cp "${HOST_EXTRACT}/sbin/apk" "${APK_BIN}"
+        rm -rf "${HOST_EXTRACT}"
+        chmod +x "${APK_BIN}"
+    fi
 fi
-APK_CMD="${APK_BIN}"
 
-echo "[*] Bootstrapping APK..."
-$APK_CMD --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --no-interactive \
-    alpine-baselayout alpine-conf alpine-repositories apk-tools busybox
+echo "[*] Bootstrapping APK (native → aarch64 rootfs)..."
+$APK_BIN --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add \
+    alpine-baselayout alpine-conf alpine-repositories apk-tools busybox 2>&1 || {
+    echo "[!] Retrying with --allow-untrusted..."
+    $APK_BIN --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --allow-untrusted \
+        alpine-baselayout alpine-conf alpine-repositories apk-tools busybox 2>&1
+}
 
 # ---- Install XFCE + VNC + mobile-friendly packages ----
 echo "[*] Installing XFCE4 desktop + VNC + mobile tools..."
-$APK_CMD --root "${ROOTFS_DIR}" --no-interactive add \
+$APK_BIN --root "${ROOTFS_DIR}" --no-interactive add \
     alpine-base busybox-initscripts openrc \
     util-linux e2fsprogs dosfstools \
     dbus dbus-x11 elogind polkit-elogind \

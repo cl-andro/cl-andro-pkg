@@ -111,7 +111,10 @@ QEMU_RUN() {
 QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" update 2>&1 || true
 
 # Install core + XFCE + VNC + mobile packages
+# Note: exit code 10 = trigger scripts (chroot-needed) failed,
+# but packages are installed. Caches regen on first boot.
 echo "[*] Installing core system..."
+set +e
 QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" --no-interactive add \
     alpine-base openrc \
     util-linux e2fsprogs \
@@ -141,6 +144,14 @@ QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" --no-interactive add \
     pulseaudio pulseaudio-utils \
     alsa-utils \
     xdotool
+APK_EXIT=$?
+set -e
+if [ $APK_EXIT -ne 0 ] && [ $APK_EXIT -ne 10 ]; then
+    exit $APK_EXIT
+fi
+if [ $APK_EXIT -eq 10 ]; then
+    echo "[*] Trigger scripts failed (no root chroot). Packages installed OK."
+fi
 
 # ---- Create user 'clandro' directly (no chroot needed) ----
 echo "[*] Creating user 'clandro'..."

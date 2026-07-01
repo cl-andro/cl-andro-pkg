@@ -80,45 +80,39 @@ jobs:
           mkdir -p "${PKG_DIR}/data/data/com.zk.clandro/files/usr/etc/proot-distro"
           mkdir -p "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin"
 
-          # Copy plugin + start script
           cp packages/alpine-xfce-proot/alpine-xfce.sh \
             "${PKG_DIR}/data/data/com.zk.clandro/files/usr/etc/proot-distro/alpine-xfce.sh"
           cp packages/alpine-xfce-proot/clandro-xfce-start \
             "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin/clandro-xfce-start"
 
-          # Create control file
-          cat > "${PKG_DIR}/DEBIAN/control" <<EOF
-Package: alpine-xfce-proot
-Version: 1.0.0-1
-Architecture: all
-Maintainer: @clandro
-Depends: proot, proot-distro, bash, coreutils, clandro-tools
-Description: Alpine Linux XFCE Mobile Desktop - PRoot distro integration
- Provides the proot-distro plugin and clandro-xfce-start script to
- run Alpine Linux with XFCE4 desktop and TigerVNC on Android via PRoot.
-EOF
+          printf '%s\n' \
+            'Package: alpine-xfce-proot' \
+            'Version: 1.0.0-1' \
+            'Architecture: all' \
+            'Maintainer: @clandro' \
+            'Depends: proot proot-distro bash coreutils clandro-tools' \
+            'Description: Alpine Linux XFCE Mobile Desktop' \
+            > "${PKG_DIR}/DEBIAN/control"
 
-          # Create postinst
-          cat > "${PKG_DIR}/DEBIAN/postinst" <<'POSTINST'
-#!/bin/sh
-set -e
-echo ""
-echo "========================================="
-echo "  Alpine XFCE Mobile Desktop"
-echo "========================================="
-echo ""
-echo "  Install rootfs:  proot-distro install alpine-xfce"
-echo "  Or run:          clandro-xfce-start"
-echo "  VNC: localhost:1 | Password: clusterauto"
-echo "========================================="
-echo ""
-POSTINST
+          printf '%s\n' \
+            '#!/bin/sh' \
+            'set -e' \
+            'echo ""' \
+            'echo "========================================="' \
+            'echo "  Alpine XFCE Mobile Desktop"' \
+            'echo "========================================="' \
+            'echo ""' \
+            'echo "  Install: proot-distro install alpine-xfce"' \
+            'echo "  Or run:  clandro-xfce-start"' \
+            'echo "  VNC: localhost:1 | Password: clusterauto"' \
+            'echo "========================================="' \
+            'echo ""' \
+            > "${PKG_DIR}/DEBIAN/postinst"
 
           chmod 755 "${PKG_DIR}/DEBIAN/postinst"
           chmod 644 "${PKG_DIR}/DEBIAN/control"
           chmod 755 "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin/clandro-xfce-start"
 
-          # Build .deb
           mkdir -p /tmp/output
           dpkg-deb -b "${PKG_DIR}" "/tmp/output/alpine-xfce-proot_1.0.0-1_all.deb"
           echo "Built .deb:"

@@ -61,7 +61,7 @@ jobs:
           sudo tar -czf "/tmp/${ARTIFACT}.tar.gz" -C /tmp/alpine-xfce-rootfs/root .
           sha256sum "/tmp/${ARTIFACT}.tar.gz" > "/tmp/${ARTIFACT}.tar.gz.sha256"
 
-          # GPG sign
+          # GPG sign tarball
           if [ -n "${{ secrets.GPG_PRIVATE_KEY }}" ]; then
             echo '${{ secrets.GPG_PRIVATE_KEY }}' | gpg --batch --import 2>/dev/null || true
             gpg --batch --yes --detach-sign \
@@ -72,17 +72,66 @@ jobs:
           echo "artifact=${ARTIFACT}" >> $GITHUB_ENV
           echo "Tarball size:"
           du -sh "/tmp/${ARTIFACT}.tar.gz"
-          ls -lh /tmp/*.tar.gz /tmp/*.sha256 /tmp/*.sig 2>/dev/null
 
-      - name: Forge alpine-xfce-proot Package (.deb)
+      - name: Build alpine-xfce-proot .deb manually
         run: |
-          export HOME=/home/builder
-          ./build-package.sh -f -a aarch64 alpine-xfce-proot
+          PKG_DIR=/tmp/deb-build/alpine-xfce-proot
+          mkdir -p "${PKG_DIR}/DEBIAN"
+          mkdir -p "${PKG_DIR}/data/data/com.zk.clandro/files/usr/etc/proot-distro"
+          mkdir -p "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin"
 
-      - name: Copy Tarball into Output Dir
+          # Copy plugin + start script
+          cp packages/alpine-xfce-proot/alpine-xfce.sh \
+            "${PKG_DIR}/data/data/com.zk.clandro/files/usr/etc/proot-distro/alpine-xfce.sh"
+          cp packages/alpine-xfce-proot/clandro-xfce-start \
+            "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin/clandro-xfce-start"
+
+          # Create control file
+          cat > "${PKG_DIR}/DEBIAN/control" <<EOF
+Package: alpine-xfce-proot
+Version: 1.0.0-1
+Architecture: all
+Maintainer: @clandro
+Depends: proot, proot-distro, bash, coreutils, clandro-tools
+Description: Alpine Linux XFCE Mobile Desktop - PRoot distro integration
+ Provides the proot-distro plugin and clandro-xfce-start script to
+ run Alpine Linux with XFCE4 desktop and TigerVNC on Android via PRoot.
+EOF
+
+          # Create postinst
+          cat > "${PKG_DIR}/DEBIAN/postinst" <<'POSTINST'
+#!/bin/sh
+set -e
+echo ""
+echo "========================================="
+echo "  Alpine XFCE Mobile Desktop"
+echo "========================================="
+echo ""
+echo "  Install rootfs:  proot-distro install alpine-xfce"
+echo "  Or run:          clandro-xfce-start"
+echo "  VNC: localhost:1 | Password: clusterauto"
+echo "========================================="
+echo ""
+POSTINST
+
+          chmod 755 "${PKG_DIR}/DEBIAN/postinst"
+          chmod 644 "${PKG_DIR}/DEBIAN/control"
+          chmod 755 "${PKG_DIR}/data/data/com.zk.clandro/files/usr/bin/clandro-xfce-start"
+
+          # Build .deb
+          mkdir -p /tmp/output
+          dpkg-deb -b "${PKG_DIR}" "/tmp/output/alpine-xfce-proot_1.0.0-1_all.deb"
+          echo "Built .deb:"
+          ls -lh /tmp/output/*.deb
+
+      - name: Copy artifacts to output/
         run: |
-          cp /tmp/${artifact}*.tar.gz /tmp/${artifact}*.sha256 /tmp/${artifact}*.sig output/ 2>/dev/null || true
-          echo "Output contents:"
+          mkdir -p output
+          cp /tmp/output/*.deb output/ 2>/dev/null || true
+          cp /tmp/${artifact}*.tar.gz output/ 2>/dev/null || true
+          cp /tmp/${artifact}*.sha256 output/ 2>/dev/null || true
+          cp /tmp/${artifact}*.sig output/ 2>/dev/null || true
+          echo "Output:"
           ls -lh output/
 
       - name: Sanitize Artifact Filenames
@@ -95,20 +144,55 @@ jobs:
             fi
           done
 
-      - name: Upload Artifacts (Rootfs Tarball + .deb)
+      - name: Upload Artifacts (.deb + Tarball)
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: alpine-xfce-aarch64
           path: output/*
 
-      - name: Publish & Sign Packages to APT Repo
+      - name: Publish .deb to APT Repo
         if: success()
         env:
           CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          ./scripts/publish-repo-ci.sh
+          # Only .deb files for the apt repo
+          mkdir -p repo-debs
+          cp output/*.deb repo-debs/ 2>/dev/null || true
+          if [ -n "$(ls -A repo-debs/ 2>/dev/null)" ]; then
+            ./scripts/publish-repo-ci.sh
+          else
+            echo "No .deb files to publish to apt repo"
+          fi
+
+      - name: Publish Tarball to GitHub Releases
+        if: success() && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="alpine-xfce-${artifact}"
+          FILES=()
+          for f in /tmp/${artifact}*.tar.gz /tmp/${artifact}*.sha256 /tmp/${artifact}*.sig; do
+            [ -f "$f" ] && FILES+=("$f")
+          done
+
+          # Delete existing tag if any (for re-runs)
+          gh release delete "$TAG" --yes 2>/dev/null || true
+
+          gh release create "$TAG" \
+            "${FILES[@]}" \
+            --title "Alpine XFCE Mobile Desktop ${artifact}" \
+            --notes "Alpine ${{ github.event.inputs.alpine_version || '3.21' }} XFCE4 rootfs for cl-andro PRoot.
+
+        Install:
+            pkg install alpine-xfce-proot
+            proot-distro install alpine-xfce
+            clandro-xfce-start
+
+        VNC: localhost:1 | Password: ${{ github.event.inputs.vnc_password || 'clusterauto' }}
+        Resolution: ${{ github.event.inputs.resolution || '1080x2400' }}
+        " || echo "Release creation skipped (not on main branch?)"
 
       - name: The Autopsy (Catch the Crash)
         if: failure()
@@ -117,5 +201,4 @@ jobs:
           ls -la /tmp/alpine-xfce-rootfs/ 2>/dev/null || echo "No rootfs dir"
           ls -la /tmp/alpine-xfce-rootfs/root/ 2>/dev/null || echo "No root dir"
           cat /tmp/alpine-xfce-rootfs/build.log 2>/dev/null || echo "No build log"
-          ls -la output/ 2>/dev/null || echo "No output dir"
-          find /home/builder/.clandro-build/ -name "config.log" -exec tail -50 {} + 2>/dev/null || true
+          ls -la /tmp/output/ 2>/dev/null || echo "No output"

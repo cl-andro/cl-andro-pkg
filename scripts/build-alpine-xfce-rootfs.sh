@@ -95,18 +95,24 @@ echo "nameserver 8.8.8.8" > "${ROOTFS_DIR}/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "${ROOTFS_DIR}/etc/resolv.conf"
 
 # ---- Bootstrap APK ----
-# Ensure apk-tools static is available
-APK_BIN="${BOOTSTRAP_CACHE}/apk"
+# Get apk-tools static binary from Alpine's CDN
+APK_BIN="${BOOTSTRAP_CACHE}/apk.static"
 if [ ! -x "$APK_BIN" ]; then
-    APK_VERSION="2.14.4"
-    APK_ARCH="x86_64"
-    [ "$(uname -m)" = "aarch64" ] && APK_ARCH="aarch64"
-    APK_URL="https://gitlab.alpinelinux.org/api/v4/projects/5/packages/generic/apk-tools-static/v${APK_VERSION}/${APK_ARCH}/apk.static"
-    echo "[*] Downloading apk-tools-static v${APK_VERSION} (${APK_ARCH})..."
-    wget -q --show-progress -O "$APK_BIN" "$APK_URL"
-    chmod +x "$APK_BIN"
+    APK_PKG="apk-tools-static-2.14.4-r0.apk"
+    APK_ARCH_URL="x86_64"
+    [ "$(uname -m)" = "aarch64" ] && APK_ARCH_URL="aarch64"
+    APK_URL="${ALPINE_MIRROR}/v${ALPINE_VERSION}/main/${APK_ARCH_URL}/${APK_PKG}"
+    echo "[*] Downloading ${APK_PKG}..."
+    wget -q --show-progress -O "${BOOTSTRAP_CACHE}/${APK_PKG}" "${APK_URL}"
+
+    APK_EXTRACT_DIR="${BOOTSTRAP_CACHE}/apk-extract"
+    mkdir -p "${APK_EXTRACT_DIR}"
+    tar -xzf "${BOOTSTRAP_CACHE}/${APK_PKG}" -C "${APK_EXTRACT_DIR}"
+    find "${APK_EXTRACT_DIR}" -name "apk.static" -exec cp {} "${APK_BIN}" \;
+    rm -rf "${APK_EXTRACT_DIR}"
+    chmod +x "${APK_BIN}"
 fi
-APK_CMD="$APK_BIN"
+APK_CMD="${APK_BIN}"
 
 echo "[*] Bootstrapping APK..."
 $APK_CMD --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --no-interactive \

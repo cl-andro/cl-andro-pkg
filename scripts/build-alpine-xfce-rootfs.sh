@@ -94,45 +94,24 @@ EOF
 echo "nameserver 8.8.8.8" > "${ROOTFS_DIR}/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "${ROOTFS_DIR}/etc/resolv.conf"
 
-# ---- Bootstrap APK using native apk binary ----
-# Strategy: use apk from the x86_64 minirootfs (native host arch) to
-# manage the aarch64 target rootfs via --arch flag. This avoids needing
-# binfmt_misc/qemu for package management.
-echo "[*] Preparing native apk binary..."
-APK_BIN="${BOOTSTRAP_CACHE}/apk-native"
-if [ ! -x "$APK_BIN" ]; then
-    if command -v apk &>/dev/null; then
-        # Host already has apk (unlikely on Ubuntu, but possible)
-        APK_BIN="$(command -v apk)"
-    else
-        # Download x86_64 minirootfs and extract its apk
-        HOST_ROOTFS_TAR="alpine-minirootfs-${ALPINE_VERSION}.0-x86_64.tar.gz"
-        HOST_ROOTFS_URL="${ALPINE_MIRROR}/v${ALPINE_VERSION}/releases/x86_64/${HOST_ROOTFS_TAR}"
-        if [ ! -f "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" ]; then
-            echo "[*] Downloading Alpine minirootfs for host (x86_64) to extract apk..."
-            wget -q --show-progress -O "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" "${HOST_ROOTFS_URL}"
-        fi
-        HOST_EXTRACT="${BOOTSTRAP_CACHE}/host-rootfs"
-        rm -rf "${HOST_EXTRACT}"
-        mkdir -p "${HOST_EXTRACT}"
-        tar -xzf "${BOOTSTRAP_CACHE}/${HOST_ROOTFS_TAR}" -C "${HOST_EXTRACT}"
-        cp "${HOST_EXTRACT}/sbin/apk" "${APK_BIN}"
-        rm -rf "${HOST_EXTRACT}"
-        chmod +x "${APK_BIN}"
-    fi
+# ---- Bootstrap APK via chroot + qemu ----
+# qemu-user-static + binfmt_misc lets us chroot into aarch64 rootfs and
+# run binaries transparently. The target rootfs already has apk shipped
+# with the minirootfs.
+if [ ! -f "${ROOTFS_DIR}/usr/bin/qemu-aarch64-static" ]; then
+    echo "[!] qemu-aarch64-static not found in rootfs. Need qemu for chroot."
+    exit 1
 fi
 
-echo "[*] Bootstrapping APK (native → aarch64 rootfs)..."
-$APK_BIN --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add \
-    alpine-baselayout alpine-conf alpine-repositories apk-tools busybox 2>&1 || {
-    echo "[!] Retrying with --allow-untrusted..."
-    $APK_BIN --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --allow-untrusted \
-        alpine-baselayout alpine-conf alpine-repositories apk-tools busybox 2>&1
-}
+echo "[*] Bootstrapping APK (chroot + qemu into aarch64 rootfs)..."
 
-# ---- Install XFCE + VNC + mobile-friendly packages ----
-echo "[*] Installing XFCE4 desktop + VNC + mobile tools..."
-$APK_BIN --root "${ROOTFS_DIR}" --no-interactive add \
+# Update APK repo list inside chroot
+sudo chroot "${ROOTFS_DIR}" /sbin/apk update 2>&1 || true
+
+# Install core + XFCE + VNC + mobile packages
+# (apk inside aarch64 chroot runs via qemu-binfmt_misc, transparently)
+echo "[*] Installing core system..."
+sudo chroot "${ROOTFS_DIR}" /sbin/apk --no-interactive add \
     alpine-base busybox-initscripts openrc \
     util-linux e2fsprogs dosfstools \
     dbus dbus-x11 elogind polkit-elogind \
@@ -243,8 +222,8 @@ os.chmod('${ROOTFS_DIR}/home/clandro/.vnc/passwd', 0o600)
 
 # Use chroot to set proper VNC password if qemu is available
 if [ -f "${ROOTFS_DIR}/usr/bin/qemu-aarch64-static" ]; then
-    echo "${VNC_PASSWORD}" | chroot "${ROOTFS_DIR}" /bin/sh -c '
-        cat > /tmp/vncpass.txt
+    echo "${VNC_PASSWORD}" | sudo tee "${ROOTFS_DIR}/tmp/vncpass.txt" > /dev/null
+    sudo chroot "${ROOTFS_DIR}" /bin/sh -c '
         /usr/bin/vncpasswd -f < /tmp/vncpass.txt > /home/clandro/.vnc/passwd 2>/dev/null
         chmod 600 /home/clandro/.vnc/passwd
         chown 10000:10000 /home/clandro/.vnc/passwd
@@ -426,16 +405,16 @@ chmod +x "${ROOTFS_DIR}/usr/local/bin/clandro-xfce"
 
 # ---- Cleanup ----
 echo "[*] Cleaning up..."
-rm -rf "${ROOTFS_DIR}/var/cache/apk"/*
-rm -rf "${ROOTFS_DIR}/tmp/"*
-rm -rf "${ROOTFS_DIR}/root/"*
-rm -f "${ROOTFS_DIR}/usr/bin/qemu-aarch64-static"
-find "${ROOTFS_DIR}/usr/share/doc" -type f -delete 2>/dev/null || true
-find "${ROOTFS_DIR}/usr/share/info" -type f -delete 2>/dev/null || true
-find "${ROOTFS_DIR}/usr/share/man" -type f -delete 2>/dev/null || true
+sudo rm -rf "${ROOTFS_DIR}/var/cache/apk"/* 2>/dev/null || true
+sudo rm -rf "${ROOTFS_DIR}/tmp/"* 2>/dev/null || true
+sudo rm -rf "${ROOTFS_DIR}/root/"* 2>/dev/null || true
+sudo rm -f "${ROOTFS_DIR}/usr/bin/qemu-aarch64-static" 2>/dev/null || true
+sudo find "${ROOTFS_DIR}/usr/share/doc" -type f -delete 2>/dev/null || true
+sudo find "${ROOTFS_DIR}/usr/share/info" -type f -delete 2>/dev/null || true
+sudo find "${ROOTFS_DIR}/usr/share/man" -type f -delete 2>/dev/null || true
 
 # Fix ownership
-chown -R 10000:10000 "${ROOTFS_DIR}/home/clandro" 2>/dev/null || true
+sudo chown -R 10000:10000 "${ROOTFS_DIR}/home/clandro" 2>/dev/null || true
 
 ROOTFS_SIZE=$(du -sh "${ROOTFS_DIR}" | cut -f1)
 echo "[*] Rootfs size: ${ROOTFS_SIZE}"

@@ -90,7 +90,7 @@ jobs:
             'Version: 1.0.0-1' \
             'Architecture: all' \
             'Maintainer: @clandro' \
-            'Depends: proot, proot-distro, bash, coreutils, clandro-tools' \
+            'Depends: proot, proot-distro, bash, coreutils' \
             'Description: Alpine Linux XFCE Mobile Desktop' \
             > "${PKG_DIR}/DEBIAN/control"
 

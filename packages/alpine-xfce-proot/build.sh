@@ -8,7 +8,7 @@ CLANDRO_PKG_PLATFORM_INDEPENDENT=true
 CLANDRO_PKG_BUILD_IN_SRC=true
 CLANDRO_PKG_SKIP_SRC_EXTRACT=true
 CLANDRO_PKG_AUTO_UPDATE=false
-CLANDRO_PKG_DEPENDS="proot, proot-distro, bash, coreutils, clandro-tools"
+CLANDRO_PKG_DEPENDS="proot, proot-distro, bash, coreutils"
 CLANDRO_PKG_SUGGESTS="clusterctl"
 CLANDRO_PKG_CONFFILES="etc/proot-distro/alpine-xfce.sh"
 

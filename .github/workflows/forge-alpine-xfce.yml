@@ -166,28 +166,28 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="alpine-xfce-${artifact}"
-          FILES=()
-          for f in /tmp/${artifact}*.tar.gz /tmp/${artifact}*.sha256 /tmp/${artifact}*.sig; do
-            [ -f "$f" ] && FILES+=("$f")
-          done
 
           gh release delete "$TAG" --yes 2>/dev/null || true
 
-          NOTES=$(cat <<EONOTES
-          Alpine ${{ github.event.inputs.alpine_version || '3.21' }} XFCE4 rootfs for cl-andro PRoot.
+          set -- /tmp/${artifact}*.tar.gz /tmp/${artifact}*.sha256 /tmp/${artifact}*.sig
+          REL_FILES=""
+          for f in "$@"; do
+            [ -f "$f" ] && REL_FILES="$REL_FILES $f"
+          done
 
-          Install:
-              pkg install alpine-xfce-proot
-              proot-distro install alpine-xfce
-              clandro-xfce-start
-
-          VNC: localhost:1 | Password: ${{ github.event.inputs.vnc_password || 'clusterauto' }}
-          Resolution: ${{ github.event.inputs.resolution || '1080x2400' }}
-          EONOTES
-          )
+          NOTES=$(printf '%s\n' \
+            "Alpine ${{ github.event.inputs.alpine_version || '3.21' }} XFCE4 rootfs for cl-andro PRoot." \
+            "" \
+            "Install:" \
+            "    pkg install alpine-xfce-proot" \
+            "    proot-distro install alpine-xfce" \
+            "    clandro-xfce-start" \
+            "" \
+            "VNC: localhost:1 | Password: ${{ github.event.inputs.vnc_password || 'clusterauto' }}" \
+            "Resolution: ${{ github.event.inputs.resolution || '1080x2400' }}")
 
           gh release create "$TAG" \
-            "${FILES[@]}" \
+            $REL_FILES \
             --title "Alpine XFCE Mobile Desktop ${artifact}" \
             --notes "$NOTES" || echo "Release creation skipped"
 

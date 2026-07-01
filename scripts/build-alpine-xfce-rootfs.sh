@@ -95,13 +95,26 @@ echo "nameserver 8.8.8.8" > "${ROOTFS_DIR}/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "${ROOTFS_DIR}/etc/resolv.conf"
 
 # ---- Bootstrap APK ----
+# Ensure apk-tools static is available
+APK_BIN="${BOOTSTRAP_CACHE}/apk"
+if [ ! -x "$APK_BIN" ]; then
+    APK_VERSION="2.14.4"
+    APK_ARCH="x86_64"
+    [ "$(uname -m)" = "aarch64" ] && APK_ARCH="aarch64"
+    APK_URL="https://gitlab.alpinelinux.org/api/v4/projects/5/packages/generic/apk-tools-static/v${APK_VERSION}/${APK_ARCH}/apk.static"
+    echo "[*] Downloading apk-tools-static v${APK_VERSION} (${APK_ARCH})..."
+    wget -q --show-progress -O "$APK_BIN" "$APK_URL"
+    chmod +x "$APK_BIN"
+fi
+APK_CMD="$APK_BIN"
+
 echo "[*] Bootstrapping APK..."
-apk --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --no-interactive \
+$APK_CMD --root "${ROOTFS_DIR}" --arch "${ARCH}" --initdb add --no-interactive \
     alpine-baselayout alpine-conf alpine-repositories apk-tools busybox
 
 # ---- Install XFCE + VNC + mobile-friendly packages ----
 echo "[*] Installing XFCE4 desktop + VNC + mobile tools..."
-apk --root "${ROOTFS_DIR}" --no-interactive add \
+$APK_CMD --root "${ROOTFS_DIR}" --no-interactive add \
     alpine-base busybox-initscripts openrc \
     util-linux e2fsprogs dosfstools \
     dbus dbus-x11 elogind polkit-elogind \

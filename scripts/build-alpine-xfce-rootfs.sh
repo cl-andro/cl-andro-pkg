@@ -113,9 +113,9 @@ QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" update 2>&1 || true
 # Install core + XFCE + VNC + mobile packages
 echo "[*] Installing core system..."
 QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" --no-interactive add \
-    alpine-base busybox-initscripts openrc \
-    util-linux e2fsprogs dosfstools \
-    dbus dbus-x11 elogind polkit-elogind \
+    alpine-base openrc \
+    util-linux e2fsprogs \
+    dbus dbus-x11 elogind polkit \
     sudo curl wget ca-certificates tzdata \
     htop nano bash shadow \
     grep sed gawk findutils coreutils \
@@ -127,22 +127,20 @@ QEMU_RUN sbin/apk --root "${ROOTFS_DIR}" --no-interactive add \
     xfce4-notifyd \
     thunar thunar-volman thunar-archive-plugin \
     ristretto mousepad parole xarchiver \
+    firefox \
     xdg-utils xdg-user-dirs \
     \
-    adwaita-icon-theme tango-icon-theme \
-    papirus-icon-theme gtk+3.0 \
-    gtk-engine-murrine \
+    adwaita-icon-theme tango-icon-theme papirus-icon-theme \
+    gtk+3.0 \
     font-noto font-noto-cjk font-dejavu font-liberation \
     \
-    tigervnc tigervnc-server \
+    tigervnc \
     \
-    matchbox-keyboard firefox-esr netsurf \
     desktop-file-utils shared-mime-info \
-    gvfs gvfs-fuse \
-    NetworkManager network-manager-applet \
+    networkmanager \
     pulseaudio pulseaudio-utils \
-    alsa-utils alsa-plugins-pulse \
-    unclutter xdotool
+    alsa-utils \
+    xdotool
 
 # ---- Create user 'clandro' directly (no chroot needed) ----
 echo "[*] Creating user 'clandro'..."
@@ -377,7 +375,7 @@ ANDROIDENV
 mkdir -p "${ROOTFS_DIR}/etc/runlevels/default"
 ln -sf /etc/init.d/dbus "${ROOTFS_DIR}/etc/runlevels/default/dbus" 2>/dev/null || true
 ln -sf /etc/init.d/elogind "${ROOTFS_DIR}/etc/runlevels/default/elogind" 2>/dev/null || true
-ln -sf /etc/init.d/NetworkManager "${ROOTFS_DIR}/etc/runlevels/default/NetworkManager" 2>/dev/null || true
+ln -sf /etc/init.d/networkmanager "${ROOTFS_DIR}/etc/runlevels/default/networkmanager" 2>/dev/null || true
 
 # Start script
 mkdir -p "${ROOTFS_DIR}/usr/local/bin"

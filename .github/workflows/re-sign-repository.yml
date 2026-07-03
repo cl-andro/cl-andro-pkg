@@ -74,8 +74,8 @@ jobs:
             echo "::error::Release file not found at dists/stable/Release"
             exit 1
           fi
-          gpg --batch --no-tty --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" --default-key "$KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
-          gpg --batch --no-tty --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" --default-key "$KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
+          echo "$GPG_PASSPHRASE" | gpg --batch --no-tty --pinentry-mode loopback --passphrase-fd 0 --default-key "$KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
+          echo "$GPG_PASSPHRASE" | gpg --batch --no-tty --pinentry-mode loopback --passphrase-fd 0 --default-key "$KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
           gpg --output cl-andro.gpg --export "$KEY_ID"
           echo "Re-signed with key $KEY_ID and exported public key"
 

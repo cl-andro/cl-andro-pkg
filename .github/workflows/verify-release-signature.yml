@@ -1,0 +1,66 @@
+name: Verify Release Signature
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-signature:
+    if: github.repository == 'cl-andro/clandro-pkg'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install GPG
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq gnupg curl
+
+      - name: Download Release & Release.gpg from packages repo
+        run: |
+          curl -sLO "https://raw.githubusercontent.com/cl-andro/cl-andro-packages/main/dists/stable/Release"
+          curl -sLO "https://raw.githubusercontent.com/cl-andro/cl-andro-packages/main/dists/stable/Release.gpg"
+
+      - name: Import GPG private key from secrets
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          if [ -z "$GPG_PRIVATE_KEY" ]; then
+            echo "::error::GPG_PRIVATE_KEY secret is not set"
+            exit 1
+          fi
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+
+      - name: Verify Release.gpg signature against Release file
+        run: |
+          echo "Verifying that Release.gpg is a valid signature for the Release file..."
+          gpg --batch --verify Release.gpg Release
+          echo "::notice::Signature verification succeeded — GPG keys match!"
+
+      - name: Extract and display key details
+        run: |
+          KEY_ID=$(gpg --verify Release.gpg Release 2>&1 | grep -oP 'using \K\S+$' || \
+                   gpg --verify Release.gpg Release 2>&1 | grep -oP 'key ID \K\S+')
+          echo "Signing key ID: ${KEY_ID:-unknown}"
+          echo "Key fingerprints:"
+          gpg --list-keys --keyid-format LONG "$KEY_ID" 2>/dev/null || true
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.CL_ANDRO_PAT }}
+        run: |
+          gh issue create \
+            --title "Release Signature Verification Failed" \
+            --body "The GPG signature on the Release file (Release.gpg) does NOT match the private key stored in secrets.
+
+          This means either:
+          1. The packages repo was signed with a different GPG key
+          2. The GPG_PRIVATE_KEY secret has been rotated/updated without re-signing
+          3. The Release or Release.gpg files have been tampered with
+
+          Action needed: Re-sign the Release file using the correct private key and push to cl-andro-packages." \
+            --label "security" \
+            --label "bug"

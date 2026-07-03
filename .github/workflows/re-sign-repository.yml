@@ -38,7 +38,7 @@ jobs:
 
       - name: Show imported key info
         run: |
-          KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | head -1 | cut -d: -f5)
+          KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | tail -1 | cut -d: -f5)
           echo "Using key ID: $KEY_ID"
           gpg --list-secret-keys --keyid-format LONG "$KEY_ID"
           echo "KEY_ID=$KEY_ID" >> $GITHUB_ENV

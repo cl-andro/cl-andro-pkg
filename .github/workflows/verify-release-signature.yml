@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   verify-signature:
-    if: github.repository == 'cl-andro/clandro-pkg'
+    if: github.repository == 'cl-andro/cl-andro-pkg'
     runs-on: ubuntu-latest
     steps:
       - name: Install GPG

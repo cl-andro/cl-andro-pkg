@@ -32,6 +32,9 @@ jobs:
           chmod 700 ~/.gnupg
           echo "allow-loopback-pinentry" > ~/.gnupg/gpg-agent.conf
           chmod 600 ~/.gnupg/gpg-agent.conf
+          echo "batch" > ~/.gnupg/gpg.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          chmod 600 ~/.gnupg/gpg.conf
           gpgconf --kill gpg-agent
           gpg-connect-agent reloadagent /bye
           echo "$GPG_PRIVATE_KEY" | gpg --batch --import

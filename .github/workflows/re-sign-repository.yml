@@ -28,6 +28,10 @@ jobs:
             echo "::error::GPG_PRIVATE_KEY secret is not set"
             exit 1
           fi
+          mkdir -p ~/.gnupg
+          echo "allow-loopback-pinentry" > ~/.gnupg/gpg-agent.conf
+          gpgconf --kill gpg-agent
+          gpg-connect-agent reloadagent /bye
           echo "$GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Show imported key info

@@ -32,34 +32,13 @@ jobs:
           fi
           echo "$GPG_PRIVATE_KEY" | gpg --batch --import
 
-      - name: Verify Release.gpg signature against Release file
+      - name: Verify Release.gpg signature
         run: |
-          echo "Verifying that Release.gpg is a valid signature for the Release file..."
-          gpg --batch --verify Release.gpg Release
-          echo "::notice::Signature verification succeeded — GPG keys match!"
-
-      - name: Extract and display key details
-        run: |
-          KEY_ID=$(gpg --verify Release.gpg Release 2>&1 | grep -oP 'using \K\S+$' || \
-                   gpg --verify Release.gpg Release 2>&1 | grep -oP 'key ID \K\S+')
-          echo "Signing key ID: ${KEY_ID:-unknown}"
-          echo "Key fingerprints:"
-          gpg --list-keys --keyid-format LONG "$KEY_ID" 2>/dev/null || true
-
-      - name: Notify on failure
-        if: failure()
-        env:
-          GITHUB_TOKEN: ${{ secrets.CL_ANDRO_PAT }}
-        run: |
-          gh issue create \
-            --title "Release Signature Verification Failed" \
-            --body "The GPG signature on the Release file (Release.gpg) does NOT match the private key stored in secrets.
-
-          This means either:
-          1. The packages repo was signed with a different GPG key
-          2. The GPG_PRIVATE_KEY secret has been rotated/updated without re-signing
-          3. The Release or Release.gpg files have been tampered with
-
-          Action needed: Re-sign the Release file using the correct private key and push to cl-andro-packages." \
-            --label "security" \
-            --label "bug"
+          if gpg --batch --verify Release.gpg Release 2>&1; then
+            KEY_ID=$(gpg --verify Release.gpg Release 2>&1 | grep -oP 'using \K\S+$' || \
+                     gpg --verify Release.gpg Release 2>&1 | grep -oP 'key ID \K\S+')
+            echo "::notice::Signature verification succeeded — GPG keys match! Key ID: ${KEY_ID:-unknown}"
+          else
+            echo "::error::Signature verification FAILED — Release.gpg does NOT match the private key in secrets"
+            exit 1
+          fi

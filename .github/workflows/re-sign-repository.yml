@@ -1,0 +1,94 @@
+name: Re-sign Repository
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: "Commit message"
+        required: true
+        default: "Re-sign Release files with updated GPG key"
+
+permissions:
+  contents: read
+
+jobs:
+  resign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq gnupg curl git
+
+      - name: Import GPG private key from secrets
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          if [ -z "$GPG_PRIVATE_KEY" ]; then
+            echo "::error::GPG_PRIVATE_KEY secret is not set"
+            exit 1
+          fi
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+
+      - name: Show imported key info
+        run: |
+          KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | head -1 | cut -d: -f5)
+          echo "Using key ID: $KEY_ID"
+          gpg --list-secret-keys --keyid-format LONG "$KEY_ID"
+          echo "KEY_ID=$KEY_ID" >> $GITHUB_ENV
+
+      - name: Export public key for reference
+        run: |
+          gpg --armor --export "$KEY_ID" > /tmp/current-public-key.asc
+          echo "Current public key:"
+          cat /tmp/current-public-key.asc
+
+      - name: Upload public key as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: clandro-public-key
+          path: /tmp/current-public-key.asc
+
+      - name: Clone cl-andro-packages
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+        run: |
+          if [ -z "$CL_ANDRO_PAT" ]; then
+            echo "::error::CL_ANDRO_PAT secret is not set"
+            exit 1
+          fi
+          git clone "https://x-access-token:${CL_ANDRO_PAT}@github.com/cl-andro/cl-andro-packages.git" repo-deploy
+
+      - name: Re-sign Release file
+        run: |
+          cd repo-deploy
+          if [ ! -f dists/stable/Release ]; then
+            echo "::error::Release file not found at dists/stable/Release"
+            exit 1
+          fi
+          gpg --batch --default-key "$KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
+          gpg --batch --default-key "$KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
+          gpg --output cl-andro.gpg --export "$KEY_ID"
+          echo "Re-signed with key $KEY_ID and exported public key"
+
+      - name: Verify signature before pushing
+        run: |
+          cd repo-deploy
+          gpg --batch --verify dists/stable/Release.gpg dists/stable/Release
+          echo "::notice::Self-verification passed — signature is valid"
+
+      - name: Commit and push
+        env:
+          CL_ANDRO_PAT: ${{ secrets.CL_ANDRO_PAT }}
+        run: |
+          cd repo-deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cl-andro.gpg dists/stable/InRelease dists/stable/Release.gpg
+          if git diff-index --quiet HEAD --; then
+            echo "Nothing changed — already signed with this key"
+          else
+            git commit -m "${{ github.event.inputs.commit_message }}"
+            git push "https://x-access-token:${CL_ANDRO_PAT}@github.com/cl-andro/cl-andro-packages.git" main
+            echo "::notice::Re-signed and pushed successfully!"
+          fi

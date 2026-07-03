@@ -4,8 +4,8 @@ CLANDRO_PKG_LICENSE="GPL-3.0"
 CLANDRO_PKG_MAINTAINER="@clandro"
 CLANDRO_PKG_VERSION=1.5.0
 CLANDRO_PKG_REVISION=1
-CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-am-socket/archive/refs/tags/${CLANDRO_PKG_VERSION}.tar.gz
-CLANDRO_PKG_SHA256=d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
+CLANDRO_PKG_SRCURL=https://github.com/cl-andro/clandro-am-socket/archive/refs/tags/v${CLANDRO_PKG_VERSION}.tar.gz
+CLANDRO_PKG_SHA256=def2e047a312c653fc19d9fd919daf1e22ee08283c1ce54d18af345425eb6d38
 CLANDRO_PKG_DEPENDS="libc++"
 
 clandro_step_post_get_source() {

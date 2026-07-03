@@ -16,6 +16,15 @@ fi
 # 1. Import GPG Key
 if [ -n "$GPG_PRIVATE_KEY" ]; then
     echo "Importing GPG private key..."
+    mkdir -p ~/.gnupg
+    chmod 700 ~/.gnupg
+    echo "allow-loopback-pinentry" > ~/.gnupg/gpg-agent.conf
+    chmod 600 ~/.gnupg/gpg-agent.conf
+    echo "batch" > ~/.gnupg/gpg.conf
+    echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+    chmod 600 ~/.gnupg/gpg.conf
+    gpgconf --kill gpg-agent
+    gpg-connect-agent reloadagent /bye
     echo "$GPG_PRIVATE_KEY" | gpg --batch --import
     echo "GPG key imported successfully."
 else
@@ -83,12 +92,12 @@ done
 
 # 6. Sign Release file
 # Automatically detect the GPG key ID from the imported keyring
-GPG_KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | head -n 1 | cut -d: -f5)
+GPG_KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | tail -n 1 | cut -d: -f5)
 
 if [ -n "$GPG_KEY_ID" ]; then
     echo "Signing Release files with GPG Key: $GPG_KEY_ID..."
-    gpg --batch --default-key "$GPG_KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
-    gpg --batch --default-key "$GPG_KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
+    echo "$GPG_PASSPHRASE" | gpg --batch --no-tty --pinentry-mode loopback --passphrase-fd 0 --default-key "$GPG_KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
+    echo "$GPG_PASSPHRASE" | gpg --batch --no-tty --pinentry-mode loopback --passphrase-fd 0 --default-key "$GPG_KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
     echo "Successfully signed repository."
 else
     echo "⚠️  Skipping signing: No private key found in GPG keyring."

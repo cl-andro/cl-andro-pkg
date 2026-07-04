@@ -80,6 +80,7 @@ clandro_step_post_make_install() {
 
 	{
 		echo 'Acquire::https::CACertificate "/data/data/com.zk.clandro/files/usr/etc/tls/cert.pem";'
+		echo 'Acquire::https::CAInfo "/data/data/com.zk.clandro/files/usr/etc/tls/cert.pem";'
 		echo 'Dir::Bin::gpgv "/data/data/com.zk.clandro/files/usr/bin/gpgv";'
 	} > $CLANDRO_PREFIX/etc/apt/apt.conf
 

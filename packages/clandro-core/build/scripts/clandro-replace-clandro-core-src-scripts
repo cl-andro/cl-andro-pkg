@@ -33,10 +33,10 @@ The following required variables must be exported when executed this
 script, which are defined in the `scripts/properties.sh` file of the
 `clandro-package` repo.
 
-- TERMUX_ENV__S_ROOT
-- TERMUX__PREFIX
-- TERMUX_PKGS__REPO_URL
-- TERMUX_CORE_PKG__REPO_URL
+- CLANDRO_ENV__S_ROOT
+- CLANDRO__PREFIX
+- CLANDRO_PKGS__REPO_URL
+- CLANDRO_CORE_PKG__REPO_URL
 HELP_EOF
 
 }
@@ -121,10 +121,10 @@ not found under the clandro_core__src_srcipts_dir '$clandro_core__src_srcipts_di
 
 
     local -a required_exported_variables=(
-        "TERMUX_ENV__S_ROOT"
-        "TERMUX__PREFIX"
-        "TERMUX_PKGS__REPO_URL"
-        "TERMUX_CORE_PKG__REPO_URL"
+        "CLANDRO_ENV__S_ROOT"
+        "CLANDRO__PREFIX"
+        "CLANDRO_PKGS__REPO_URL"
+        "CLANDRO_CORE_PKG__REPO_URL"
     )
 
     for exported_variable in "${required_exported_variables[@]}"; do
@@ -161,10 +161,10 @@ under the clandro_core__src_srcipts_dir '$clandro_core__src_srcipts_dir' directo
 
         # Replace placeholder for variables (not scripts) in the src_script_content.
         src_script_content="$(printf "%s" "$src_script_content" | sed \
-            -e "s%[@]TERMUX_ENV__S_ROOT[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$TERMUX_ENV__S_ROOT")%g" \
-            -e "s%[@]TERMUX__PREFIX[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$TERMUX__PREFIX")%g" \
-            -e "s%[@]TERMUX_PKGS__REPO_URL[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$TERMUX_PKGS__REPO_URL")%g" \
-            -e "s%[@]TERMUX_CORE_PKG__REPO_URL[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$TERMUX_CORE_PKG__REPO_URL")%g"
+            -e "s%[@]CLANDRO_ENV__S_ROOT[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$CLANDRO_ENV__S_ROOT")%g" \
+            -e "s%[@]CLANDRO__PREFIX[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$CLANDRO__PREFIX")%g" \
+            -e "s%[@]CLANDRO_PKGS__REPO_URL[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$CLANDRO_PKGS__REPO_URL")%g" \
+            -e "s%[@]CLANDRO_CORE_PKG__REPO_URL[@]%$(clandro_rtcss__get_sed_replacement_escaped_string "$CLANDRO_CORE_PKG__REPO_URL")%g"
         )" || return $?
 
         # Create a local variable with the same name as its script file name

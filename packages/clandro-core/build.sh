@@ -31,6 +31,13 @@ CLANDRO_PKGS__REPO_NAME=${CLANDRO_PKGS__REPO_NAME} CLANDRO_PKGS__REPO_URL=${CLAN
 CLANDRO_PKGS__BUILD__REPO_ROOT_DIR=${CLANDRO_PKGS__BUILD__REPO_ROOT_DIR} \
 CLANDRO_CORE_PKG__REPO_NAME=${CLANDRO_CORE_PKG__REPO_NAME} CLANDRO_CORE_PKG__REPO_URL=${CLANDRO_CORE_PKG__REPO_URL}"
 
+clandro_step_pre_configure() {
+	# Fix broken legacy Termux symlinks to point to rebranded CLANDRO scripts
+	ln -sf clandro-apps-info-app-version-name.bash "$CLANDRO_PKG_SRCDIR/app/main/scripts/clandro/shell/command/environment/clandro-apps-info-app-version-name"
+	ln -sf clandro-apps-info-env-variable.bash "$CLANDRO_PKG_SRCDIR/app/main/scripts/clandro/shell/command/environment/clandro-apps-info-env-variable"
+	ln -sf clandro-scoped-env-variable.bash "$CLANDRO_PKG_SRCDIR/app/main/scripts/clandro/shell/command/environment/clandro-scoped-env-variable"
+}
+
 clandro_step_install_license() {
 	mkdir -p "$CLANDRO_PREFIX/share/doc/$CLANDRO_PKG_NAME/licenses"
 	cp -af "$CLANDRO_PKG_SRCDIR/LICENSE" "$CLANDRO_PREFIX/share/doc/$CLANDRO_PKG_NAME/copyright"

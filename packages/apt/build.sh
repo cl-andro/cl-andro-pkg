@@ -78,6 +78,12 @@ clandro_step_post_make_install() {
 		echo "deb [signed-by=/data/data/com.zk.clandro/files/usr/etc/apt/trusted.gpg.d/cl-andro.gpg] https://cl-andro.github.io/cl-andro-packages/ stable main"
 	} > $CLANDRO_PREFIX/etc/apt/sources.list
 
+	{
+		echo 'Acquire::https::CACertificate "/data/data/com.zk.clandro/files/usr/etc/tls/cert.pem";'
+		echo 'Dir::Bin::gpgv "/data/data/com.zk.clandro/files/usr/bin/gpgv";'
+	} > $CLANDRO_PREFIX/etc/apt/apt.conf
+
+
 	# apt-transport-tor
 	ln -sfr $CLANDRO_PREFIX/lib/apt/methods/http $CLANDRO_PREFIX/lib/apt/methods/tor
 	ln -sfr $CLANDRO_PREFIX/lib/apt/methods/http $CLANDRO_PREFIX/lib/apt/methods/tor+http

@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.GHCR_PAT }}
     steps:
       - name: Checkout Sovereign Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Architect the Custom OS Directories
         run: |
           sudo mkdir -p /data/data/com.zk.clandro/files/usr
